@@ -10,7 +10,7 @@ import Cocoa
 
 class FatigueControlService {
     
-    var isStarted = false
+    var isStarted = true
     
     func startFC() {
         isStarted = true

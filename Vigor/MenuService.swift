@@ -10,10 +10,14 @@ import Cocoa
 
 class MenuService {
     
+    lazy var menu: NSMenu = {
+        return NSMenu()
+    }()
+    
     let deviceService = DeviceService()
     
-    func constructMenu(statusItem: NSStatusItem, menu: NSMenu) {
-        
+    func constructMenu(statusItem: NSStatusItem) {
+                
         menu.addItem(NSMenuItem(title: "ID", action: nil, keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: deviceService.deviceID(), action: nil, keyEquivalent: ""))
         menu.addItem(NSMenuItem.separator())

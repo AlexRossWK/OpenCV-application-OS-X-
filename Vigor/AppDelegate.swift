@@ -19,9 +19,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let fatigueControlService = FatigueControlService()
     let statusItemService = StatusItemService()
     
-    
-    let menu = NSMenu()
-
     //Backgrounding test
     var time = 0
     var timer1 = Timer()
@@ -30,7 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
         //Menu
-        menuService.constructMenu(statusItem: statusItemService.statusItem, menu: menu)
+        menuService.constructMenu(statusItem: statusItemService.statusItem)
         
         //Status item title
         statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " + fatigueControlService.currentStatus())
@@ -38,15 +35,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Backgrounding test
         timer1 = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (_) in
             self?.time += 1
-            self?.menu.items[9].title = "\(self?.time ?? 0)"
+            self?.menuService.menu.items[9].title = "\(self?.time ?? 0)"
         })
         RunLoop.main.add(timer1, forMode: .commonModes)
         
         //Status request
-        timer2 = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { [weak self] (_) in
-            self?.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " + (self?.fatigueControlService.currentStatus() ?? ""))
-        })
-        RunLoop.main.add(timer2, forMode: .commonModes)
+        startStatusPeriodicRequest()
         
     }
     
@@ -57,14 +51,30 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
 }
 
+//Periodic status request
 extension AppDelegate {
+    private func startStatusPeriodicRequest() {
+        timer2 = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { [weak self] (_) in
+            self?.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " + (self?.fatigueControlService.currentStatus() ?? ""))
+        })
+        RunLoop.main.add(timer2, forMode: .commonModes)
+    }
     
+    private func stopStatusPeriodicRequest() {
+        timer2.invalidate()
+    }
+}
+
+//Fatigue Control Methods
+extension AppDelegate {
     @objc func startStopAnalizing(_ sender: Any?) {
         switch fatigueControlService.isStarted {
         case false:
             fatigueControlService.startFC()
+            startStatusPeriodicRequest()
         default:
             fatigueControlService.stopFC()
+            stopStatusPeriodicRequest()
         }
     }
     
@@ -75,5 +85,4 @@ extension AppDelegate {
     @objc func exitApp(_ sender: Any?) {
         fatigueControlService.exit()
     }
-    
 }

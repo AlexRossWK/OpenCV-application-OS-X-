@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3073FE12108AA590073E8CD /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3073FE02108AA590073E8CD /* MenuService.swift */; };
+		E3073FE32108AA690073E8CD /* FeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3073FE22108AA690073E8CD /* FeedbackService.swift */; };
+		E3073FE52108AB100073E8CD /* DeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3073FE42108AB100073E8CD /* DeviceService.swift */; };
+		E3073FE72108AE610073E8CD /* FatigueControlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3073FE62108AE610073E8CD /* FatigueControlService.swift */; };
+		E3073FE92108B1710073E8CD /* StatusItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3073FE82108B1710073E8CD /* StatusItemService.swift */; };
 		E31A69B721073AF000C34CA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31A69B621073AF000C34CA2 /* AppDelegate.swift */; };
 		E31A69B921073AF000C34CA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31A69B821073AF000C34CA2 /* ViewController.swift */; };
 		E31A69BB21073AF100C34CA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31A69BA21073AF100C34CA2 /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E3073FE02108AA590073E8CD /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
+		E3073FE22108AA690073E8CD /* FeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackService.swift; sourceTree = "<group>"; };
+		E3073FE42108AB100073E8CD /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
+		E3073FE62108AE610073E8CD /* FatigueControlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatigueControlService.swift; sourceTree = "<group>"; };
+		E3073FE82108B1710073E8CD /* StatusItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemService.swift; sourceTree = "<group>"; };
 		E31A69B321073AF000C34CA2 /* Vigor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vigor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31A69B621073AF000C34CA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E31A69B821073AF000C34CA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,14 +63,27 @@
 		E31A69B521073AF000C34CA2 /* Vigor */ = {
 			isa = PBXGroup;
 			children = (
+				E31A69C62107583300C34CA2 /* Algoritm */,
 				E31A69B621073AF000C34CA2 /* AppDelegate.swift */,
-				E31A69B821073AF000C34CA2 /* ViewController.swift */,
+				E3073FE02108AA590073E8CD /* MenuService.swift */,
+				E3073FE22108AA690073E8CD /* FeedbackService.swift */,
+				E3073FE42108AB100073E8CD /* DeviceService.swift */,
+				E3073FE82108B1710073E8CD /* StatusItemService.swift */,
+				E3073FE62108AE610073E8CD /* FatigueControlService.swift */,
 				E31A69BA21073AF100C34CA2 /* Assets.xcassets */,
+				E31A69B821073AF000C34CA2 /* ViewController.swift */,
 				E31A69BC21073AF100C34CA2 /* Main.storyboard */,
 				E31A69BF21073AF100C34CA2 /* Info.plist */,
 				E31A69C021073AF100C34CA2 /* Vigor.entitlements */,
 			);
 			path = Vigor;
+			sourceTree = "<group>";
+		};
+		E31A69C62107583300C34CA2 /* Algoritm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Algoritm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +157,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E31A69B921073AF000C34CA2 /* ViewController.swift in Sources */,
+				E3073FE72108AE610073E8CD /* FatigueControlService.swift in Sources */,
 				E31A69B721073AF000C34CA2 /* AppDelegate.swift in Sources */,
+				E3073FE32108AA690073E8CD /* FeedbackService.swift in Sources */,
+				E3073FE12108AA590073E8CD /* MenuService.swift in Sources */,
+				E3073FE52108AB100073E8CD /* DeviceService.swift in Sources */,
+				E3073FE92108B1710073E8CD /* StatusItemService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Vigor/Vigor.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 23NWH89XSR;
@@ -278,8 +307,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = rentateam.Vigor;
+				PRODUCT_BUNDLE_IDENTIFIER = rentateam.Vigor.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -289,6 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Vigor/Vigor.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 23NWH89XSR;
@@ -297,8 +328,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = rentateam.Vigor;
+				PRODUCT_BUNDLE_IDENTIFIER = rentateam.Vigor.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

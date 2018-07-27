@@ -79,7 +79,9 @@ extension AppDelegate {
     }
     
     @objc func sendFeedback(_ sender: Any?) {
-        feedbackService.sendFeedback(emails: ["ik@woodenshark.com"], subject: "Fatigue control feedback: \(deviceService.deviceID())", text: "")
+//        feedbackService.sendFeedback(emails: ["ik@woodenshark.com"], subject: "Fatigue control feedback: \(deviceService.deviceID())", text: "")
+        let objcClass = MyOCPPClass()
+        objcClass.printHelloWorldFromCPP()
     }
     
     @objc func exitApp(_ sender: Any?) {

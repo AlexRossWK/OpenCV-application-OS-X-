@@ -16,6 +16,28 @@
 		E31A69B921073AF000C34CA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31A69B821073AF000C34CA2 /* ViewController.swift */; };
 		E31A69BB21073AF100C34CA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31A69BA21073AF100C34CA2 /* Assets.xcassets */; };
 		E31A69BE21073AF100C34CA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31A69BC21073AF100C34CA2 /* Main.storyboard */; };
+		E37C3248210B59620043F3E4 /* model in Resources */ = {isa = PBXBuildFile; fileRef = E37C3233210B595F0043F3E4 /* model */; };
+		E37C3249210B59620043F3E4 /* LandmarkDetectionValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3234210B595F0043F3E4 /* LandmarkDetectionValidator.cpp */; };
+		E37C324A210B59620043F3E4 /* FaceARDetect in Resources */ = {isa = PBXBuildFile; fileRef = E37C3235210B59600043F3E4 /* FaceARDetect */; };
+		E37C324B210B59620043F3E4 /* detect_motion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3236210B59600043F3E4 /* detect_motion.cpp */; };
+		E37C324C210B59620043F3E4 /* LandmarkDetectorModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3237210B59600043F3E4 /* LandmarkDetectorModel.cpp */; };
+		E37C324D210B59620043F3E4 /* FaceDetect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3238210B59600043F3E4 /* FaceDetect.cpp */; };
+		E37C324E210B59620043F3E4 /* PAW.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3239210B59600043F3E4 /* PAW.cpp */; };
+		E37C324F210B59620043F3E4 /* classifiers in Resources */ = {isa = PBXBuildFile; fileRef = E37C323A210B59610043F3E4 /* classifiers */; };
+		E37C3250210B59620043F3E4 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C323B210B59610043F3E4 /* stdafx.cpp */; };
+		E37C3251210B59620043F3E4 /* GazeEstimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C323C210B59610043F3E4 /* GazeEstimation.cpp */; };
+		E37C3252210B59620043F3E4 /* local in Resources */ = {isa = PBXBuildFile; fileRef = E37C323D210B59610043F3E4 /* local */; };
+		E37C3253210B59620043F3E4 /* test_console in Resources */ = {isa = PBXBuildFile; fileRef = E37C323E210B59610043F3E4 /* test_console */; };
+		E37C3254210B59620043F3E4 /* Patch_experts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C323F210B59610043F3E4 /* Patch_experts.cpp */; };
+		E37C3255210B59620043F3E4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E37C3240210B59610043F3E4 /* Info.plist */; };
+		E37C3256210B59620043F3E4 /* PDM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3241210B59610043F3E4 /* PDM.cpp */; };
+		E37C3257210B59620043F3E4 /* SVR_patch_expert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3242210B59620043F3E4 /* SVR_patch_expert.cpp */; };
+		E37C3258210B59620043F3E4 /* LandmarkDetectorFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3243210B59620043F3E4 /* LandmarkDetectorFunc.cpp */; };
+		E37C3259210B59620043F3E4 /* LandmarkDetectorParameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3244210B59620043F3E4 /* LandmarkDetectorParameters.cpp */; };
+		E37C325A210B59620043F3E4 /* LandmarkDetectorUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3245210B59620043F3E4 /* LandmarkDetectorUtils.cpp */; };
+		E37C325B210B59620043F3E4 /* CCNF_patch_expert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3246210B59620043F3E4 /* CCNF_patch_expert.cpp */; };
+		E37C326D210B5D150043F3E4 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E37C326C210B5D150043F3E4 /* libcurl.tbd */; };
+		E37C3270210B627B0043F3E4 /* CPPConnect.mm in Sources */ = {isa = PBXBuildFile; fileRef = E37C326F210B627B0043F3E4 /* CPPConnect.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +53,45 @@
 		E31A69BD21073AF100C34CA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E31A69BF21073AF100C34CA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E31A69C021073AF100C34CA2 /* Vigor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vigor.entitlements; sourceTree = "<group>"; };
+		E37C3232210B595D0043F3E4 /* Vigor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vigor-Bridging-Header.h"; sourceTree = "<group>"; };
+		E37C3233210B595F0043F3E4 /* model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = model; sourceTree = "<group>"; };
+		E37C3234210B595F0043F3E4 /* LandmarkDetectionValidator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LandmarkDetectionValidator.cpp; sourceTree = "<group>"; };
+		E37C3235210B59600043F3E4 /* FaceARDetect */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FaceARDetect; sourceTree = "<group>"; };
+		E37C3236210B59600043F3E4 /* detect_motion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = detect_motion.cpp; sourceTree = "<group>"; };
+		E37C3237210B59600043F3E4 /* LandmarkDetectorModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LandmarkDetectorModel.cpp; sourceTree = "<group>"; };
+		E37C3238210B59600043F3E4 /* FaceDetect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceDetect.cpp; sourceTree = "<group>"; };
+		E37C3239210B59600043F3E4 /* PAW.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PAW.cpp; sourceTree = "<group>"; };
+		E37C323A210B59610043F3E4 /* classifiers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = classifiers; sourceTree = "<group>"; };
+		E37C323B210B59610043F3E4 /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdafx.cpp; sourceTree = "<group>"; };
+		E37C323C210B59610043F3E4 /* GazeEstimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GazeEstimation.cpp; sourceTree = "<group>"; };
+		E37C323D210B59610043F3E4 /* local */ = {isa = PBXFileReference; lastKnownFileType = folder; path = local; sourceTree = "<group>"; };
+		E37C323E210B59610043F3E4 /* test_console */ = {isa = PBXFileReference; lastKnownFileType = folder; path = test_console; sourceTree = "<group>"; };
+		E37C323F210B59610043F3E4 /* Patch_experts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Patch_experts.cpp; sourceTree = "<group>"; };
+		E37C3240210B59610043F3E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E37C3241210B59610043F3E4 /* PDM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PDM.cpp; sourceTree = "<group>"; };
+		E37C3242210B59620043F3E4 /* SVR_patch_expert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SVR_patch_expert.cpp; sourceTree = "<group>"; };
+		E37C3243210B59620043F3E4 /* LandmarkDetectorFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LandmarkDetectorFunc.cpp; sourceTree = "<group>"; };
+		E37C3244210B59620043F3E4 /* LandmarkDetectorParameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LandmarkDetectorParameters.cpp; sourceTree = "<group>"; };
+		E37C3245210B59620043F3E4 /* LandmarkDetectorUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LandmarkDetectorUtils.cpp; sourceTree = "<group>"; };
+		E37C3246210B59620043F3E4 /* CCNF_patch_expert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCNF_patch_expert.cpp; sourceTree = "<group>"; };
+		E37C3247210B59620043F3E4 /* main.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
+		E37C325C210B5AF00043F3E4 /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		E37C325D210B5B040043F3E4 /* LandmarkDetectorParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectorParameters.h; sourceTree = "<group>"; };
+		E37C325E210B5B050043F3E4 /* PAW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAW.h; sourceTree = "<group>"; };
+		E37C325F210B5B050043F3E4 /* SVR_patch_expert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVR_patch_expert.h; sourceTree = "<group>"; };
+		E37C3260210B5B060043F3E4 /* PDM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDM.h; sourceTree = "<group>"; };
+		E37C3261210B5B060043F3E4 /* LandmarkDetectionValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectionValidator.h; sourceTree = "<group>"; };
+		E37C3262210B5B060043F3E4 /* LandmarkCoreIncludes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandmarkCoreIncludes.h; sourceTree = "<group>"; };
+		E37C3263210B5B060043F3E4 /* CCNF_patch_expert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNF_patch_expert.h; sourceTree = "<group>"; };
+		E37C3264210B5B070043F3E4 /* LandmarkDetectorFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectorFunc.h; sourceTree = "<group>"; };
+		E37C3265210B5B070043F3E4 /* LandmarkDetectorUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectorUtils.h; sourceTree = "<group>"; };
+		E37C3266210B5B070043F3E4 /* Patch_experts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Patch_experts.h; sourceTree = "<group>"; };
+		E37C3267210B5B070043F3E4 /* FaceDetect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceDetect.h; sourceTree = "<group>"; };
+		E37C3268210B5B080043F3E4 /* LandmarkDetectorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectorModel.h; sourceTree = "<group>"; };
+		E37C326A210B5B500043F3E4 /* GazeEstimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GazeEstimation.h; sourceTree = "<group>"; };
+		E37C326C210B5D150043F3E4 /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
+		E37C326E210B62110043F3E4 /* CPPConnectHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPPConnectHeader.h; sourceTree = "<group>"; };
+		E37C326F210B627B0043F3E4 /* CPPConnect.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CPPConnect.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37C326D210B5D150043F3E4 /* libcurl.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +111,7 @@
 			children = (
 				E31A69B521073AF000C34CA2 /* Vigor */,
 				E31A69B421073AF000C34CA2 /* Products */,
+				E37C326B210B5D150043F3E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,13 +126,15 @@
 		E31A69B521073AF000C34CA2 /* Vigor */ = {
 			isa = PBXGroup;
 			children = (
-				E31A69C62107583300C34CA2 /* Algoritm */,
+				E37C326E210B62110043F3E4 /* CPPConnectHeader.h */,
+				E37C326F210B627B0043F3E4 /* CPPConnect.mm */,
 				E31A69B621073AF000C34CA2 /* AppDelegate.swift */,
 				E3073FE02108AA590073E8CD /* MenuService.swift */,
 				E3073FE22108AA690073E8CD /* FeedbackService.swift */,
 				E3073FE42108AB100073E8CD /* DeviceService.swift */,
 				E3073FE82108B1710073E8CD /* StatusItemService.swift */,
 				E3073FE62108AE610073E8CD /* FatigueControlService.swift */,
+				E31A69C62107583300C34CA2 /* Algoritm */,
 				E31A69BA21073AF100C34CA2 /* Assets.xcassets */,
 				E31A69B821073AF000C34CA2 /* ViewController.swift */,
 				E31A69BC21073AF100C34CA2 /* Main.storyboard */,
@@ -82,8 +147,60 @@
 		E31A69C62107583300C34CA2 /* Algoritm */ = {
 			isa = PBXGroup;
 			children = (
+				E37C3232210B595D0043F3E4 /* Vigor-Bridging-Header.h */,
+				E37C3246210B59620043F3E4 /* CCNF_patch_expert.cpp */,
+				E37C323A210B59610043F3E4 /* classifiers */,
+				E37C3236210B59600043F3E4 /* detect_motion.cpp */,
+				E37C3235210B59600043F3E4 /* FaceARDetect */,
+				E37C3238210B59600043F3E4 /* FaceDetect.cpp */,
+				E37C323C210B59610043F3E4 /* GazeEstimation.cpp */,
+				E37C3240210B59610043F3E4 /* Info.plist */,
+				E37C3234210B595F0043F3E4 /* LandmarkDetectionValidator.cpp */,
+				E37C3243210B59620043F3E4 /* LandmarkDetectorFunc.cpp */,
+				E37C3237210B59600043F3E4 /* LandmarkDetectorModel.cpp */,
+				E37C3244210B59620043F3E4 /* LandmarkDetectorParameters.cpp */,
+				E37C3245210B59620043F3E4 /* LandmarkDetectorUtils.cpp */,
+				E37C3269210B5B3F0043F3E4 /* h-files */,
+				E37C323D210B59610043F3E4 /* local */,
+				E37C3233210B595F0043F3E4 /* model */,
+				E37C323F210B59610043F3E4 /* Patch_experts.cpp */,
+				E37C3239210B59600043F3E4 /* PAW.cpp */,
+				E37C3241210B59610043F3E4 /* PDM.cpp */,
+				E37C323B210B59610043F3E4 /* stdafx.cpp */,
+				E37C3242210B59620043F3E4 /* SVR_patch_expert.cpp */,
+				E37C323E210B59610043F3E4 /* test_console */,
 			);
 			path = Algoritm;
+			sourceTree = "<group>";
+		};
+		E37C3269210B5B3F0043F3E4 /* h-files */ = {
+			isa = PBXGroup;
+			children = (
+				E37C326A210B5B500043F3E4 /* GazeEstimation.h */,
+				E37C325C210B5AF00043F3E4 /* stdafx.h */,
+				E37C3263210B5B060043F3E4 /* CCNF_patch_expert.h */,
+				E37C3267210B5B070043F3E4 /* FaceDetect.h */,
+				E37C3262210B5B060043F3E4 /* LandmarkCoreIncludes.h */,
+				E37C3261210B5B060043F3E4 /* LandmarkDetectionValidator.h */,
+				E37C3264210B5B070043F3E4 /* LandmarkDetectorFunc.h */,
+				E37C3268210B5B080043F3E4 /* LandmarkDetectorModel.h */,
+				E37C325D210B5B040043F3E4 /* LandmarkDetectorParameters.h */,
+				E37C3265210B5B070043F3E4 /* LandmarkDetectorUtils.h */,
+				E37C3266210B5B070043F3E4 /* Patch_experts.h */,
+				E37C325E210B5B050043F3E4 /* PAW.h */,
+				E37C3260210B5B060043F3E4 /* PDM.h */,
+				E37C325F210B5B050043F3E4 /* SVR_patch_expert.h */,
+				E37C3247210B59620043F3E4 /* main.hpp */,
+			);
+			path = "h-files";
+			sourceTree = "<group>";
+		};
+		E37C326B210B5D150043F3E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E37C326C210B5D150043F3E4 /* libcurl.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +235,7 @@
 				TargetAttributes = {
 					E31A69B221073AF000C34CA2 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -144,8 +262,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37C3255210B59620043F3E4 /* Info.plist in Resources */,
+				E37C3252210B59620043F3E4 /* local in Resources */,
+				E37C3248210B59620043F3E4 /* model in Resources */,
 				E31A69BB21073AF100C34CA2 /* Assets.xcassets in Resources */,
+				E37C324F210B59620043F3E4 /* classifiers in Resources */,
+				E37C3253210B59620043F3E4 /* test_console in Resources */,
 				E31A69BE21073AF100C34CA2 /* Main.storyboard in Resources */,
+				E37C324A210B59620043F3E4 /* FaceARDetect in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,13 +280,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37C324E210B59620043F3E4 /* PAW.cpp in Sources */,
+				E37C3254210B59620043F3E4 /* Patch_experts.cpp in Sources */,
 				E31A69B921073AF000C34CA2 /* ViewController.swift in Sources */,
+				E37C324C210B59620043F3E4 /* LandmarkDetectorModel.cpp in Sources */,
 				E3073FE72108AE610073E8CD /* FatigueControlService.swift in Sources */,
+				E37C3258210B59620043F3E4 /* LandmarkDetectorFunc.cpp in Sources */,
 				E31A69B721073AF000C34CA2 /* AppDelegate.swift in Sources */,
+				E37C325A210B59620043F3E4 /* LandmarkDetectorUtils.cpp in Sources */,
+				E37C3270210B627B0043F3E4 /* CPPConnect.mm in Sources */,
 				E3073FE32108AA690073E8CD /* FeedbackService.swift in Sources */,
 				E3073FE12108AA590073E8CD /* MenuService.swift in Sources */,
+				E37C324B210B59620043F3E4 /* detect_motion.cpp in Sources */,
+				E37C3256210B59620043F3E4 /* PDM.cpp in Sources */,
 				E3073FE52108AB100073E8CD /* DeviceService.swift in Sources */,
+				E37C3251210B59620043F3E4 /* GazeEstimation.cpp in Sources */,
+				E37C3250210B59620043F3E4 /* stdafx.cpp in Sources */,
+				E37C3249210B59620043F3E4 /* LandmarkDetectionValidator.cpp in Sources */,
+				E37C324D210B59620043F3E4 /* FaceDetect.cpp in Sources */,
+				E37C325B210B59620043F3E4 /* CCNF_patch_expert.cpp in Sources */,
 				E3073FE92108B1710073E8CD /* StatusItemService.swift in Sources */,
+				E37C3259210B59620043F3E4 /* LandmarkDetectorParameters.cpp in Sources */,
+				E37C3257210B59620043F3E4 /* SVR_patch_expert.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,19 +436,77 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Vigor/Vigor.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 23NWH89XSR;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = Vigor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_calib3d.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_calib3d.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_calib3d.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_core.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_core.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_core.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_dnn.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_dnn.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_dnn.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_features2d.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_features2d.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_features2d.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_flann.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_flann.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_flann.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_highgui.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_highgui.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_highgui.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_imgcodecs.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_imgcodecs.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_imgcodecs.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_imgproc.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_imgproc.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_imgproc.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_ml.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_ml.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_ml.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_objdetect.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_objdetect.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_objdetect.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_photo.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_photo.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_photo.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_shape.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_shape.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_shape.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_stitching.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_stitching.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_stitching.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_superres.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_superres.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_superres.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_video.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_video.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_video.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_videoio.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_videoio.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_videoio.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_videostab.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_videostab.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_videostab.dylib\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = rentateam.Vigor.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Vigor/Algoritm/Vigor-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -318,19 +515,76 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Vigor/Vigor.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 23NWH89XSR;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = Vigor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_calib3d.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_calib3d.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_calib3d.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_core.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_core.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_core.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_dnn.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_dnn.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_dnn.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_features2d.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_features2d.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_features2d.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_flann.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_flann.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_flann.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_highgui.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_highgui.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_highgui.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_imgcodecs.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_imgcodecs.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_imgcodecs.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_imgproc.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_imgproc.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_imgproc.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_ml.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_ml.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_ml.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_objdetect.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_objdetect.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_objdetect.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_photo.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_photo.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_photo.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_shape.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_shape.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_shape.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_stitching.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_stitching.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_stitching.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_superres.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_superres.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_superres.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_video.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_video.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_video.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_videoio.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_videoio.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_videoio.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_videostab.4.0.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_videostab.4.0.dylib\"",
+					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_videostab.dylib\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = rentateam.Vigor.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Vigor/Algoritm/Vigor-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

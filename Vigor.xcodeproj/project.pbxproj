@@ -12,31 +12,40 @@
 		E3073FE52108AB100073E8CD /* DeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3073FE42108AB100073E8CD /* DeviceService.swift */; };
 		E3073FE72108AE610073E8CD /* FatigueControlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3073FE62108AE610073E8CD /* FatigueControlService.swift */; };
 		E3073FE92108B1710073E8CD /* StatusItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3073FE82108B1710073E8CD /* StatusItemService.swift */; };
+		E30B15B52111BB3200B2E432 /* classifiers in Resources */ = {isa = PBXBuildFile; fileRef = E30B15B42111BB3100B2E432 /* classifiers */; };
+		E30B15B72111BB3B00B2E432 /* model in Resources */ = {isa = PBXBuildFile; fileRef = E30B15B62111BB3B00B2E432 /* model */; };
+		E30B15C52111F37F00B2E432 /* FaceDetect.h in Headers */ = {isa = PBXBuildFile; fileRef = E30B15C02111F37E00B2E432 /* FaceDetect.h */; };
+		E30B15C62111F37F00B2E432 /* FaceDetect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30B15C12111F37E00B2E432 /* FaceDetect.cpp */; };
+		E30B15C72111F37F00B2E432 /* libcurl in Resources */ = {isa = PBXBuildFile; fileRef = E30B15C22111F37E00B2E432 /* libcurl */; };
+		E30B15C82111F37F00B2E432 /* LandmarkDetectorUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30B15C32111F37E00B2E432 /* LandmarkDetectorUtils.cpp */; };
+		E30B15C92111F37F00B2E432 /* LandmarkDetectorUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E30B15C42111F37F00B2E432 /* LandmarkDetectorUtils.h */; };
 		E31A69B721073AF000C34CA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31A69B621073AF000C34CA2 /* AppDelegate.swift */; };
 		E31A69B921073AF000C34CA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31A69B821073AF000C34CA2 /* ViewController.swift */; };
 		E31A69BB21073AF100C34CA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31A69BA21073AF100C34CA2 /* Assets.xcassets */; };
 		E31A69BE21073AF100C34CA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31A69BC21073AF100C34CA2 /* Main.storyboard */; };
-		E37C3248210B59620043F3E4 /* model in Resources */ = {isa = PBXBuildFile; fileRef = E37C3233210B595F0043F3E4 /* model */; };
-		E37C3249210B59620043F3E4 /* LandmarkDetectionValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3234210B595F0043F3E4 /* LandmarkDetectionValidator.cpp */; };
-		E37C324A210B59620043F3E4 /* FaceARDetect in Resources */ = {isa = PBXBuildFile; fileRef = E37C3235210B59600043F3E4 /* FaceARDetect */; };
-		E37C324B210B59620043F3E4 /* detect_motion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3236210B59600043F3E4 /* detect_motion.cpp */; };
-		E37C324C210B59620043F3E4 /* LandmarkDetectorModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3237210B59600043F3E4 /* LandmarkDetectorModel.cpp */; };
-		E37C324D210B59620043F3E4 /* FaceDetect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3238210B59600043F3E4 /* FaceDetect.cpp */; };
-		E37C324E210B59620043F3E4 /* PAW.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3239210B59600043F3E4 /* PAW.cpp */; };
-		E37C324F210B59620043F3E4 /* classifiers in Resources */ = {isa = PBXBuildFile; fileRef = E37C323A210B59610043F3E4 /* classifiers */; };
-		E37C3250210B59620043F3E4 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C323B210B59610043F3E4 /* stdafx.cpp */; };
-		E37C3251210B59620043F3E4 /* GazeEstimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C323C210B59610043F3E4 /* GazeEstimation.cpp */; };
-		E37C3252210B59620043F3E4 /* local in Resources */ = {isa = PBXBuildFile; fileRef = E37C323D210B59610043F3E4 /* local */; };
+		E36074262110412700E4AF3B /* Patch_experts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E36073FD2110411E00E4AF3B /* Patch_experts.cpp */; };
+		E36074272110412700E4AF3B /* libcurl in Resources */ = {isa = PBXBuildFile; fileRef = E36073FE2110411F00E4AF3B /* libcurl */; };
+		E36074292110412800E4AF3B /* LandmarkDetectorParameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E36074022110411F00E4AF3B /* LandmarkDetectorParameters.cpp */; };
+		E360742A2110412800E4AF3B /* main_old.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E36074032110411F00E4AF3B /* main_old.cpp */; };
+		E360742B2110412800E4AF3B /* uid.txt in Resources */ = {isa = PBXBuildFile; fileRef = E36074042110412000E4AF3B /* uid.txt */; };
+		E360742C2110412800E4AF3B /* TestThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E36074062110412000E4AF3B /* TestThread.cpp */; };
+		E360742D2110412800E4AF3B /* Source.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E36074072110412000E4AF3B /* Source.cpp */; };
+		E360742E2110412800E4AF3B /* CCNF_patch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E36074082110412000E4AF3B /* CCNF_patch.cpp */; };
+		E36074302110412800E4AF3B /* LandmarkDetectorFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E360740B2110412100E4AF3B /* LandmarkDetectorFunc.cpp */; };
+		E36074312110412800E4AF3B /* PAW.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E360740C2110412100E4AF3B /* PAW.cpp */; };
+		E36074322110412800E4AF3B /* detect_motion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E360740E2110412100E4AF3B /* detect_motion.cpp */; };
+		E36074332110412800E4AF3B /* param.txt in Resources */ = {isa = PBXBuildFile; fileRef = E36074102110412200E4AF3B /* param.txt */; };
+		E36074342110412800E4AF3B /* x64 in Resources */ = {isa = PBXBuildFile; fileRef = E36074122110412300E4AF3B /* x64 */; };
+		E36074352110412800E4AF3B /* PDM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E36074132110412300E4AF3B /* PDM.cpp */; };
+		E36074372110412800E4AF3B /* haarcascade2.xml in Resources */ = {isa = PBXBuildFile; fileRef = E36074182110412500E4AF3B /* haarcascade2.xml */; };
+		E36074392110412800E4AF3B /* LandmarkDetectionValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E360741A2110412500E4AF3B /* LandmarkDetectionValidator.cpp */; };
+		E360743B2110412800E4AF3B /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E360741E2110412600E4AF3B /* stdafx.cpp */; };
+		E360743D2110412800E4AF3B /* SVR_patch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E36074222110412700E4AF3B /* SVR_patch.cpp */; };
+		E360743E2110412800E4AF3B /* LandmarkDetectorModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E36074232110412700E4AF3B /* LandmarkDetectorModel.cpp */; };
+		E360743F2110412800E4AF3B /* GazeEstimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E36074242110412700E4AF3B /* GazeEstimation.cpp */; };
+		E360744221105C3700E4AF3B /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E37C326C210B5D150043F3E4 /* libcurl.tbd */; };
+		E3607446211086F500E4AF3B /* libcurl.4.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E3607445211086F500E4AF3B /* libcurl.4.tbd */; };
 		E37C3253210B59620043F3E4 /* test_console in Resources */ = {isa = PBXBuildFile; fileRef = E37C323E210B59610043F3E4 /* test_console */; };
-		E37C3254210B59620043F3E4 /* Patch_experts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C323F210B59610043F3E4 /* Patch_experts.cpp */; };
-		E37C3255210B59620043F3E4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E37C3240210B59610043F3E4 /* Info.plist */; };
-		E37C3256210B59620043F3E4 /* PDM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3241210B59610043F3E4 /* PDM.cpp */; };
-		E37C3257210B59620043F3E4 /* SVR_patch_expert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3242210B59620043F3E4 /* SVR_patch_expert.cpp */; };
-		E37C3258210B59620043F3E4 /* LandmarkDetectorFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3243210B59620043F3E4 /* LandmarkDetectorFunc.cpp */; };
-		E37C3259210B59620043F3E4 /* LandmarkDetectorParameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3244210B59620043F3E4 /* LandmarkDetectorParameters.cpp */; };
-		E37C325A210B59620043F3E4 /* LandmarkDetectorUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3245210B59620043F3E4 /* LandmarkDetectorUtils.cpp */; };
-		E37C325B210B59620043F3E4 /* CCNF_patch_expert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E37C3246210B59620043F3E4 /* CCNF_patch_expert.cpp */; };
-		E37C326D210B5D150043F3E4 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E37C326C210B5D150043F3E4 /* libcurl.tbd */; };
 		E37C3270210B627B0043F3E4 /* CPPConnect.mm in Sources */ = {isa = PBXBuildFile; fileRef = E37C326F210B627B0043F3E4 /* CPPConnect.mm */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +55,13 @@
 		E3073FE42108AB100073E8CD /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
 		E3073FE62108AE610073E8CD /* FatigueControlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatigueControlService.swift; sourceTree = "<group>"; };
 		E3073FE82108B1710073E8CD /* StatusItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemService.swift; sourceTree = "<group>"; };
+		E30B15B42111BB3100B2E432 /* classifiers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = classifiers; sourceTree = "<group>"; };
+		E30B15B62111BB3B00B2E432 /* model */ = {isa = PBXFileReference; lastKnownFileType = folder; name = model; path = ../SleepDetect/model; sourceTree = "<group>"; };
+		E30B15C02111F37E00B2E432 /* FaceDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetect.h; sourceTree = "<group>"; };
+		E30B15C12111F37E00B2E432 /* FaceDetect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceDetect.cpp; sourceTree = "<group>"; };
+		E30B15C22111F37E00B2E432 /* libcurl */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libcurl; sourceTree = "<group>"; };
+		E30B15C32111F37E00B2E432 /* LandmarkDetectorUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LandmarkDetectorUtils.cpp; sourceTree = "<group>"; };
+		E30B15C42111F37F00B2E432 /* LandmarkDetectorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectorUtils.h; sourceTree = "<group>"; };
 		E31A69B321073AF000C34CA2 /* Vigor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vigor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31A69B621073AF000C34CA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E31A69B821073AF000C34CA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,42 +69,42 @@
 		E31A69BD21073AF100C34CA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E31A69BF21073AF100C34CA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E31A69C021073AF100C34CA2 /* Vigor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vigor.entitlements; sourceTree = "<group>"; };
+		E36073FD2110411E00E4AF3B /* Patch_experts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Patch_experts.cpp; path = ../../../SleepDetect/Patch_experts.cpp; sourceTree = "<group>"; };
+		E36073FE2110411F00E4AF3B /* libcurl */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libcurl; sourceTree = "<group>"; };
+		E36074012110411F00E4AF3B /* TestThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestThread.h; sourceTree = "<group>"; };
+		E36074022110411F00E4AF3B /* LandmarkDetectorParameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LandmarkDetectorParameters.cpp; path = ../../../SleepDetect/LandmarkDetectorParameters.cpp; sourceTree = "<group>"; };
+		E36074032110411F00E4AF3B /* main_old.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_old.cpp; sourceTree = "<group>"; };
+		E36074042110412000E4AF3B /* uid.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uid.txt; sourceTree = "<group>"; };
+		E36074052110412000E4AF3B /* Patch_experts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patch_experts.h; sourceTree = "<group>"; };
+		E36074062110412000E4AF3B /* TestThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestThread.cpp; sourceTree = "<group>"; };
+		E36074072110412000E4AF3B /* Source.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Source.cpp; sourceTree = "<group>"; };
+		E36074082110412000E4AF3B /* CCNF_patch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCNF_patch.cpp; sourceTree = "<group>"; };
+		E360740A2110412100E4AF3B /* GazeEstimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GazeEstimation.h; sourceTree = "<group>"; };
+		E360740B2110412100E4AF3B /* LandmarkDetectorFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LandmarkDetectorFunc.cpp; path = ../../../SleepDetect/LandmarkDetectorFunc.cpp; sourceTree = "<group>"; };
+		E360740C2110412100E4AF3B /* PAW.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PAW.cpp; path = ../../../SleepDetect/PAW.cpp; sourceTree = "<group>"; };
+		E360740D2110412100E4AF3B /* PDM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDM.h; sourceTree = "<group>"; };
+		E360740E2110412100E4AF3B /* detect_motion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = detect_motion.cpp; path = ../../../SleepDetect/detect_motion.cpp; sourceTree = "<group>"; };
+		E360740F2110412100E4AF3B /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		E36074102110412200E4AF3B /* param.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = param.txt; sourceTree = "<group>"; };
+		E36074112110412200E4AF3B /* LandmarkCoreIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkCoreIncludes.h; sourceTree = "<group>"; };
+		E36074122110412300E4AF3B /* x64 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = x64; sourceTree = "<group>"; };
+		E36074132110412300E4AF3B /* PDM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PDM.cpp; path = ../../../SleepDetect/PDM.cpp; sourceTree = "<group>"; };
+		E36074162110412400E4AF3B /* LandmarkDetectorParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectorParameters.h; sourceTree = "<group>"; };
+		E36074172110412400E4AF3B /* CCNF_patch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNF_patch.h; sourceTree = "<group>"; };
+		E36074182110412500E4AF3B /* haarcascade2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade2.xml; sourceTree = "<group>"; };
+		E360741A2110412500E4AF3B /* LandmarkDetectionValidator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LandmarkDetectionValidator.cpp; path = ../../../SleepDetect/LandmarkDetectionValidator.cpp; sourceTree = "<group>"; };
+		E360741C2110412600E4AF3B /* LandmarkDetectorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectorModel.h; sourceTree = "<group>"; };
+		E360741D2110412600E4AF3B /* LandmarkDetectionValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectionValidator.h; sourceTree = "<group>"; };
+		E360741E2110412600E4AF3B /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stdafx.cpp; path = ../../../SleepDetect/stdafx.cpp; sourceTree = "<group>"; };
+		E360741F2110412600E4AF3B /* LandmarkDetectorFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectorFunc.h; sourceTree = "<group>"; };
+		E36074212110412700E4AF3B /* PAW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAW.h; sourceTree = "<group>"; };
+		E36074222110412700E4AF3B /* SVR_patch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SVR_patch.cpp; sourceTree = "<group>"; };
+		E36074232110412700E4AF3B /* LandmarkDetectorModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LandmarkDetectorModel.cpp; path = ../../../SleepDetect/LandmarkDetectorModel.cpp; sourceTree = "<group>"; };
+		E36074242110412700E4AF3B /* GazeEstimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GazeEstimation.cpp; path = ../../../SleepDetect/GazeEstimation.cpp; sourceTree = "<group>"; };
+		E36074252110412700E4AF3B /* SVR_patch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVR_patch.h; sourceTree = "<group>"; };
+		E3607445211086F500E4AF3B /* libcurl.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.4.tbd; path = usr/lib/libcurl.4.tbd; sourceTree = SDKROOT; };
 		E37C3232210B595D0043F3E4 /* Vigor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vigor-Bridging-Header.h"; sourceTree = "<group>"; };
-		E37C3233210B595F0043F3E4 /* model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = model; sourceTree = "<group>"; };
-		E37C3234210B595F0043F3E4 /* LandmarkDetectionValidator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LandmarkDetectionValidator.cpp; sourceTree = "<group>"; };
-		E37C3235210B59600043F3E4 /* FaceARDetect */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FaceARDetect; sourceTree = "<group>"; };
-		E37C3236210B59600043F3E4 /* detect_motion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = detect_motion.cpp; sourceTree = "<group>"; };
-		E37C3237210B59600043F3E4 /* LandmarkDetectorModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LandmarkDetectorModel.cpp; sourceTree = "<group>"; };
-		E37C3238210B59600043F3E4 /* FaceDetect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceDetect.cpp; sourceTree = "<group>"; };
-		E37C3239210B59600043F3E4 /* PAW.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PAW.cpp; sourceTree = "<group>"; };
-		E37C323A210B59610043F3E4 /* classifiers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = classifiers; sourceTree = "<group>"; };
-		E37C323B210B59610043F3E4 /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdafx.cpp; sourceTree = "<group>"; };
-		E37C323C210B59610043F3E4 /* GazeEstimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GazeEstimation.cpp; sourceTree = "<group>"; };
-		E37C323D210B59610043F3E4 /* local */ = {isa = PBXFileReference; lastKnownFileType = folder; path = local; sourceTree = "<group>"; };
 		E37C323E210B59610043F3E4 /* test_console */ = {isa = PBXFileReference; lastKnownFileType = folder; path = test_console; sourceTree = "<group>"; };
-		E37C323F210B59610043F3E4 /* Patch_experts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Patch_experts.cpp; sourceTree = "<group>"; };
-		E37C3240210B59610043F3E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E37C3241210B59610043F3E4 /* PDM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PDM.cpp; sourceTree = "<group>"; };
-		E37C3242210B59620043F3E4 /* SVR_patch_expert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SVR_patch_expert.cpp; sourceTree = "<group>"; };
-		E37C3243210B59620043F3E4 /* LandmarkDetectorFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LandmarkDetectorFunc.cpp; sourceTree = "<group>"; };
-		E37C3244210B59620043F3E4 /* LandmarkDetectorParameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LandmarkDetectorParameters.cpp; sourceTree = "<group>"; };
-		E37C3245210B59620043F3E4 /* LandmarkDetectorUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LandmarkDetectorUtils.cpp; sourceTree = "<group>"; };
-		E37C3246210B59620043F3E4 /* CCNF_patch_expert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCNF_patch_expert.cpp; sourceTree = "<group>"; };
-		E37C3247210B59620043F3E4 /* main.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
-		E37C325C210B5AF00043F3E4 /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
-		E37C325D210B5B040043F3E4 /* LandmarkDetectorParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectorParameters.h; sourceTree = "<group>"; };
-		E37C325E210B5B050043F3E4 /* PAW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAW.h; sourceTree = "<group>"; };
-		E37C325F210B5B050043F3E4 /* SVR_patch_expert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVR_patch_expert.h; sourceTree = "<group>"; };
-		E37C3260210B5B060043F3E4 /* PDM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDM.h; sourceTree = "<group>"; };
-		E37C3261210B5B060043F3E4 /* LandmarkDetectionValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectionValidator.h; sourceTree = "<group>"; };
-		E37C3262210B5B060043F3E4 /* LandmarkCoreIncludes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandmarkCoreIncludes.h; sourceTree = "<group>"; };
-		E37C3263210B5B060043F3E4 /* CCNF_patch_expert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNF_patch_expert.h; sourceTree = "<group>"; };
-		E37C3264210B5B070043F3E4 /* LandmarkDetectorFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectorFunc.h; sourceTree = "<group>"; };
-		E37C3265210B5B070043F3E4 /* LandmarkDetectorUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectorUtils.h; sourceTree = "<group>"; };
-		E37C3266210B5B070043F3E4 /* Patch_experts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Patch_experts.h; sourceTree = "<group>"; };
-		E37C3267210B5B070043F3E4 /* FaceDetect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceDetect.h; sourceTree = "<group>"; };
-		E37C3268210B5B080043F3E4 /* LandmarkDetectorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandmarkDetectorModel.h; sourceTree = "<group>"; };
-		E37C326A210B5B500043F3E4 /* GazeEstimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GazeEstimation.h; sourceTree = "<group>"; };
 		E37C326C210B5D150043F3E4 /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
 		E37C326E210B62110043F3E4 /* CPPConnectHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPPConnectHeader.h; sourceTree = "<group>"; };
 		E37C326F210B627B0043F3E4 /* CPPConnect.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CPPConnect.mm; sourceTree = "<group>"; };
@@ -99,7 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E37C326D210B5D150043F3E4 /* libcurl.tbd in Frameworks */,
+				E3607446211086F500E4AF3B /* libcurl.4.tbd in Frameworks */,
+				E360744221105C3700E4AF3B /* libcurl.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +126,8 @@
 		E31A69AA21073AF000C34CA2 = {
 			isa = PBXGroup;
 			children = (
+				E30B15B62111BB3B00B2E432 /* model */,
+				E30B15B42111BB3100B2E432 /* classifiers */,
 				E31A69B521073AF000C34CA2 /* Vigor */,
 				E31A69B421073AF000C34CA2 /* Products */,
 				E37C326B210B5D150043F3E4 /* Frameworks */,
@@ -130,8 +149,8 @@
 				E37C326F210B627B0043F3E4 /* CPPConnect.mm */,
 				E31A69B621073AF000C34CA2 /* AppDelegate.swift */,
 				E3073FE02108AA590073E8CD /* MenuService.swift */,
-				E3073FE22108AA690073E8CD /* FeedbackService.swift */,
 				E3073FE42108AB100073E8CD /* DeviceService.swift */,
+				E3073FE22108AA690073E8CD /* FeedbackService.swift */,
 				E3073FE82108B1710073E8CD /* StatusItemService.swift */,
 				E3073FE62108AE610073E8CD /* FatigueControlService.swift */,
 				E31A69C62107583300C34CA2 /* Algoritm */,
@@ -147,63 +166,72 @@
 		E31A69C62107583300C34CA2 /* Algoritm */ = {
 			isa = PBXGroup;
 			children = (
+				E30B15C12111F37E00B2E432 /* FaceDetect.cpp */,
+				E30B15C02111F37E00B2E432 /* FaceDetect.h */,
+				E30B15C32111F37E00B2E432 /* LandmarkDetectorUtils.cpp */,
+				E30B15C42111F37F00B2E432 /* LandmarkDetectorUtils.h */,
+				E30B15C22111F37E00B2E432 /* libcurl */,
+				E36074082110412000E4AF3B /* CCNF_patch.cpp */,
+				E36074172110412400E4AF3B /* CCNF_patch.h */,
+				E360740E2110412100E4AF3B /* detect_motion.cpp */,
+				E36074242110412700E4AF3B /* GazeEstimation.cpp */,
+				E360740A2110412100E4AF3B /* GazeEstimation.h */,
+				E36074182110412500E4AF3B /* haarcascade2.xml */,
+				E36074112110412200E4AF3B /* LandmarkCoreIncludes.h */,
+				E360741A2110412500E4AF3B /* LandmarkDetectionValidator.cpp */,
+				E360741D2110412600E4AF3B /* LandmarkDetectionValidator.h */,
+				E360740B2110412100E4AF3B /* LandmarkDetectorFunc.cpp */,
+				E360741F2110412600E4AF3B /* LandmarkDetectorFunc.h */,
+				E36074232110412700E4AF3B /* LandmarkDetectorModel.cpp */,
+				E360741C2110412600E4AF3B /* LandmarkDetectorModel.h */,
+				E36074022110411F00E4AF3B /* LandmarkDetectorParameters.cpp */,
+				E36074162110412400E4AF3B /* LandmarkDetectorParameters.h */,
+				E36073FE2110411F00E4AF3B /* libcurl */,
+				E36074032110411F00E4AF3B /* main_old.cpp */,
+				E36074102110412200E4AF3B /* param.txt */,
+				E36073FD2110411E00E4AF3B /* Patch_experts.cpp */,
+				E36074052110412000E4AF3B /* Patch_experts.h */,
+				E360740C2110412100E4AF3B /* PAW.cpp */,
+				E36074212110412700E4AF3B /* PAW.h */,
+				E36074132110412300E4AF3B /* PDM.cpp */,
+				E360740D2110412100E4AF3B /* PDM.h */,
+				E36074072110412000E4AF3B /* Source.cpp */,
+				E360741E2110412600E4AF3B /* stdafx.cpp */,
+				E360740F2110412100E4AF3B /* stdafx.h */,
+				E36074222110412700E4AF3B /* SVR_patch.cpp */,
+				E36074252110412700E4AF3B /* SVR_patch.h */,
+				E36074062110412000E4AF3B /* TestThread.cpp */,
+				E36074012110411F00E4AF3B /* TestThread.h */,
+				E36074042110412000E4AF3B /* uid.txt */,
+				E36074122110412300E4AF3B /* x64 */,
 				E37C3232210B595D0043F3E4 /* Vigor-Bridging-Header.h */,
-				E37C3246210B59620043F3E4 /* CCNF_patch_expert.cpp */,
-				E37C323A210B59610043F3E4 /* classifiers */,
-				E37C3236210B59600043F3E4 /* detect_motion.cpp */,
-				E37C3235210B59600043F3E4 /* FaceARDetect */,
-				E37C3238210B59600043F3E4 /* FaceDetect.cpp */,
-				E37C323C210B59610043F3E4 /* GazeEstimation.cpp */,
-				E37C3240210B59610043F3E4 /* Info.plist */,
-				E37C3234210B595F0043F3E4 /* LandmarkDetectionValidator.cpp */,
-				E37C3243210B59620043F3E4 /* LandmarkDetectorFunc.cpp */,
-				E37C3237210B59600043F3E4 /* LandmarkDetectorModel.cpp */,
-				E37C3244210B59620043F3E4 /* LandmarkDetectorParameters.cpp */,
-				E37C3245210B59620043F3E4 /* LandmarkDetectorUtils.cpp */,
-				E37C3269210B5B3F0043F3E4 /* h-files */,
-				E37C323D210B59610043F3E4 /* local */,
-				E37C3233210B595F0043F3E4 /* model */,
-				E37C323F210B59610043F3E4 /* Patch_experts.cpp */,
-				E37C3239210B59600043F3E4 /* PAW.cpp */,
-				E37C3241210B59610043F3E4 /* PDM.cpp */,
-				E37C323B210B59610043F3E4 /* stdafx.cpp */,
-				E37C3242210B59620043F3E4 /* SVR_patch_expert.cpp */,
 				E37C323E210B59610043F3E4 /* test_console */,
 			);
 			path = Algoritm;
 			sourceTree = "<group>";
 		};
-		E37C3269210B5B3F0043F3E4 /* h-files */ = {
-			isa = PBXGroup;
-			children = (
-				E37C326A210B5B500043F3E4 /* GazeEstimation.h */,
-				E37C325C210B5AF00043F3E4 /* stdafx.h */,
-				E37C3263210B5B060043F3E4 /* CCNF_patch_expert.h */,
-				E37C3267210B5B070043F3E4 /* FaceDetect.h */,
-				E37C3262210B5B060043F3E4 /* LandmarkCoreIncludes.h */,
-				E37C3261210B5B060043F3E4 /* LandmarkDetectionValidator.h */,
-				E37C3264210B5B070043F3E4 /* LandmarkDetectorFunc.h */,
-				E37C3268210B5B080043F3E4 /* LandmarkDetectorModel.h */,
-				E37C325D210B5B040043F3E4 /* LandmarkDetectorParameters.h */,
-				E37C3265210B5B070043F3E4 /* LandmarkDetectorUtils.h */,
-				E37C3266210B5B070043F3E4 /* Patch_experts.h */,
-				E37C325E210B5B050043F3E4 /* PAW.h */,
-				E37C3260210B5B060043F3E4 /* PDM.h */,
-				E37C325F210B5B050043F3E4 /* SVR_patch_expert.h */,
-				E37C3247210B59620043F3E4 /* main.hpp */,
-			);
-			path = "h-files";
-			sourceTree = "<group>";
-		};
 		E37C326B210B5D150043F3E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3607445211086F500E4AF3B /* libcurl.4.tbd */,
 				E37C326C210B5D150043F3E4 /* libcurl.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E36074412110538E00E4AF3B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E30B15C92111F37F00B2E432 /* LandmarkDetectorUtils.h in Headers */,
+				E30B15C52111F37F00B2E432 /* FaceDetect.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		E31A69B221073AF000C34CA2 /* Vigor */ = {
@@ -213,6 +241,7 @@
 				E31A69AF21073AF000C34CA2 /* Sources */,
 				E31A69B021073AF000C34CA2 /* Frameworks */,
 				E31A69B121073AF000C34CA2 /* Resources */,
+				E36074412110538E00E4AF3B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -236,6 +265,11 @@
 					E31A69B221073AF000C34CA2 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -262,14 +296,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E37C3255210B59620043F3E4 /* Info.plist in Resources */,
-				E37C3252210B59620043F3E4 /* local in Resources */,
-				E37C3248210B59620043F3E4 /* model in Resources */,
+				E30B15B72111BB3B00B2E432 /* model in Resources */,
+				E30B15B52111BB3200B2E432 /* classifiers in Resources */,
+				E30B15C72111F37F00B2E432 /* libcurl in Resources */,
+				E36074272110412700E4AF3B /* libcurl in Resources */,
 				E31A69BB21073AF100C34CA2 /* Assets.xcassets in Resources */,
-				E37C324F210B59620043F3E4 /* classifiers in Resources */,
 				E37C3253210B59620043F3E4 /* test_console in Resources */,
 				E31A69BE21073AF100C34CA2 /* Main.storyboard in Resources */,
-				E37C324A210B59620043F3E4 /* FaceARDetect in Resources */,
+				E36074342110412800E4AF3B /* x64 in Resources */,
+				E36074372110412800E4AF3B /* haarcascade2.xml in Resources */,
+				E360742B2110412800E4AF3B /* uid.txt in Resources */,
+				E36074332110412800E4AF3B /* param.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,28 +317,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E37C324E210B59620043F3E4 /* PAW.cpp in Sources */,
-				E37C3254210B59620043F3E4 /* Patch_experts.cpp in Sources */,
+				E360742A2110412800E4AF3B /* main_old.cpp in Sources */,
 				E31A69B921073AF000C34CA2 /* ViewController.swift in Sources */,
-				E37C324C210B59620043F3E4 /* LandmarkDetectorModel.cpp in Sources */,
+				E36074392110412800E4AF3B /* LandmarkDetectionValidator.cpp in Sources */,
 				E3073FE72108AE610073E8CD /* FatigueControlService.swift in Sources */,
-				E37C3258210B59620043F3E4 /* LandmarkDetectorFunc.cpp in Sources */,
 				E31A69B721073AF000C34CA2 /* AppDelegate.swift in Sources */,
-				E37C325A210B59620043F3E4 /* LandmarkDetectorUtils.cpp in Sources */,
+				E360743F2110412800E4AF3B /* GazeEstimation.cpp in Sources */,
 				E37C3270210B627B0043F3E4 /* CPPConnect.mm in Sources */,
+				E30B15C62111F37F00B2E432 /* FaceDetect.cpp in Sources */,
+				E36074312110412800E4AF3B /* PAW.cpp in Sources */,
 				E3073FE32108AA690073E8CD /* FeedbackService.swift in Sources */,
+				E360742D2110412800E4AF3B /* Source.cpp in Sources */,
 				E3073FE12108AA590073E8CD /* MenuService.swift in Sources */,
-				E37C324B210B59620043F3E4 /* detect_motion.cpp in Sources */,
-				E37C3256210B59620043F3E4 /* PDM.cpp in Sources */,
+				E36074292110412800E4AF3B /* LandmarkDetectorParameters.cpp in Sources */,
+				E36074302110412800E4AF3B /* LandmarkDetectorFunc.cpp in Sources */,
+				E360742E2110412800E4AF3B /* CCNF_patch.cpp in Sources */,
 				E3073FE52108AB100073E8CD /* DeviceService.swift in Sources */,
-				E37C3251210B59620043F3E4 /* GazeEstimation.cpp in Sources */,
-				E37C3250210B59620043F3E4 /* stdafx.cpp in Sources */,
-				E37C3249210B59620043F3E4 /* LandmarkDetectionValidator.cpp in Sources */,
-				E37C324D210B59620043F3E4 /* FaceDetect.cpp in Sources */,
-				E37C325B210B59620043F3E4 /* CCNF_patch_expert.cpp in Sources */,
+				E360743D2110412800E4AF3B /* SVR_patch.cpp in Sources */,
+				E30B15C82111F37F00B2E432 /* LandmarkDetectorUtils.cpp in Sources */,
+				E360742C2110412800E4AF3B /* TestThread.cpp in Sources */,
+				E36074352110412800E4AF3B /* PDM.cpp in Sources */,
+				E36074322110412800E4AF3B /* detect_motion.cpp in Sources */,
+				E360743E2110412800E4AF3B /* LandmarkDetectorModel.cpp in Sources */,
+				E360743B2110412800E4AF3B /* stdafx.cpp in Sources */,
+				E36074262110412700E4AF3B /* Patch_experts.cpp in Sources */,
 				E3073FE92108B1710073E8CD /* StatusItemService.swift in Sources */,
-				E37C3259210B59620043F3E4 /* LandmarkDetectorParameters.cpp in Sources */,
-				E37C3257210B59620043F3E4 /* SVR_patch_expert.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +476,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Vigor/Vigor.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -448,7 +490,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(inherited)",
+					/usr/local/Cellar,
+				);
 				OTHER_LDFLAGS = (
 					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_calib3d.4.0.0.dylib\"",
 					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_calib3d.4.0.dylib\"",
@@ -515,6 +561,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Vigor/Vigor.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -527,7 +575,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(inherited)",
+					/usr/local/Cellar,
+				);
 				OTHER_LDFLAGS = (
 					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_calib3d.4.0.0.dylib\"",
 					"\"$(SRCROOT)/../opencv-master/build/lib/libopencv_calib3d.4.0.dylib\"",

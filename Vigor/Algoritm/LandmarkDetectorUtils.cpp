@@ -19,11 +19,20 @@
 #include <chrono>
 #include <curl/curl.h>
 
+
+#include <iostream>
+#include <fstream>
+#include <string>
+
+#include <iostream>
+#include <fstream>
+
 //using namespace std;
 
 namespace LandmarkDetector
 {
 
+	/*
 	struct ye_history
 	{
 		//std::string blink = "01010" initialization = 1 sleep = 2 date_time = 2018 - 02 - 23
@@ -35,7 +44,58 @@ namespace LandmarkDetector
 
 	};
 
-	std::vector<ye_history> hist_yes;
+	*/
+
+	std::vector<int> time_open_eye_history;
+	struct ye_history_blink
+	{
+		//std::string blink = "01010" initialization = 1 sleep = 2 date_time = 2018 - 02 - 23
+		std::string user; //мак компа
+		std::string date_time;
+		
+		int blink_count; //сколько раз моргнул., чем чаше тем хуже (1)
+		int time_open_eye; //2. Как долго в совокупности глаза были открыты (мс)
+		int max_time_blink_count; // максимальное время закрытия глаз, чем больше тем хуже (3)
+		int disable_motion_face; // 4. как долго не двигалась голова (мс)
+
+
+		/*int face_motion_count; //сколько раз было движение головой. В нормальной ситуации человек двигает головой, если же нет...человек "залип"
+		//чем меньше, тем хуже
+		int blink_count; //сколько раз моргнул., чем чаше тем хуже
+		int max_time_blink_count; // максимальное время закрытия глаз, чем больше тем хуже
+		int min_blink_close_time_interval;//минимальное время интервал между закрытия глазами, в средннем 5 сек, чем меньше, тем хуже 
+		*/
+	};
+
+	//эталонный показатель, для сравнения.
+	//в момент первого запуска программы он анализируется 5 минит, далее сохраняется в файлик.
+	//в момент следущего запуска идет загрузка данных с файла для сравнения
+	struct ye_reference_blink
+	{
+		std::string user; //мак компа
+		std::string date_time;
+		/*
+		int face_motion_count; //сколько раз было движение головой. В нормальной ситуации человек двигает головой, если же нет...человек "залип"
+							   //чем меньше, тем хуже
+		int blink_count; //сколько раз моргнул., чем чаше тем хуже
+		int max_time_blink_count; // максимальное время закрытия глаз, чем больше тем хуже
+		int min_blink_close_time_interval;//минимальное время интервал между закрытия глазами, в средннем 5 сек, чем меньше, тем хуже */
+
+		int blink_count; //сколько раз моргнул., чем чаше тем хуже (1)
+		int time_open_eye; //2. Как долго в совокупности глаза были открыты (мс)
+		int max_time_blink_count; // максимальное время закрытия глаз, чем больше тем хуже (3)
+		int disable_motion_face; // 4. как долго не двигалась голова (мс)
+		
+/*1. Количество морганий тут все должно быть понятно
+2. Как долго в совокупности глаза были открыты (мс)
+3. как долго в совокупности глаза были закрыты (мс)
+Если у нас сохраняется баг с открытием/закрытием глаз при перемещении головы, можно просто вычитать из общего интервала продолжительность пункта 2.
+4. как долго не двигалась голова (мс)
+*/
+
+	};
+
+	//std::vector<ye_history_blink> hist_yes;
 
 	/*std::cout << "USER001" << std::endl;
 							//TIME
@@ -442,7 +502,7 @@ namespace LandmarkDetector
 			dftTempl = _templ_dfts.find(dftsize.width)->second;
 		}
 
-        cv::Size bsz(std::min(blocksize.width, corr.cols), std::min(blocksize.height, corr.rows));
+        cv::Size bsz(fmin(blocksize.width, corr.cols), fmin(blocksize.height, corr.rows));
 		cv::Mat src;
 
 		cv::Mat cdst(corr, cv::Rect(0, 0, bsz.width, bsz.height));
@@ -456,8 +516,8 @@ namespace LandmarkDetector
 
 			cv::Size dsz(bsz.width + _templ.cols - 1, bsz.height + _templ.rows - 1);
 
-            int x2 = std::min(img.cols, dsz.width);
-            int y2 = std::min(img.rows, dsz.height);
+            int x2 = fmin(img.cols, dsz.width);
+            int y2 = fmin(img.rows, dsz.height);
 
 			cv::Mat src0(img, cv::Range(0, y2), cv::Range(0, x2));
 			cv::Mat dst(dftImg, cv::Rect(0, 0, dsz.width, dsz.height));
@@ -748,155 +808,6 @@ namespace LandmarkDetector
 
 	}
 
-	//void DrawBox(cv::Mat image, cv::Vec6d pose, cv::Scalar color, int thickness, float fx, float fy, float cx, float cy)
-	//{
-	//    double boxVerts[] = {-1, 1, -1,
-	//                         1, 1, -1,
-	//                         1, 1, 1,
-	//                         -1, 1, 1,
-	//                         1, -1, 1,
-	//                         1, -1, -1,
-	//                         -1, -1, -1,
-	//                         -1, -1, 1};
-	//
-	//    std::vector<std::pair<int,int>> edges;
-	//    edges.push_back(std::pair<int,int>(0,1));
-	//    edges.push_back(std::pair<int,int>(1,2));
-	//    edges.push_back(std::pair<int,int>(2,3));
-	//    edges.push_back(std::pair<int,int>(0,3));
-	//    edges.push_back(std::pair<int,int>(2,4));
-	//    edges.push_back(std::pair<int,int>(1,5));
-	//    edges.push_back(std::pair<int,int>(0,6));
-	//    edges.push_back(std::pair<int,int>(3,7));
-	//    edges.push_back(std::pair<int,int>(6,5));
-	//    edges.push_back(std::pair<int,int>(5,4));
-	//    edges.push_back(std::pair<int,int>(4,7));
-	//    edges.push_back(std::pair<int,int>(7,6));
-	//
-	//    // The size of the head is roughly 200mm x 200mm x 200mm
-	//    cv::Mat_<double> box = cv::Mat(8, 3, CV_64F, boxVerts).clone() * 100;
-	//
-	//    cv::Matx33d rot = LandmarkDetector::Euler2RotationMatrix(cv::Vec3d(pose[3], pose[4], pose[5]));
-	//    cv::Mat_<double> rotBox;
-	//
-	//    // Rotate the box
-	//    rotBox = cv::Mat(rot) * box.t();
-	//    rotBox = rotBox.t();
-	//
-	//    // Move the bounding box to head position
-	//    rotBox.col(0) = rotBox.col(0) + pose[0];
-	//    rotBox.col(1) = rotBox.col(1) + pose[1];
-	//    rotBox.col(2) = rotBox.col(2) + pose[2];
-	//
-	//    // draw the lines
-	//    cv::Mat_<double> rotBoxProj;
-	//    Project(rotBoxProj, rotBox, fx, fy, cx, cy);
-	//
-	//    cv::Rect image_rect(0,0,image.cols, image.rows);
-	//
-	//    for (size_t i = 0; i < edges.size(); ++i)
-	//    {
-	//        cv::Mat_<double> begin;
-	//        cv::Mat_<double> end;
-	//
-	//        rotBoxProj.row(edges[i].first).copyTo(begin);
-	//        rotBoxProj.row(edges[i].second).copyTo(end);
-	//
-	//        cv::Point p1((int)begin.at<double>(0), (int)begin.at<double>(1));
-	//        cv::Point p2((int)end.at<double>(0), (int)end.at<double>(1));
-	//
-	//        // Only draw the line if one of the points is inside the image
-	//        if(p1.inside(image_rect) || p2.inside(image_rect))
-	//        {
-	//            cv::line(image, p1, p2, color, thickness);
-	//        }
-	//
-	//    }
-	//
-	//}
-	//
-	//std::vector<std::pair<cv::Point, cv::Point> > CalculateBox(cv::Vec6d pose, float fx, float fy, float cx, float cy)
-	//{
-	//    double boxVerts[] = {-1, 1, -1,
-	//                         1, 1, -1,
-	//                         1, 1, 1,
-	//                         -1, 1, 1,
-	//                         1, -1, 1,
-	//                         1, -1, -1,
-	//                         -1, -1, -1,
-	//                         -1, -1, 1};
-	//
-	//    std::vector<std::pair<int,int>> edges;
-	//    edges.push_back(std::pair<int,int>(0,1));
-	//    edges.push_back(std::pair<int,int>(1,2));
-	//    edges.push_back(std::pair<int,int>(2,3));
-	//    edges.push_back(std::pair<int,int>(0,3));
-	//    edges.push_back(std::pair<int,int>(2,4));
-	//    edges.push_back(std::pair<int,int>(1,5));
-	//    edges.push_back(std::pair<int,int>(0,6));
-	//    edges.push_back(std::pair<int,int>(3,7));
-	//    edges.push_back(std::pair<int,int>(6,5));
-	//    edges.push_back(std::pair<int,int>(5,4));
-	//    edges.push_back(std::pair<int,int>(4,7));
-	//    edges.push_back(std::pair<int,int>(7,6));
-	//
-	//    // The size of the head is roughly 200mm x 200mm x 200mm
-	//    cv::Mat_<double> box = cv::Mat(8, 3, CV_64F, boxVerts).clone() * 100;
-	//
-	//    cv::Matx33d rot = LandmarkDetector::Euler2RotationMatrix(cv::Vec3d(pose[3], pose[4], pose[5]));
-	//    cv::Mat_<double> rotBox;
-	//
-	//    // Rotate the box
-	//    rotBox = cv::Mat(rot) * box.t();
-	//    rotBox = rotBox.t();
-	//
-	//    // Move the bounding box to head position
-	//    rotBox.col(0) = rotBox.col(0) + pose[0];
-	//    rotBox.col(1) = rotBox.col(1) + pose[1];
-	//    rotBox.col(2) = rotBox.col(2) + pose[2];
-	//
-	//    // draw the lines
-	//    cv::Mat_<double> rotBoxProj;
-	//    Project(rotBoxProj, rotBox, fx, fy, cx, cy);
-	//
-	//    std::vector<std::pair<cv::Point, cv::Point>> lines;
-	//
-	//    for (size_t i = 0; i < edges.size(); ++i)
-	//    {
-	//        cv::Mat_<double> begin;
-	//        cv::Mat_<double> end;
-	//
-	//        rotBoxProj.row(edges[i].first).copyTo(begin);
-	//        rotBoxProj.row(edges[i].second).copyTo(end);
-	//
-	//        cv::Point p1((int)begin.at<double>(0), (int)begin.at<double>(1));
-	//        cv::Point p2((int)end.at<double>(0), (int)end.at<double>(1));
-	//
-	//        lines.push_back(std::pair<cv::Point, cv::Point>(p1,p2));
-	//
-	//    }
-	//
-	//    return lines;
-	//}
-	//
-	//void DrawBox(std::vector<std::pair<cv::Point, cv::Point>> lines, cv::Mat image, cv::Scalar color, int thickness)
-	//{
-	//    cv::Rect image_rect(0,0,image.cols, image.rows);
-	//
-	//    for (size_t i = 0; i < lines.size(); ++i)
-	//    {
-	//        cv::Point p1 = lines.at(i).first;
-	//        cv::Point p2 = lines.at(i).second;
-	//        // Only draw the line if one of the points is inside the image
-	//        if(p1.inside(image_rect) || p2.inside(image_rect))
-	//        {
-	//            cv::line(image, p1, p2, color, thickness);
-	//        }
-	//
-	//    }
-	//
-	//}
-
 	// Computing landmarks (to be drawn later possibly)
 	std::vector<cv::Point2d> CalculateLandmarks(const cv::Mat_<double>& shape2D, cv::Mat_<int>& visibilities)
 	{
@@ -1044,7 +955,9 @@ namespace LandmarkDetector
 			int y_current = closeValues[i] ? y - 50 : y + 50;
 			current = cv::Point(preview.x + 10, y_current);
 
-			cv::line(image, preview, current, cv::Scalar(255, 0, 0), 2);
+			cv::line(image, preview, current, cv::Scalar(0, 0, 0), 2);
+
+			//cv::line(image, preview, current, cv::Scalar(255, 0, 0), 2);
 
 		}
 
@@ -1321,7 +1234,12 @@ namespace LandmarkDetector
 																		//double time_eye_close = 0;
 	double min_time_eye_open = 0; //время между закрытием глаза, минимум
 	double time_interval_eye_close = 0;
+	double time_interval_eye_close_temp = 0; //для определения сколько открыт глаз, если значение не меняется (всегда одинаково), обновление открытости глаза не происходит.
 	double time_interval_eye_close_result = 0;
+
+	std::chrono::high_resolution_clock::time_point time_disable_motion_face_start = std::chrono::high_resolution_clock::now();;
+	
+
 
 
 
@@ -1355,12 +1273,7 @@ namespace LandmarkDetector
 
 	double temp_val = 0;
 	cv::Point p;
-
 	
-
-
-	
-
 	cv::Ptr<cv::BackgroundSubtractor> bg_model =
 		cv::createBackgroundSubtractorMOG2().dynamicCast<cv::BackgroundSubtractor>();
 
@@ -1369,12 +1282,151 @@ namespace LandmarkDetector
 	//начала репорта, через 1 сек обновляем даннеые
 	std::chrono::high_resolution_clock::time_point time_start_report = std::chrono::high_resolution_clock::now();
 	//blink="01010" initialization=1 sleep=2 date_time=2018-02-23
-	std::string blink = "";
+	//std::string blink = "";
 	int initialization = 0;
 	int sleep = 0;
+
+	//struct ReportBlink
+
+	//инициализация, параметра для сравнения
+	ye_history_blink hist_value;
+	ye_reference_blink reference_value;
 	
-	void Draw(cv::Mat img, cv::Mat graf_image, const cv::Mat_<double>& shape2D, const cv::Mat_<int>& visibilities, cv::Rect rectFace, bool time_logs_refresh, char change_coiff_eye_distance)
+	bool first_start_program = true; //старт программы, проверяем есть ли конфик для сохранения данных
+	bool enable_config_file = false; //есть ли конфиг_файл, если его нет то идет анализ 5 минут и далее усредняются значения с сохранение м данных. Даллее отправка данных рах в минуту
+	
+	//start или current
+	void SendJSON(std::string type_message, std::string body_text, std::string mac, cv::Mat img, std::string uid)
 	{
+
+		if (true)
+			return;
+
+		//UID_preview = uid;
+
+		//std::string mak = "USER01_";
+
+		//test
+		cv::Point textOrg(10, 10);
+		cv::rectangle(img, cv::Rect(0, 0, img.cols, img.rows), cv::Scalar(0, 0, 0), -1);
+
+		//cv::putText(img, text, textOrg, fontFace, fontScale, cv::Scalar::all(255), thickness, 8);
+
+
+		auto t = std::time(nullptr);
+		auto tm = *std::localtime(&t);
+
+		std::stringstream ss;
+		ss << std::put_time(&tm, "%Y-%m-%d %H-%M-%S");
+		std::string date_time = ss.str() + "_";
+
+
+		std::ofstream myfile;
+		myfile.open("uid.txt", std::ios_base::app);
+		myfile << uid + "\n";
+		myfile.close();
+
+		//std::string text_message = uid + "_" + type_message + "_" + mac + "_" + date_time + body_text;
+		std::string text_message = type_message + "_" + mac + "_" + date_time + body_text;
+
+		std::cout << "---------------------" << std::endl;
+		std::cout << text_message << std::endl;
+
+		int count = time_open_eye_history.size();
+		time_open_eye_history.clear();
+
+		CURL *curl;
+		CURLcode res;
+
+		struct curl_slist *slist1;
+
+		slist1 = NULL;
+		std::string x_device = "X-Device-ID: " + uid;
+		slist1 = curl_slist_append(slist1, x_device.c_str());
+
+
+		/* In windows, this will init the winsock stuff */
+		curl_global_init(CURL_GLOBAL_ALL);
+
+		/* get a curl handle */
+		curl = curl_easy_init();
+		if (curl) {
+			/* First set the URL that is about to receive our POST. This URL can
+			just as well be a https:// URL if that is what should receive the
+			data. */
+			curl_easy_setopt(curl, CURLOPT_URL, "http://eye-server.woodenshark.com/api/v4/save_log");
+
+			//curl_easy_setopt(curl, CURLOPT_URL, "http://eye-server.woodenshark.com/api/v4/save_log");
+			/* Now specify the POST data */
+			curl_easy_setopt(curl, CURLOPT_HTTPHEADER, slist1);
+			curl_easy_setopt(curl, CURLOPT_POSTFIELDS, text_message.c_str());
+
+			/* Perform the request, res will get the return code */
+			res = curl_easy_perform(curl);
+			/* Check for errors */
+			if (res != CURLE_OK)
+				fprintf(stderr, "curl_easy_perform() failed: %s\n",
+					curl_easy_strerror(res));
+
+			/* always cleanup */
+			curl_easy_cleanup(curl);
+		}
+		curl_global_cleanup();
+	}
+	
+
+	int send_message_time;
+	void Draw(cv::Mat img, cv::Mat graf_image, const cv::Mat_<double>& shape2D, const cv::Mat_<int>& visibilities, cv::Rect rectFace, 
+		bool time_logs_refresh, char change_coiff_eye_distance, std::string mac, std::string uid, std::string &get_status_text)
+	{
+
+		if (first_start_program)
+		{
+			std::string line;
+			std::ifstream myfile("param.txt");
+			if (myfile.is_open())
+			{
+				std::vector<std::string> lines;
+				while (getline(myfile, line))
+				{
+					std::cout << line << '\n';
+					lines.push_back(line);
+				}
+				myfile.close();
+
+
+				if (lines.size() > 3)
+				{
+					/*
+					2. Как долго в совокупности глаза были открыты (сек)  
+					3. как долго в совокупности глаза были закрыты (сек)  
+					4. как долго не двигалась голова (сек)"
+					*/
+					reference_value.blink_count = std::stoi(lines[0]);
+					reference_value.time_open_eye = std::stoi(lines[1]);
+					reference_value.max_time_blink_count = std::stoi(lines[2]);
+					reference_value.disable_motion_face = std::stoi(lines[3]);
+				}
+
+				std::string text_message = std::to_string(reference_value.blink_count) + "_" + std::to_string(reference_value.time_open_eye) +
+					"_" + std::to_string(reference_value.max_time_blink_count) + "_" + std::to_string(reference_value.disable_motion_face);
+
+				get_status_text = text_message;
+				//старт_ отправки
+				SendJSON("start", text_message, mac, img, uid);
+				
+				enable_config_file = true;
+			}
+			else
+			{
+				std::cout << "Unable to open config file";
+			}
+
+			first_start_program = false;
+		}
+		
+		
+		
 		if (time_logs_refresh)
 			refresh_value = true;
 
@@ -1395,85 +1447,193 @@ namespace LandmarkDetector
 		//отправляю репртт
 		std::chrono::high_resolution_clock::time_point time_current_report = std::chrono::high_resolution_clock::now();
 		std::chrono::duration<double, std::milli> time_send_report = time_current_report  - time_start_report;
-        
-        
-		if (time_send_report.count() > 10000)
+
+		
+		//if (time_send_report.count() > 10000 * 6 * 3 && !enable_config_file) //5 минут и нет конфиг_файла, сохраняеем данные и двигаемся дальше.
+		if (time_send_report.count() > 1000 * 5  && !enable_config_file) //5 минут и нет конфиг_файла, сохраняеем данные и двигаемся дальше.
 		{
-			if (blink == "")
+			//конфиг файла нет, делаем запись параметров и отправляем старт
+
+			//порядок данных
+			/*
+			int face_motion_count; //сколько раз было движение головой. В нормальной ситуации человек двигает головой, если же нет...человек "залип"
+								   //чем меньше, тем хуже
+			int blink_count; //сколько раз моргнул., чем чаше тем хуже
+			int max_time_blink_count; // максимальное время закрытия глаз, чем больше тем хуже
+			int min_blink_close_time_interval;//минимальное время интервал между закрытия глазами, в средннем 5 сек, чем меньше, тем хуже 
+			*/
+
+			//расчет средних показателей
+			/*int average_face_motion_count = hist_value.face_motion_count / 6;
+			int average_blink_count = hist_value.blink_count / 6;
+
+			reference_value.face_motion_count = average_face_motion_count;
+			reference_value.blink_count = average_blink_count;
+			reference_value.max_time_blink_count = hist_value.max_time_blink_count;
+			reference_value.min_blink_close_time_interval = hist_value.min_blink_close_time_interval;*/
+
+			/*
+			2. Как долго в совокупности глаза были открыты (сек)
+			3. как долго в совокупности глаза были закрыты (сек)
+			4. как долго не двигалась голова (сек)"
+			*/
+			reference_value.blink_count = hist_value.blink_count;
+			reference_value.time_open_eye = hist_value.time_open_eye;
+			reference_value.max_time_blink_count = hist_value.max_time_blink_count;
+			reference_value.disable_motion_face = hist_value.disable_motion_face;
+
+			
+			//сохраняем параметры
+			std::ofstream myfile;
+			myfile.open("param.txt");
+			/*
+			myfile << reference_value.face_motion_count << "\n";
+			myfile << reference_value.blink_count << "\n";
+			myfile << reference_value.max_time_blink_count << "\n";
+			myfile << reference_value.min_blink_close_time_interval << "\n";
+			*/
+
+			myfile << reference_value.blink_count << "\n";
+			myfile << reference_value.time_open_eye << "\n";
+			myfile << reference_value.max_time_blink_count << "\n";
+			myfile << reference_value.disable_motion_face << "\n";
+
+
+			myfile.close();
+
+			std::string text_message = std::to_string(reference_value.blink_count) + "_" + std::to_string(reference_value.time_open_eye) +
+				"_" + std::to_string(reference_value.max_time_blink_count) + "_" + std::to_string(reference_value.disable_motion_face);
+
+			get_status_text = text_message;
+			//старт_ отправки
+			SendJSON("start", text_message, mac, img, uid);
+
+			/*
+			hist_value.blink_count = 0;
+			hist_value.face_motion_count = 0;
+			hist_value.min_blink_close_time_interval = 0;
+			hist_value.max_time_blink_count = 0;
+			*/
+
+			hist_value.blink_count = 0; //сколько раз моргнул., чем чаше тем хуже (1)
+			hist_value.time_open_eye= 0; //2. Как долго в совокупности глаза были открыты (мс)
+			hist_value.max_time_blink_count = 0; // максимальное время закрытия глаз, чем больше тем хуже (3)
+			hist_value.disable_motion_face = 0; // 4. как долго не двигалась голова (мс)
+
+
+
+			enable_config_file = true;
+			time_start_report = std::chrono::high_resolution_clock::now();
+		}
+
+		
+		
+		std::string text = std::to_string(send_message_time);
+		int fontFace = cv::FONT_HERSHEY_SCRIPT_SIMPLEX;
+		double fontScale = 1.5;
+		int thickness = 2;
+		cv::Point textOrg(10, 110);
+		cv::putText(img, text, textOrg, fontFace, fontScale, cv::Scalar::all(255), thickness, 8);
+		cv::Point textOrg1(10, 145);
+		cv::putText(img, std::to_string(hist_value.time_open_eye), textOrg1, fontFace, fontScale, cv::Scalar::all(255), thickness, 8);
+		//закрытие
+		cv::Point textOrg2(10, 175);
+		cv::putText(img, std::to_string(time_interval_eye_close), textOrg2, fontFace, fontScale, cv::Scalar::all(255), thickness, 8);
+
+		//time_spam
+		cv::Point textOrg3(100, 75);
+		cv::putText(img, std::to_string(time_send_report.count()), textOrg3, fontFace, fontScale, cv::Scalar::all(255), thickness, 8);
+
+		
+		//if (time_send_report.count() > 10000 * 3 && enable_config_file) //прошло 30 сек и есть конфиг файл, выгружаем данные на сервер.
+		if (time_send_report.count() > 1000 * 3 && enable_config_file) //прошло 30 сек и есть конфиг файл, выгружаем данные на сервер.
+		{
+			/*if (hist_value.blink_count == 0)
 			{
-				blink = "";
+				hist_value.blink_count = 0;
+				hist_value.disable_motion_face = 0;
+				hist_value.time_open_eye = 0;
+				hist_value.max_time_blink_count = 0;
+
 				initialization = 0;
 				sleep = 0;
 
 				time_start_report = std::chrono::high_resolution_clock::now();
 			}
 			else
-			{
-				//hist_yes
+			{*/
+			send_message_time = time_send_report.count();
+			//hist_yes
 
-				std::string text_message = "";
+			std::string text_message = "";
 
-				for (size_t i = 0; i < hist_yes.size(); i++)
-				{
-					ye_history hist = hist_yes[i];
+			//for (size_t i = 0; i < hist_yes.size(); i++)
+			//{
+			//	ye_history_blink hist = hist_yes[i];
 
-					//USER[001] TIME[27-02-2018 20-52-43] OPEN[1] FACE[1] BLINK[1]
+			//	//USER[001] TIME[27-02-2018 20-52-43] OPEN[1] FACE[1] BLINK[1]
 
-					text_message += "USER[" + hist.user + "]TIME[" + hist.date_time + "]OPEN[" + hist.sleep + "]FACE[" + hist.face_detect + "]BLINK[" + hist.blint + "]\n";
+			//	text_message += "USER[" + hist.user + "]TIME[" + hist.date_time + "]OPEN[" + hist.sleep + "]FACE[" + hist.face_detect + "]BLINK[" + hist.blint + "]\n";
 
-				}
+			//}
 
-				hist_yes.clear();
-				auto t = std::time(nullptr);
-				auto tm = *std::localtime(&t);
-				//std::cout << std::put_time(&tm, "%d-%m-%Y %H-%M-%S") << std::endl;
 
-				//std::stringstream ss;
-				//ss << std::put_time(&tm, "%Y-%m-%d");
+			/*
+			auto t = std::time(nullptr);
+			auto tm = *std::localtime(&t);
 
-				////<methodCall><methodName>save_log< / methodName><params><param><value><string>01010< / string>< / value>< / param><param><value><int>1< / int>< / value>< / param><param><value><int>2< / int>< / value>< / param><param><value><string>2018 - 02 - 23< / string>< / value>< / param>< / params>< / methodCall>
+			std::stringstream ss;
+			ss << std::put_time(&tm, "%Y-%m-%d %H-%M-%S");
+			hist_value.date_time = ss.str();
 
-				//std::string message = "<methodCall><methodName>save_log</methodName><params><param><value>";
-				//message += "<string>" + blink;
-				//message += "</string></value></param><param><value><int>" + std::to_string(initialization);
-				//message += "</int></value></param><param><value><int> " + std::to_string(sleep);
-				//message += "</int></value></param><param><value><string>" + ss.str() + "</string></value></param></params></methodCall>";
-				//std::string text2_post = "22;";
-				//каждые две счекунды
-				CURL *curl;
-				CURLcode res;
+			*/
 
-				/* In windows, this will init the winsock stuff */
-				curl_global_init(CURL_GLOBAL_ALL);
 
-				/* get a curl handle */
-				curl = curl_easy_init();
-				if (curl) {
-					/* First set the URL that is about to receive our POST. This URL can
-					just as well be a https:// URL if that is what should receive the
-					data. */
-					curl_easy_setopt(curl, CURLOPT_URL, "http://eye-server.woodenshark.com/api/v2/save_log");
-					/* Now specify the POST data */
-					curl_easy_setopt(curl, CURLOPT_POSTFIELDS, text_message.c_str());
+			//start_USER01_2018-03-14 20-11-55_165_584_860_1395
 
-					/* Perform the request, res will get the return code */
-					res = curl_easy_perform(curl);
-					/* Check for errors */
-					if (res != CURLE_OK)
-						fprintf(stderr, "curl_easy_perform() failed: %s\n",
-							curl_easy_strerror(res));
+			/*
+				myfile << reference_value.blink_count << "\n";
+		myfile << reference_value.time_open_eye << "\n";
+		myfile << reference_value.max_time_blink_count << "\n";
+		myfile << reference_value.disable_motion_face << "\n";
 
-					/* always cleanup */
-					curl_easy_cleanup(curl);
-				}
-				curl_global_cleanup();
+			*/
+			/*int average_face_motion_count = hist_value.face_motion_count / 6;
+			int average_blink_count = hist_value.blink_count / 6;*/
 
-				blink = "";
-				initialization = 0;
-				sleep = 0;
+			reference_value.blink_count = hist_value.blink_count;
+			reference_value.time_open_eye = hist_value.time_open_eye;
+			reference_value.max_time_blink_count = (10000 * 3) - hist_value.time_open_eye; //hist_value.max_time_blink_count;
+			reference_value.disable_motion_face = hist_value.disable_motion_face;
 
-				time_start_report = std::chrono::high_resolution_clock::now();
-			}
+
+
+
+			std::string text_message_1 = std::to_string(reference_value.blink_count) + "_" + std::to_string(reference_value.time_open_eye) +
+				"_" + std::to_string(reference_value.max_time_blink_count) + "_" + std::to_string(reference_value.disable_motion_face);
+
+			get_status_text = text_message_1;
+
+			//старт_ отправки
+			SendJSON("current", text_message_1, mac, img, uid);
+
+			/*
+			hist_value.blink_count = 0;
+			hist_value.face_motion_count = 0;
+			hist_value.min_blink_close_time_interval = 0;
+			hist_value.max_time_blink_count = 0;*/
+
+			hist_value.blink_count = 0; //сколько раз моргнул., чем чаше тем хуже (1)
+			hist_value.time_open_eye = 0; //2. Как долго в совокупности глаза были открыты (мс)
+			hist_value.max_time_blink_count = 0; // максимальное время закрытия глаз, чем больше тем хуже (3)
+			hist_value.disable_motion_face = 0; // 4. как долго не двигалась голова (мс)
+
+			//blink = "";
+			initialization = 0;
+			sleep = 0;
+
+			time_start_report = std::chrono::high_resolution_clock::now();
+			//}
 		}
 
 		/*bool close = true;*/
@@ -1494,8 +1654,8 @@ namespace LandmarkDetector
 			cv::Point startM;
 			cv::Point endM;
 
-			//std::cout << std::endl;
-			//std::cout << "-------------------" << std::endl;
+			std::cout << std::endl;
+			std::cout << "-------------------" << std::endl;
 
 			for (int i = 0; i < n; ++i)
 			{
@@ -1721,8 +1881,8 @@ namespace LandmarkDetector
 								//close_preview = close_current;
 
 								//=============================================================================
-								//close_current = plotGraph(graf_image, numbers_graph);
-								close_current = plotGraph1(graf_image, numbers_graph);
+								close_current = plotGraph(graf_image, numbers_graph);
+								//close_current = plotGraph1(graf_image, numbers_graph);
 
 								//не анализируем.
 								//plotGraph(graf_image, numbers_graph);
@@ -1763,11 +1923,18 @@ namespace LandmarkDetector
 									//СТАРТ_АНАЛИЗА Детектор времени промежутка между закрытием
 									time_start_eye_open = std::chrono::high_resolution_clock::now();
 
-									//if (refresh_value)
-									//{
 									time_interval_eye_close_result = time_interval_eye_close;
-									//refresh_value = false;
-
+									
+									////общеее время открытого глаза;
+									if (time_interval_eye_close_result > 1000)
+									{
+										if (time_interval_eye_close_temp != time_interval_eye_close_result)
+										{
+											hist_value.time_open_eye += time_interval_eye_close_result;
+											time_interval_eye_close_temp = time_interval_eye_close_result;
+										}
+										time_open_eye_history.push_back(time_interval_eye_close_result);
+									}
 									double oclonenie_t = current_interval_close / 250.0;
 									if (oclonenie_t > 1.00)
 									{
@@ -1792,8 +1959,13 @@ namespace LandmarkDetector
 
 
 									if (time_eye_open_ms.count() > 1)
+									{
 										time_interval_eye_close = time_eye_open_ms.count();
-
+									
+										//общеее время открытого глаза;
+										/*hist_value.time_open_eye = time_interval_eye_close_result;
+										time_open_eye_history.push_back(time_interval_eye_close_result);*/
+									}
 								}
 
 
@@ -2013,7 +2185,7 @@ namespace LandmarkDetector
 
 						BlinkStatusEyes = aray <= 4000.0;
 
-							//std::cout << std::endl;
+							std::cout << std::endl;
 							//[ID Машины] - 1
 							std::cout << "USER001" << std::endl;
 							//TIME
@@ -2033,18 +2205,7 @@ namespace LandmarkDetector
 								BLINK_DETERMINED = "0";
 							std::cout << "BLINK = " << BLINK_DETERMINED << std::endl;
 
-							//add_history
-							//class ye_history
-							//{
-							//	//std::string blink = "01010" initialization = 1 sleep = 2 date_time = 2018 - 02 - 23
-
-							//	std::string user;
-							//	std::string date_time;
-							//	std::string sleep;
-							//	std::string face_detect;
-							//	std::string blint;
-
-							//};
+						
 
 							
 
@@ -2132,14 +2293,14 @@ namespace LandmarkDetector
 						std::stringstream ss;
 						ss << std::put_time(&tm, "%Y-%m-%d %H-%M-%S");
 
-						ye_history hist_value;
+					/*	ye_history hist_value;
 						hist_value.user = "USER001";
 						hist_value.date_time = ss.str();
 						hist_value.sleep = close_current_new ? "0" : "1";
 						hist_value.blint = InitHeadCloseStatusEyes ? "0" : "1";
-						hist_value.face_detect = BlinkStatusEyes ? "0" : "1";
+						hist_value.face_detect = BlinkStatusEyes ? "0" : "1";*/
 
-						hist_yes.push_back(hist_value);
+						
 
 						////if the avarage eye aspect ratio of lef and right eye less than 0.2, the status is sleeping.
 						//if ((right_ear + left_ear) / 2 < 0.32)
@@ -2150,7 +2311,7 @@ namespace LandmarkDetector
 						////cv::putText(img, "NOT_CLOSE", cv::Point(50, 300), CV_FONT_HERSHEY_DUPLEX, 1, cv::Scalar(0, 255, 255), 1.7);
 
 						//std::cout << (right_ear + left_ear) / 2 << std::endl;
-						//std::cout << std::endl;
+						std::cout << std::endl;
 
 						//if (val_preview == 0.0)
 						val_preview = val_current;
@@ -2160,9 +2321,33 @@ namespace LandmarkDetector
 							CV_FONT_HERSHEY_DUPLEX, 0.6, close_current_new ? cv::Scalar(0, 0, 255) : cv::Scalar(0, 255, 0), 1.7);
 
 						//для анализа
-						blink += close_current_new ? "0" : "1";
+						//blink += close_current_new ? "0" : "1";
 
+						//анализ_отчет
+						hist_value.blink_count += close_current_new ? 1 : 0; //коли-во морганий
+						if (aray <= 4000.0)
+						{
+							//как долго не двигалась голова (максимальное значение).
+							/*if(hist_value.disable_motion_face == 0)
+								time_disable_motion_face_start = std::chrono::high_resolution_clock::now();
+							else
+							{*/
+							std::chrono::high_resolution_clock::time_point time_disable_end = std::chrono::high_resolution_clock::now();
+							std::chrono::duration<double, std::milli> interval = time_disable_end - time_disable_motion_face_start;
 
+							if (hist_value.disable_motion_face < interval.count())
+							{
+								hist_value.disable_motion_face = interval.count();
+							}
+
+							time_disable_motion_face_start = std::chrono::high_resolution_clock::now();
+							//}
+							//++hist_value.face_motion_count;
+						}
+						hist_value.max_time_blink_count = max_interval_close;
+						//hist_value.min_blink_close_time_interval = time_interval_eye_close_result;
+
+										
 
 
 
@@ -2182,7 +2367,7 @@ namespace LandmarkDetector
 						}
 
 						//detect close
-						//plotGraphNew(graf_image, close_current_new);
+						plotGraphNew(graf_image, close_current_new);
 
 
 						////cv::circle(img, featurePoint, 1 * draw_multiplier, cv::Scalar(0, 0, 250), thickness, CV_AA, draw_shiftbits);
@@ -2329,7 +2514,6 @@ namespace LandmarkDetector
 			{
 				featurePoint = cv::Point((int)shape2D.at<double>(i, 0), (int)shape2D.at<double>(i, 1));
 			}
-			// A rough heuristic for drawn point size
 			int thickness = (int)std::ceil(5.0* ((double)img.cols) / 640.0);
 			int thickness_2 = (int)std::ceil(1.5* ((double)img.cols) / 640.0);
 
@@ -2340,9 +2524,9 @@ namespace LandmarkDetector
 
 	}
 
-
+	
 	// Drawing detected landmarks on a face image
-	void Draw(cv::Mat img, cv::Mat graf_image, const CLNF& clnf_model, cv::Rect rectFace, bool time_logs_refresh, char change_coiff_eye_distance)
+	void Draw(cv::Mat img, cv::Mat graf_image, const CLNF& clnf_model, cv::Rect rectFace, bool time_logs_refresh, char change_coiff_eye_distance, std::string mac, std::string uid, std::string &get_status_text)
 	{
 
 		int idx = clnf_model.patch_experts.GetViewIdx(clnf_model.params_global, 0);
@@ -2362,7 +2546,7 @@ namespace LandmarkDetector
 			//clnf_model.pdm.CalcBoundingBox(rectT, clnf_model.params_global, clnf_model.params_local);
 
 
-			Draw(img, graf_image, clnf_model.detected_landmarks, clnf_model.patch_experts.visibilities[0][idx], /*rectFace*/rectT, time_logs_refresh, change_coiff_eye_distance);
+			Draw(img, graf_image, clnf_model.detected_landmarks, clnf_model.patch_experts.visibilities[0][idx], /*rectFace*/rectT, time_logs_refresh, change_coiff_eye_distance, mac, uid, get_status_text);
 
 			//// If the model has hierarchical updates draw those too
 			//for (size_t i = 0; i < clnf_model.hierarchical_models.size(); ++i)

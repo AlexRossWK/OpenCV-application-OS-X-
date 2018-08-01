@@ -12,12 +12,13 @@
 
 #endif /* CPPConnectHeader_h */
 
-
-
 #import <Foundation/Foundation.h>
+
 
 @interface MyOCPPClass: NSObject
 
--(void)printHelloWorldFromCPP;
+-(void)startDetect;
+-(void)stopDetect;
+-(NSString *)getStatus;
 
 @end

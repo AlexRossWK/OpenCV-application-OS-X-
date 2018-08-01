@@ -6,16 +6,32 @@
 //  Copyright © 2018 Rentateam. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#include "TestThread.h"
 
+#import <Foundation/Foundation.h>
 #import "CPPConnectHeader.h"
-#include "FaceDetect.h"
 
 @implementation MyOCPPClass
 
-- (void)printHelloWorldFromCPP
+- (void)startDetect
 {
-    Clear();
+    SleepDetect sd;
+    sd.Start();
+    
+}
+
+- (void)stopDetect
+{
+    SleepDetect sd;
+    sd.Stop();
+}
+
+- (NSString *)getStatus
+{
+    SleepDetect sd;
+    NSString *status = [NSString stringWithCString:sd.GetStatus().c_str()
+                                                encoding:[NSString defaultCStringEncoding]];
+    return status;
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import AVFoundation
 
 
 @NSApplicationMain
@@ -33,14 +34,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " + fatigueControlService.currentStatus())
         
         //Backgrounding test
-        timer1 = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (_) in
-            self?.time += 1
-            self?.menuService.menu.items[9].title = "\(self?.time ?? 0)"
-        })
-        RunLoop.main.add(timer1, forMode: .commonModes)
+//        timer1 = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (_) in
+//            self?.time += 1
+//            self?.menuService.menu.items[9].title = "\(self?.time ?? 0)"
+//        })
+//        RunLoop.main.add(timer1, forMode: .commonModes)
         
         //Status request
         startStatusPeriodicRequest()
+        
+        //Fatigue control
+        //TODO поправить
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.fatigueControlService.startFC()
+        }
         
     }
     
@@ -53,9 +60,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 //Periodic status request
 extension AppDelegate {
+
     private func startStatusPeriodicRequest() {
         timer2 = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { [weak self] (_) in
-            self?.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " + (self?.fatigueControlService.currentStatus() ?? ""))
+            self?.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " + (self?.fatigueControlService.currentStatus() ?? "ERR"))
         })
         RunLoop.main.add(timer2, forMode: .commonModes)
     }
@@ -70,18 +78,22 @@ extension AppDelegate {
     @objc func startStopAnalizing(_ sender: Any?) {
         switch fatigueControlService.isStarted {
         case false:
-            fatigueControlService.startFC()
+            fatigueControlService.isStarted = true
+            DispatchQueue.global(qos: .userInitiated).async {
+                self.fatigueControlService.startFC()
+            }
             startStatusPeriodicRequest()
         default:
+            fatigueControlService.isStarted = false
+
             fatigueControlService.stopFC()
             stopStatusPeriodicRequest()
         }
     }
     
     @objc func sendFeedback(_ sender: Any?) {
-//        feedbackService.sendFeedback(emails: ["ik@woodenshark.com"], subject: "Fatigue control feedback: \(deviceService.deviceID())", text: "")
-        let objcClass = MyOCPPClass()
-        objcClass.printHelloWorldFromCPP()
+        feedbackService.sendFeedback(emails: ["ik@woodenshark.com"], subject: "Fatigue control feedback: \(deviceService.deviceID())", text: "")
+
     }
     
     @objc func exitApp(_ sender: Any?) {

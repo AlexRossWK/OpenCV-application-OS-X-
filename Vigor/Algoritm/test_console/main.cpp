@@ -1,38 +1,30 @@
-//
-//  main.cpp
-//  test_console_openface
-//
-//  Created by РђР»РµРєСЃРµР№ Р РѕСЃСЃРѕС€Р°РЅСЃРєРёР№ on 27.07.2018.
-//  Copyright В© 2018 user. All rights reserved.
-//
 
-#include <string>
-#include <iostream>
-using namespace std;
-bool StringContain(string &a,string &b)
+#include "TestThread.h"
+std::string status = "";
+void GetStatusSleepDetect(SleepDetect &sleep_d)
 {
-    const int p[26] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59,61, 67, 71, 73, 79, 83, 89, 97, 101};
-    int f = 1;
-    for (int i = 0; i < a.length(); ++i)
-    {
-        int x = p[a[i] - 'A'];
-        if (f % x)
-        {
-            f *= x;
-        }
-    }
-    for (int i = 0; i < b.length(); ++i)
-    {
-        int x = p[b[i] - 'A'];
-        if (f % x)
-        {
-            return false;
-        }
-    }
-    return true;
+	while (1)
+	{
+		//просто цикл, ждем событий
+        std::cout << "================================ getstatus =====================sleep=sleep" << std::endl;
+		Sleep(1000);
+
+
+		std::cout << sleep_d.GetStatus() << std::endl;
+
+	}
 }
-
-int main()
+int main(int argc, char * argv[])
 {
-    return 1;
+	SleepDetect sleep_d;
+
+    //стартуем в отдельном потоке
+    //sleep_d.Start();
+    sleep_d.Stop();
+
+    std::thread thread_camera_detect = std::thread(GetStatusSleepDetect, sleep_d);
+    thread_camera_detect.detach();
+    sleep_d.Start();
+
+	
 }

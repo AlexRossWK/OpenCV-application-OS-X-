@@ -11,25 +11,33 @@ import Cocoa
 class FatigueControlService {
     
     var isStarted = true
-    
+    let objcClass = MyOCPPClass()
+
     func startFC() {
-        isStarted = true
+        objcClass.startDetect()
         print("analyzing started")
     }
     
     func stopFC() {
-        isStarted = false
+        objcClass.stopDetect()
         print("analyzing finished")
     }
     
     func exit() {
         isStarted = false
         print("left the app")
+        objcClass.stopDetect()
         NSApplication.shared.terminate(self)
     }
     
     func currentStatus() -> String {
-        print("status requested")
-        return "100%"
+        print("status" + objcClass.getStatus())
+        guard let status = objcClass.getStatus() else {
+            return "NON"
+        }
+        if status == "" {
+            return "ERR"
+        }
+        return status
     }
 }

@@ -1,1 +1,0 @@
-../Cellar/gmp/6.1.2_2/include/gmp.h

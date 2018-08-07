@@ -1,0 +1,6 @@
+/usr/local/Cellar/opencv/3.4.2/build/CMakeFiles/install/local.dir
+/usr/local/Cellar/opencv/3.4.2/build/CMakeFiles/install/strip.dir
+/usr/local/Cellar/opencv/3.4.2/build/CMakeFiles/install.dir
+/usr/local/Cellar/opencv/3.4.2/build/CMakeFiles/list_install_components.dir
+/usr/local/Cellar/opencv/3.4.2/build/CMakeFiles/rebuild_cache.dir
+/usr/local/Cellar/opencv/3.4.2/build/CMakeFiles/edit_cache.dir

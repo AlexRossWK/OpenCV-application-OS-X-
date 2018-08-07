@@ -20,16 +20,16 @@ bool Inits()
     
     // det_parameters.model_location = std::string("/usr/local/model/main_clnf_general.txt");
      //det_parameters.face_detector_location = std::string("/usr/local/classifiers/haarcascade_frontalface_alt.xml");
-    det_parameters.model_location = "/usr/local/model/main_clnf_general.txt";
-    det_parameters.face_detector_location = "/usr/local/classifiers/haarcascade_frontalface_alt.xml";
+    det_parameters.model_location = "/usr/local/lib/model/main_clnf_general.txt";
+    det_parameters.face_detector_location = "/usr/local/lib/classifiers/haarcascade_frontalface_alt.xml";
     
     
     
    std::cout<< "model_location = " << det_parameters.model_location << std::endl;
    std::cout<< "face_detector_location = " << det_parameters.face_detector_location << std::endl;
     
-    clnf_model.model_location_clnf = "/usr/local/model/main_clnf_general.txt";
-    clnf_model.face_detector_location_clnf = "/usr/local/classifiers/haarcascade_frontalface_alt.xml";
+    clnf_model.model_location_clnf = "/usr/local/lib/model/main_clnf_general.txt";
+    clnf_model.face_detector_location_clnf = "/usr/local/lib/classifiers/haarcascade_frontalface_alt.xml";
    // clnf_model.model_location_clnf = std::string("/usr/local/model/main_clnf_general.txt");
    // clnf_model.face_detector_location_clnf = std::string("/usr/local/classifiers/haarcascade_frontalface_alt.xml");
     
@@ -154,8 +154,8 @@ int detectEye(cv::Mat face)
 	{
 		for (int i = 0; i < eyes.size(); i++)
 		{
-            //comment cv::rectangle
-//            cv::rectangle(face, eyes[i], cv::Scalar(255, 255, 255), 10);
+            //Comment
+			//cv::rectangle(face, eyes[i], cv::Scalar(255, 255, 255), 10);
 		}
 	}
 

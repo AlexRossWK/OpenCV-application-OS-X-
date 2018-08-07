@@ -31,6 +31,9 @@ class FatigueControlService {
         NSApplication.shared.terminate(self)
     }
     
+    func writeMAC(mac: String) {
+        objcClass.writeMAC(mac)
+    }
     
 //    func currentStatus() -> String {
 //        print("status" + objcClass.getStatus())

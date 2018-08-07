@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Vigor</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>x86_64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8</string>
+				<key>dateExpires</key>
+				<string>25.07.2019</string>
+				<key>type</key>
+				<string>Mac Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>com.apple.security.app-sandbox</key>
+				<true/>
+				<key>com.apple.security.device.camera</key>
+				<true/>
+				<key>com.apple.security.device.microphone</key>
+				<true/>
+				<key>com.apple.security.device.usb</key>
+				<true/>
+				<key>com.apple.security.files.user-selected.read-only</key>
+				<true/>
+				<key>com.apple.security.network.client</key>
+				<true/>
+				<key>com.apple.security.network.server</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>Vigor.app</string>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>23NWH89XSR</string>
+				<key>name</key>
+				<string>RentaTeam OOO</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

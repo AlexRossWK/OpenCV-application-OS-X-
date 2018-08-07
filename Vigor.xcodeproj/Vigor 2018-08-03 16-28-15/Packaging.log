@@ -1,0 +1,604 @@
+2018-08-03 13:28:06 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7fbecc97e0e0; archive(resolved)='<IDEArchive: 0x7fbec5c95ed0>', distributionTask(resolved)='2', distributionMethod(resolved)='<IDEDistributionMethodDevelopmentSignedMac: 0x7fbecca2ace0>', team(resolved)='<IDEProvisioningBasicTeam: 0x7fbeae823630; teamID='23NWH89XSR', teamName='RentaTeam OOO'>'>
+	Chain (10, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7fbecc97e0e0; archive = '<IDEArchive: 0x7fbec5c95ed0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fbecca2ace0>', team='<IDEProvisioningBasicTeam: 0x7fbeae823630; teamID='23NWH89XSR', teamName='RentaTeam OOO'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7fbec6f761e0; archive = '<IDEArchive: 0x7fbec5c95ed0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fbecca2ace0>', team='<IDEProvisioningBasicTeam: 0x7fbeae823630; teamID='23NWH89XSR', teamName='RentaTeam OOO'>'>
+	<IDEDistributionContext: 0x7fbeb1d47690; archive = '<IDEArchive: 0x7fbec5c95ed0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fbecca2ace0>', team='<IDEProvisioningBasicTeam: 0x7fbeae823630; teamID='23NWH89XSR', teamName='RentaTeam OOO'>'>
+	<IDEDistributionContext: 0x7fbeb1db1aa0; archive = '<IDEArchive: 0x7fbec5c95ed0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fbecca2ace0>', team='<IDEProvisioningBasicTeam: 0x7fbeae823630; teamID='23NWH89XSR', teamName='RentaTeam OOO'>'>
+	<IDEDistributionContext: 0x7fbec6053670; archive = '<IDEArchive: 0x7fbec5c95ed0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fbecca2ace0>', team='<IDEProvisioningBasicTeam: 0x7fbeae823630; teamID='23NWH89XSR', teamName='RentaTeam OOO'>'>
+	<IDEDistributionContext: 0x7fbec6fa54c0; archive = '<IDEArchive: 0x7fbec5c95ed0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fbecca2ace0>', team='<IDEProvisioningBasicTeam: 0x7fbeae823630; teamID='23NWH89XSR', teamName='RentaTeam OOO'>'>
+	<IDEDistributionContext: 0x7fbec6a2e870; archive = '<IDEArchive: 0x7fbec5c95ed0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fbecca2ace0>', team='<IDEProvisioningBasicTeam: 0x7fbeae823630; teamID='23NWH89XSR', teamName='RentaTeam OOO'>'>
+	<IDEDistributionContext: 0x7fbeb1195c70; archive = '<IDEArchive: 0x7fbec5c95ed0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fbecca2ace0>', team='<IDEProvisioningBasicTeam: 0x7fbeae823630; teamID='23NWH89XSR', teamName='RentaTeam OOO'>'>
+	<IDEDistributionContext: 0x7fbeb2199830; archive = '<IDEArchive: 0x7fbec5c95ed0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fbecca2ace0>', team='(null)'>
+	<IDEDistributionContext: 0x7fbeaeac4540; archive = '<IDEArchive: 0x7fbec5c95ed0>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7fbecc97e0e0>
+2018-08-03 13:28:06 +0000  Processing step: IDEDistributionCreateDestRootStep
+2018-08-03 13:28:06 +0000  Processing step: IDEDistributionCopyItemStep
+2018-08-03 13:28:06 +0000  Running /usr/bin/ditto '-V' '/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app'
+2018-08-03 13:28:06 +0000  >>> Copying /Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app 
+2018-08-03 13:28:06 +0000  copying file ./Contents/_CodeSignature/CodeResources ... 
+2018-08-03 13:28:06 +0000  35552 bytes for ./Contents/_CodeSignature/CodeResources
+2018-08-03 13:28:06 +0000  copying file ./Contents/MacOS/Vigor ... 
+2018-08-03 13:28:06 +0000  684432 bytes for ./Contents/MacOS/Vigor
+2018-08-03 13:28:06 +0000  copying file ./Contents/Resources/param.txt ... 
+2018-08-03 13:28:06 +0000  22 bytes for ./Contents/Resources/param.txt
+2018-08-03 13:28:06 +0000  copying file ./Contents/Resources/x64/Release/LandmarkDetectionValidator.obj ... 
+2018-08-03 13:28:06 +0000  3479297 bytes for ./Contents/Resources/x64/Release/LandmarkDetectionValidator.obj
+copying file ./Contents/Resources/x64/Release/1_Testthread.obj ... 
+2018-08-03 13:28:06 +0000  4587424 bytes for ./Contents/Resources/x64/Release/1_Testthread.obj
+copying file ./Contents/Resources/x64/Release/PAW.obj ... 
+2018-08-03 13:28:06 +0000  2517860 bytes for ./Contents/Resources/x64/Release/PAW.obj
+copying file ./Contents/Resources/x64/Release/LandmarkDetectorParameters.obj ... 
+1654631 bytes for ./Contents/Resources/x64/Release/LandmarkDetectorParameters.obj
+copying file ./Contents/Resources/x64/Release/SleepDetect.log ... 
+12710 bytes for ./Contents/Resources/x64/Release/SleepDetect.log
+copying file ./Contents/Resources/x64/Release/CCNF_patch.obj ... 
+2574789 bytes for ./Contents/Resources/x64/Release/CCNF_patch.obj
+copying file ./Contents/Resources/x64/Release/LandmarkDetectorModel.obj ... 
+4332107 bytes for ./Contents/Resources/x64/Release/LandmarkDetectorModel.obj
+copying file ./Contents/Resources/x64/Release/vc140.pdb ... 
+2018-08-03 13:28:06 +0000  3534848 bytes for ./Contents/Resources/x64/Release/vc140.pdb
+copying file ./Contents/Resources/x64/Release/SleepDetect.tlog/SleepDetect.lastbuildstate ... 
+205 bytes for ./Contents/Resources/x64/Release/SleepDetect.tlog/SleepDetect.lastbuildstate
+copying file ./Contents/Resources/x64/Release/SleepDetect.tlog/link.read.1.tlog ... 
+12068 bytes for ./Contents/Resources/x64/Release/SleepDetect.tlog/link.read.1.tlog
+copying file ./Contents/Resources/x64/Release/SleepDetect.tlog/link.command.1.tlog ... 
+6102 bytes for ./Contents/Resources/x64/Release/SleepDetect.tlog/link.command.1.tlog
+copying file ./Contents/Resources/x64/Release/SleepDetect.tlog/link.write.1.tlog ... 
+3618 bytes for ./Contents/Resources/x64/Release/SleepDetect.tlog/link.write.1.tlog
+copying file ./Contents/Resources/x64/Release/SleepDetect.tlog/CL.read.1.tlog ... 
+576138 bytes for ./Contents/Resources/x64/Release/SleepDetect.tlog/CL.read.1.tlog
+copying file ./Contents/Resources/x64/Release/SleepDetect.tlog/CL.command.1.tlog ... 
+16308 bytes for ./Contents/Resources/x64/Release/SleepDetect.tlog/CL.command.1.tlog
+copying file ./Contents/Resources/x64/Release/SleepDetect.tlog/CL.write.1.tlog ... 
+11392 bytes for ./Contents/Resources/x64/Release/SleepDetect.tlog/CL.write.1.tlog
+copying file ./Contents/Resources/x64/Release/LandmarkDetectorFunc.obj ... 
+4560118 bytes for ./Contents/Resources/x64/Release/LandmarkDetectorFunc.obj
+copying file ./Contents/Resources/x64/Release/main.obj ... 
+2018-08-03 13:28:06 +0000  4838 bytes for ./Contents/Resources/x64/Release/main.obj
+copying file ./Contents/Resources/x64/Release/stdafx.obj ... 
+1616286 bytes for ./Contents/Resources/x64/Release/stdafx.obj
+copying file ./Contents/Resources/x64/Release/detect_motion.obj ... 
+1593989 bytes for ./Contents/Resources/x64/Release/detect_motion.obj
+copying file ./Contents/Resources/x64/Release/PDM.obj ... 
+2489970 bytes for ./Contents/Resources/x64/Release/PDM.obj
+copying file ./Contents/Resources/x64/Release/video_decoder.obj ... 
+927932 bytes for ./Contents/Resources/x64/Release/video_decoder.obj
+copying file ./Contents/Resources/x64/Release/LandmarkDetectorUtils.obj ... 
+2018-08-03 13:28:06 +0000  3614233 bytes for ./Contents/Resources/x64/Release/LandmarkDetectorUtils.obj
+copying file ./Contents/Resources/x64/Release/Source.obj ... 
+4842 bytes for ./Contents/Resources/x64/Release/Source.obj
+copying file ./Contents/Resources/x64/Release/TestThread.obj ... 
+4781755 bytes for ./Contents/Resources/x64/Release/TestThread.obj
+copying file ./Contents/Resources/x64/Release/SVR_patch.obj ... 
+2510016 bytes for ./Contents/Resources/x64/Release/SVR_patch.obj
+copying file ./Contents/Resources/x64/Release/GazeEstimation.obj ... 
+2398692 bytes for ./Contents/Resources/x64/Release/GazeEstimation.obj
+copying file ./Contents/Resources/x64/Release/Patch_experts.obj ... 
+3201362 bytes for ./Contents/Resources/x64/Release/Patch_experts.obj
+copying file ./Contents/Resources/x64/Release/FaceDetect.obj ... 
+2387691 bytes for ./Contents/Resources/x64/Release/FaceDetect.obj
+copying file ./Contents/Resources/libcurl/video_decoder.cpp ... 
+7685 bytes for ./Contents/Resources/libcurl/video_decoder.cpp
+copying file ./Contents/Resources/Base.lproj/Main.storyboardc/MainMenu.nib ... 
+2018-08-03 13:28:06 +0000  36129 bytes for ./Contents/Resources/Base.lproj/Main.storyboardc/MainMenu.nib
+2018-08-03 13:28:06 +0000  copying file ./Contents/Resources/Base.lproj/Main.storyboardc/Info.plist ... 
+2018-08-03 13:28:06 +0000  163 bytes for ./Contents/Resources/Base.lproj/Main.storyboardc/Info.plist
+2018-08-03 13:28:06 +0000  copying file ./Contents/Resources/haarcascade2.xml ... 
+2018-08-03 13:28:06 +0000  1092888 bytes for ./Contents/Resources/haarcascade2.xml
+copying file ./Contents/Resources/model/haarAlign.txt ... 
+2018-08-03 13:28:06 +0000  117 bytes for ./Contents/Resources/model/haarAlign.txt
+copying file ./Contents/Resources/model/model_inner/main_clnf_inner.txt ... 
+2018-08-03 13:28:06 +0000  31 bytes for ./Contents/Resources/model/model_inner/main_clnf_inner.txt
+2018-08-03 13:28:06 +0000  copying file ./Contents/Resources/model/model_inner/pdms/pdm_51_inner.txt ... 
+2018-08-03 13:28:06 +0000  48934 bytes for ./Contents/Resources/model/model_inner/pdms/pdm_51_inner.txt
+2018-08-03 13:28:06 +0000  copying file ./Contents/Resources/model/model_inner/patch_experts/ccnf_patches_1.00_inner.txt ... 
+2018-08-03 13:28:06 +0000  2043100 bytes for ./Contents/Resources/model/model_inner/patch_experts/ccnf_patches_1.00_inner.txt
+2018-08-03 13:28:06 +0000  copying file ./Contents/Resources/model/model_inner/clnf_inner.txt ... 
+79 bytes for ./Contents/Resources/model/model_inner/clnf_inner.txt
+copying file ./Contents/Resources/model/tris_68.txt ... 
+5351 bytes for ./Contents/Resources/model/tris_68.txt
+copying file ./Contents/Resources/model/main_clnf_wild.txt ... 
+337 bytes for ./Contents/Resources/model/main_clnf_wild.txt
+copying file ./Contents/Resources/model/pdms/Multi-PIE_aligned_PDM_66.txt ... 
+48093 bytes for ./Contents/Resources/model/pdms/Multi-PIE_aligned_PDM_66.txt
+copying file ./Contents/Resources/model/pdms/In-the-wild_aligned_PDM_68.txt ... 
+69023 bytes for ./Contents/Resources/model/pdms/In-the-wild_aligned_PDM_68.txt
+copying file ./Contents/Resources/model/pdms/Multi-PIE_aligned_PDM_68.txt ... 
+47559 bytes for ./Contents/Resources/model/pdms/Multi-PIE_aligned_PDM_68.txt
+copying file ./Contents/Resources/model/clnf_general.txt ... 
+234 bytes for ./Contents/Resources/model/clnf_general.txt
+copying file ./Contents/Resources/model/main_clm_general.txt ... 
+2018-08-03 13:28:06 +0000  129 bytes for ./Contents/Resources/model/main_clm_general.txt
+copying file ./Contents/Resources/model/tris_68_full.txt ... 
+1076 bytes for ./Contents/Resources/model/tris_68_full.txt
+copying file ./Contents/Resources/model/main_clm_wild.txt ... 
+126 bytes for ./Contents/Resources/model/main_clm_wild.txt
+copying file ./Contents/Resources/model/clm_wild.txt ... 
+236 bytes for ./Contents/Resources/model/clm_wild.txt
+copying file ./Contents/Resources/model/clm-z.txt ... 
+386 bytes for ./Contents/Resources/model/clm-z.txt
+copying file ./Contents/Resources/model/model_eye/pdms/pdm_28_l_eye_3D_closed.txt ... 
+9304 bytes for ./Contents/Resources/model/model_eye/pdms/pdm_28_l_eye_3D_closed.txt
+copying file ./Contents/Resources/model/model_eye/pdms/pdm_28_eye_3D_closed.txt ... 
+2018-08-03 13:28:06 +0000  9318 bytes for ./Contents/Resources/model/model_eye/pdms/pdm_28_eye_3D_closed.txt
+copying file ./Contents/Resources/model/model_eye/clnf_left_synth.txt ... 
+2018-08-03 13:28:06 +0000  164 bytes for ./Contents/Resources/model/model_eye/clnf_left_synth.txt
+2018-08-03 13:28:06 +0000  copying file ./Contents/Resources/model/model_eye/main_clnf_synth_right.txt ... 
+37 bytes for ./Contents/Resources/model/model_eye/main_clnf_synth_right.txt
+copying file ./Contents/Resources/model/model_eye/clnf_right_synth.txt ... 
+151 bytes for ./Contents/Resources/model/model_eye/clnf_right_synth.txt
+copying file ./Contents/Resources/model/model_eye/main_clnf_synth_left.txt ... 
+36 bytes for ./Contents/Resources/model/model_eye/main_clnf_synth_left.txt
+copying file ./Contents/Resources/model/model_eye/patch_experts/ccnf_patches_1.00_synth_lid_.txt ... 
+2018-08-03 13:28:06 +0000  104368 bytes for ./Contents/Resources/model/model_eye/patch_experts/ccnf_patches_1.00_synth_lid_.txt
+copying file ./Contents/Resources/model/model_eye/patch_experts/left_ccnf_patches_1.00_synth_lid_.txt ... 
+2018-08-03 13:28:06 +0000  104384 bytes for ./Contents/Resources/model/model_eye/patch_experts/left_ccnf_patches_1.00_synth_lid_.txt
+copying file ./Contents/Resources/model/model_eye/patch_experts/left_ccnf_patches_1.50_synth_lid_.txt ... 
+2018-08-03 13:28:06 +0000  104384 bytes for ./Contents/Resources/model/model_eye/patch_experts/left_ccnf_patches_1.50_synth_lid_.txt
+copying file ./Contents/Resources/model/model_eye/patch_experts/ccnf_patches_1.50_synth_lid_.txt ... 
+2018-08-03 13:28:06 +0000  104368 bytes for ./Contents/Resources/model/model_eye/patch_experts/ccnf_patches_1.50_synth_lid_.txt
+2018-08-03 13:28:06 +0000  copying file ./Contents/Resources/model/main_clnf_general.txt ... 
+2018-08-03 13:28:06 +0000  992 bytes for ./Contents/Resources/model/main_clnf_general.txt
+2018-08-03 13:28:06 +0000  copying file ./Contents/Resources/model/patch_experts/svr_patches_0.35_general.txt ... 
+2018-08-03 13:28:06 +0000  1129079 bytes for ./Contents/Resources/model/patch_experts/svr_patches_0.35_general.txt
+2018-08-03 13:28:06 +0000  copying file ./Contents/Resources/model/patch_experts/ccnf_patches_0.25_wild.txt ... 
+2018-08-03 13:28:06 +0000  1655664 bytes for ./Contents/Resources/model/patch_experts/ccnf_patches_0.25_wild.txt
+copying file ./Contents/Resources/model/patch_experts/svr_patches_0.25_general.txt ... 
+2018-08-03 13:28:06 +0000  1128083 bytes for ./Contents/Resources/model/patch_experts/svr_patches_0.25_general.txt
+copying file ./Contents/Resources/model/patch_experts/ccnf_patches_0.5_wild.txt ... 
+1655664 bytes for ./Contents/Resources/model/patch_experts/ccnf_patches_0.5_wild.txt
+copying file ./Contents/Resources/model/patch_experts/depth_patches_0.35.txt ... 
+709160 bytes for ./Contents/Resources/model/patch_experts/depth_patches_0.35.txt
+copying file ./Contents/Resources/model/patch_experts/intensity_patches_0.25.txt ... 
+1405342 bytes for ./Contents/Resources/model/patch_experts/intensity_patches_0.25.txt
+copying file ./Contents/Resources/model/patch_experts/ccnf_patches_1_wild.txt ... 
+2018-08-03 13:28:06 +0000  1655664 bytes for ./Contents/Resources/model/patch_experts/ccnf_patches_1_wild.txt
+copying file ./Contents/Resources/model/patch_experts/intensity_patches_0.35.txt ... 
+1406116 bytes for ./Contents/Resources/model/patch_experts/intensity_patches_0.35.txt
+copying file ./Contents/Resources/model/patch_experts/depth_patches_0.25.txt ... 
+708690 bytes for ./Contents/Resources/model/patch_experts/depth_patches_0.25.txt
+copying file ./Contents/Resources/model/patch_experts/ccnf_patches_0.35_wild.txt ... 
+1655664 bytes for ./Contents/Resources/model/patch_experts/ccnf_patches_0.35_wild.txt
+copying file ./Contents/Resources/model/patch_experts/intensity_patches_0.5.txt ... 
+1407139 bytes for ./Contents/Resources/model/patch_experts/intensity_patches_0.5.txt
+copying file ./Contents/Resources/model/patch_experts/depth_patches_0.5.txt ... 
+2018-08-03 13:28:07 +0000  709195 bytes for ./Contents/Resources/model/patch_experts/depth_patches_0.5.txt
+copying file ./Contents/Resources/model/patch_experts/svr_patches_0.35_wild.txt ... 
+487955 bytes for ./Contents/Resources/model/patch_experts/svr_patches_0.35_wild.txt
+copying file ./Contents/Resources/model/patch_experts/ccnf_patches_0.5_general.txt ... 
+2429528 bytes for ./Contents/Resources/model/patch_experts/ccnf_patches_0.5_general.txt
+copying file ./Contents/Resources/model/patch_experts/ccnf_patches_0.25_general.txt ... 
+2429528 bytes for ./Contents/Resources/model/patch_experts/ccnf_patches_0.25_general.txt
+copying file ./Contents/Resources/model/patch_experts/svr_patches_0.5_wild.txt ... 
+488488 bytes for ./Contents/Resources/model/patch_experts/svr_patches_0.5_wild.txt
+copying file ./Contents/Resources/model/patch_experts/svr_patches_0.25_wild.txt ... 
+487313 bytes for ./Contents/Resources/model/patch_experts/svr_patches_0.25_wild.txt
+copying file ./Contents/Resources/model/patch_experts/ccnf_patches_0.35_general.txt ... 
+2429528 bytes for ./Contents/Resources/model/patch_experts/ccnf_patches_0.35_general.txt
+copying file ./Contents/Resources/model/patch_experts/svr_patches_0.5_general.txt ... 
+1129923 bytes for ./Contents/Resources/model/patch_experts/svr_patches_0.5_general.txt
+copying file ./Contents/Resources/model/tris_66.txt ... 
+4973 bytes for ./Contents/Resources/model/tris_66.txt
+copying file ./Contents/Resources/model/clnf_wild.txt ... 
+275 bytes for ./Contents/Resources/model/clnf_wild.txt
+copying file ./Contents/Resources/model/clm_general.txt ... 
+245 bytes for ./Contents/Resources/model/clm_general.txt
+copying file ./Contents/Resources/model/detection_validation/validator_general_68.txt ... 
+370728 bytes for ./Contents/Resources/model/detection_validation/validator_general_68.txt
+copying file ./Contents/Resources/model/detection_validation/validator_general_66.txt ... 
+565596 bytes for ./Contents/Resources/model/detection_validation/validator_general_66.txt
+copying file ./Contents/Resources/model/main_clm-z.txt ... 
+123 bytes for ./Contents/Resources/model/main_clm-z.txt
+copying file ./Contents/Resources/test_console/main.cpp ... 
+619 bytes for ./Contents/Resources/test_console/main.cpp
+copying file ./Contents/Resources/uid.txt ... 
+2776 bytes for ./Contents/Resources/uid.txt
+copying file ./Contents/Resources/classifiers/haarcascade_profileface.xml ... 
+2018-08-03 13:28:07 +0000  828514 bytes for ./Contents/Resources/classifiers/haarcascade_profileface.xml
+copying file ./Contents/Resources/classifiers/haarcascade_frontalface_alt2.xml ... 
+540616 bytes for ./Contents/Resources/classifiers/haarcascade_frontalface_alt2.xml
+copying file ./Contents/Resources/classifiers/haarcascade_frontalface_alt_tree.xml ... 
+2689040 bytes for ./Contents/Resources/classifiers/haarcascade_frontalface_alt_tree.xml
+copying file ./Contents/Resources/classifiers/haarcascade_frontalface_alt.xml ... 
+676709 bytes for ./Contents/Resources/classifiers/haarcascade_frontalface_alt.xml
+copying file ./Contents/Resources/classifiers/haarcascade_frontalface_default.xml ... 
+930127 bytes for ./Contents/Resources/classifiers/haarcascade_frontalface_default.xml
+copying file ./Contents/Frameworks/libswiftAppKit.dylib ... 
+166832 bytes for ./Contents/Frameworks/libswiftAppKit.dylib
+copying file ./Contents/Frameworks/libswiftCoreImage.dylib ... 
+40352 bytes for ./Contents/Frameworks/libswiftCoreImage.dylib
+copying file ./Contents/Frameworks/libswiftObjectiveC.dylib ... 
+60928 bytes for ./Contents/Frameworks/libswiftObjectiveC.dylib
+copying file ./Contents/Frameworks/libswiftXPC.dylib ... 
+35952 bytes for ./Contents/Frameworks/libswiftXPC.dylib
+copying file ./Contents/Frameworks/libswiftCore.dylib ... 
+6151776 bytes for ./Contents/Frameworks/libswiftCore.dylib
+copying file ./Contents/Frameworks/libswiftCoreGraphics.dylib ... 
+188160 bytes for ./Contents/Frameworks/libswiftCoreGraphics.dylib
+copying file ./Contents/Frameworks/libswiftMetal.dylib ... 
+68784 bytes for ./Contents/Frameworks/libswiftMetal.dylib
+copying file ./Contents/Frameworks/libswiftCoreData.dylib ... 
+95808 bytes for ./Contents/Frameworks/libswiftCoreData.dylib
+copying file ./Contents/Frameworks/libswiftDispatch.dylib ... 
+302288 bytes for ./Contents/Frameworks/libswiftDispatch.dylib
+copying file ./Contents/Frameworks/libswiftos.dylib ... 
+49456 bytes for ./Contents/Frameworks/libswiftos.dylib
+copying file ./Contents/Frameworks/libswiftCoreFoundation.dylib ... 
+31888 bytes for ./Contents/Frameworks/libswiftCoreFoundation.dylib
+copying file ./Contents/Frameworks/libswiftDarwin.dylib ... 
+89488 bytes for ./Contents/Frameworks/libswiftDarwin.dylib
+copying file ./Contents/Frameworks/libswiftQuartzCore.dylib ... 
+52368 bytes for ./Contents/Frameworks/libswiftQuartzCore.dylib
+copying file ./Contents/Frameworks/libswiftIOKit.dylib ... 
+36064 bytes for ./Contents/Frameworks/libswiftIOKit.dylib
+copying file ./Contents/Frameworks/libswiftCoreAudio.dylib ... 
+72784 bytes for ./Contents/Frameworks/libswiftCoreAudio.dylib
+copying file ./Contents/Frameworks/libswiftAVFoundation.dylib ... 
+100320 bytes for ./Contents/Frameworks/libswiftAVFoundation.dylib
+copying file ./Contents/Frameworks/libswiftFoundation.dylib ... 
+2018-08-03 13:28:07 +0000  2018-08-03 13:28:07 +0000  /usr/bin/ditto exited with 0
+2018-08-03 13:28:07 +0000  2849216 bytes for ./Contents/Frameworks/libswiftFoundation.dylib
+copying file ./Contents/Frameworks/libswiftCoreMedia.dylib ... 
+73344 bytes for ./Contents/Frameworks/libswiftCoreMedia.dylib
+copying file ./Contents/Frameworks/libswiftsimd.dylib ... 
+589280 bytes for ./Contents/Frameworks/libswiftsimd.dylib
+copying file ./Contents/Info.plist ... 
+1796 bytes for ./Contents/Info.plist
+copying file ./Contents/PkgInfo ... 
+8 bytes for ./Contents/PkgInfo
+
+2018-08-03 13:28:07 +0000  Processing step: IDEDistributionEmbedProfileStep
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeccbcae50 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7fbecc84f000:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftAVFoundation.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeaee5a9d0 'com.apple.dt.runtime.swiftAppKit' '<DVTFilePath:0x7fbeb206b5b0:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftAppKit.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeae842c60 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fbec858ae50:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCore.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeb1c45360 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7fbeaee8ac70:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreAudio.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeb1f57d20 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fbeacc3cf60:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreData.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeae8faea0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fbeb037e680:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreFoundation.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeb20376e0 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fbeb1a0f900:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreGraphics.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbec4665900 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fbec6d6a460:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreImage.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeb198a380 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7fbecc9b8740:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreMedia.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbec66d48f0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fbeae9b6620:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftDarwin.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbecca226c0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fbeb1a23310:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftDispatch.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeb1f34da0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fbeb07e7f20:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftFoundation.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeb21b81f0 'com.apple.dt.runtime.swiftIOKit' '<DVTFilePath:0x7fbeaea00660:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftIOKit.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeb21b6f90 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fbeb16bfd10:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftMetal.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeb12e45b0 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fbeaec07010:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftObjectiveC.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbec59a2200 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fbeaece50d0:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftQuartzCore.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeb207efc0 'com.apple.dt.runtime.swiftXPC' '<DVTFilePath:0x7fbeb12cd350:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftXPC.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeaee44620 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fbeb12b24c0:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftos.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeb18461e0 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7fbec464f280:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftsimd.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fbeb1c91500 'rentateam.Vigor.com' '<DVTFilePath:0x7fbeb052b840:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app'>'>
+2018-08-03 13:28:07 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2018-08-03 13:28:07 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2018-08-03 13:28:07 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2018-08-03 13:28:07 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-08-03 13:28:07 +0000  Processing step: IDEDistributionSymbolsStep
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-08-03 13:28:07 +0000  Processing step: IDEDistributionAppThinningStep
+2018-08-03 13:28:07 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2018-08-03 13:28:07 +0000  Processing step: IDEDistributionODRStep
+2018-08-03 13:28:07 +0000  Processing step: IDEDistributionStripXattrsStep
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeccbcae50 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7fbecc84f000:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftAVFoundation.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeaee5a9d0 'com.apple.dt.runtime.swiftAppKit' '<DVTFilePath:0x7fbeb206b5b0:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftAppKit.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeae842c60 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fbec858ae50:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCore.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeb1c45360 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7fbeaee8ac70:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreAudio.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeb1f57d20 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fbeacc3cf60:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreData.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeae8faea0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fbeb037e680:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreFoundation.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeb20376e0 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fbeb1a0f900:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreGraphics.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbec4665900 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fbec6d6a460:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreImage.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeb198a380 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7fbecc9b8740:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreMedia.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbec66d48f0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fbeae9b6620:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftDarwin.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbecca226c0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fbeb1a23310:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftDispatch.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeb1f34da0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fbeb07e7f20:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftFoundation.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeb21b81f0 'com.apple.dt.runtime.swiftIOKit' '<DVTFilePath:0x7fbeaea00660:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftIOKit.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeb21b6f90 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fbeb16bfd10:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftMetal.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeb12e45b0 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fbeaec07010:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftObjectiveC.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbec59a2200 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fbeaece50d0:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftQuartzCore.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeb207efc0 'com.apple.dt.runtime.swiftXPC' '<DVTFilePath:0x7fbeb12cd350:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftXPC.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeaee44620 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fbeb12b24c0:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftos.dylib'>'>
+2018-08-03 13:28:07 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fbeb18461e0 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7fbec464f280:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftsimd.dylib'>'>
+2018-08-03 13:28:07 +0000  Running /usr/bin/xattr '-crs' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app'
+2018-08-03 13:28:07 +0000  2018-08-03 13:28:07 +0000  /usr/bin/xattr exited with 0
+
+2018-08-03 13:28:07 +0000  2018-08-03 13:28:07 +0000  Processing step: IDEDistributionCodesignStep
+
+2018-08-03 13:28:07 +0000  Entitlements for <IDEDistributionItem: 0x7fbeccbcae50 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7fbecc84f000:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftAVFoundation.dylib'>'>: {
+}
+2018-08-03 13:28:07 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeccbcae50 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7fbecc84f000:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftAVFoundation.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementscOtWsS
+2018-08-03 13:28:07 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementscOtWsS' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftAVFoundation.dylib'
+2018-08-03 13:28:07 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftAVFoundation.dylib: replacing existing signature
+2018-08-03 13:28:07 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftAVFoundation.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftAVFoundation]
+2018-08-03 13:28:07 +0000  
+2018-08-03 13:28:07 +0000  
+2018-08-03 13:28:07 +0000  
+2018-08-03 13:28:07 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:07 +0000  2018-08-03 13:28:07 +0000  
+
+2018-08-03 13:28:07 +0000  Entitlements for <IDEDistributionItem: 0x7fbeaee5a9d0 'com.apple.dt.runtime.swiftAppKit' '<DVTFilePath:0x7fbeb206b5b0:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftAppKit.dylib'>'>: {
+}
+2018-08-03 13:28:07 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeaee5a9d0 'com.apple.dt.runtime.swiftAppKit' '<DVTFilePath:0x7fbeb206b5b0:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftAppKit.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsbf5BUv
+2018-08-03 13:28:07 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsbf5BUv' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftAppKit.dylib'
+2018-08-03 13:28:08 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftAppKit.dylib: replacing existing signature
+2018-08-03 13:28:08 +0000  
+2018-08-03 13:28:08 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftAppKit.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftAppKit]
+2018-08-03 13:28:08 +0000  
+2018-08-03 13:28:08 +0000  
+2018-08-03 13:28:08 +0000  2018-08-03 13:28:08 +0000  /usr/bin/codesign exited with 0
+
+2018-08-03 13:28:08 +0000  Entitlements for <IDEDistributionItem: 0x7fbeae842c60 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fbec858ae50:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCore.dylib'>'>: {
+}
+2018-08-03 13:28:08 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeae842c60 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fbec858ae50:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCore.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementseD8OZc
+2018-08-03 13:28:08 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementseD8OZc' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCore.dylib'
+2018-08-03 13:28:08 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCore.dylib: replacing existing signature
+2018-08-03 13:28:08 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCore.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftCore]
+2018-08-03 13:28:08 +0000  
+2018-08-03 13:28:08 +0000  
+2018-08-03 13:28:08 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:08 +0000  
+2018-08-03 13:28:08 +0000  
+2018-08-03 13:28:08 +0000  Entitlements for <IDEDistributionItem: 0x7fbeb1c45360 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7fbeaee8ac70:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreAudio.dylib'>'>: {
+}
+2018-08-03 13:28:08 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeb1c45360 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7fbeaee8ac70:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreAudio.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsiUXQIW
+2018-08-03 13:28:08 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsiUXQIW' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreAudio.dylib'
+2018-08-03 13:28:08 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreAudio.dylib: replacing existing signature
+2018-08-03 13:28:08 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreAudio.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftCoreAudio]
+2018-08-03 13:28:08 +0000  
+2018-08-03 13:28:08 +0000  
+2018-08-03 13:28:08 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:08 +0000  
+2018-08-03 13:28:08 +0000  Entitlements for <IDEDistributionItem: 0x7fbeb1f57d20 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fbeacc3cf60:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreData.dylib'>'>: {
+}
+2018-08-03 13:28:08 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeb1f57d20 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fbeacc3cf60:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreData.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsgz7CR4
+2018-08-03 13:28:08 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsgz7CR4' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreData.dylib'
+2018-08-03 13:28:08 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreData.dylib: replacing existing signature
+2018-08-03 13:28:08 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreData.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftCoreData]
+2018-08-03 13:28:08 +0000  
+2018-08-03 13:28:08 +0000  
+2018-08-03 13:28:08 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:08 +0000  2018-08-03 13:28:08 +0000  
+
+2018-08-03 13:28:08 +0000  Entitlements for <IDEDistributionItem: 0x7fbeae8faea0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fbeb037e680:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreFoundation.dylib'>'>: {
+}
+2018-08-03 13:28:08 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeae8faea0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fbeb037e680:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreFoundation.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlements3R1QZi
+2018-08-03 13:28:08 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlements3R1QZi' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreFoundation.dylib'
+2018-08-03 13:28:09 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreFoundation.dylib: replacing existing signature
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreFoundation.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftCoreFoundation]
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  Entitlements for <IDEDistributionItem: 0x7fbeb20376e0 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fbeb1a0f900:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreGraphics.dylib'>'>: {
+}
+2018-08-03 13:28:09 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeb20376e0 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fbeb1a0f900:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreGraphics.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementseThSnz
+2018-08-03 13:28:09 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementseThSnz' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreGraphics.dylib'
+2018-08-03 13:28:09 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreGraphics.dylib: replacing existing signature
+2018-08-03 13:28:09 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreGraphics.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftCoreGraphics]
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  Entitlements for <IDEDistributionItem: 0x7fbec4665900 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fbec6d6a460:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreImage.dylib'>'>: {
+}
+2018-08-03 13:28:09 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbec4665900 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fbec6d6a460:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreImage.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsUCDR10
+2018-08-03 13:28:09 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsUCDR10' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreImage.dylib'
+2018-08-03 13:28:09 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreImage.dylib: replacing existing signature
+2018-08-03 13:28:09 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreImage.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftCoreImage]
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  2018-08-03 13:28:09 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:09 +0000  
+
+2018-08-03 13:28:09 +0000  Entitlements for <IDEDistributionItem: 0x7fbeb198a380 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7fbecc9b8740:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreMedia.dylib'>'>: {
+}
+2018-08-03 13:28:09 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeb198a380 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7fbecc9b8740:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftCoreMedia.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlements7CJ1gQ
+2018-08-03 13:28:09 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlements7CJ1gQ' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreMedia.dylib'
+2018-08-03 13:28:09 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreMedia.dylib: replacing existing signature
+2018-08-03 13:28:09 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftCoreMedia.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftCoreMedia]
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  2018-08-03 13:28:09 +0000  /usr/bin/codesign exited with 0
+
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  Entitlements for <IDEDistributionItem: 0x7fbec66d48f0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fbeae9b6620:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftDarwin.dylib'>'>: {
+}
+2018-08-03 13:28:09 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbec66d48f0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fbeae9b6620:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftDarwin.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsbpLqcf
+2018-08-03 13:28:09 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsbpLqcf' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftDarwin.dylib'
+2018-08-03 13:28:09 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftDarwin.dylib: replacing existing signature
+2018-08-03 13:28:09 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftDarwin.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftDarwin]
+2018-08-03 13:28:09 +0000  
+2018-08-03 13:28:09 +0000  2018-08-03 13:28:09 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:09 +0000  
+
+2018-08-03 13:28:09 +0000  Entitlements for <IDEDistributionItem: 0x7fbecca226c0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fbeb1a23310:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftDispatch.dylib'>'>: {
+}
+2018-08-03 13:28:09 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbecca226c0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fbeb1a23310:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftDispatch.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsMBnpub
+2018-08-03 13:28:09 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsMBnpub' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftDispatch.dylib'
+2018-08-03 13:28:10 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftDispatch.dylib: replacing existing signature
+2018-08-03 13:28:10 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftDispatch.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftDispatch]
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:10 +0000  2018-08-03 13:28:10 +0000  Entitlements for <IDEDistributionItem: 0x7fbeb1f34da0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fbeb07e7f20:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftFoundation.dylib'>'>: {
+}
+2018-08-03 13:28:10 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeb1f34da0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fbeb07e7f20:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftFoundation.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsd9KOnl
+
+2018-08-03 13:28:10 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsd9KOnl' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftFoundation.dylib'
+2018-08-03 13:28:10 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftFoundation.dylib: replacing existing signature
+2018-08-03 13:28:10 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftFoundation.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftFoundation]
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  Entitlements for <IDEDistributionItem: 0x7fbeb21b81f0 'com.apple.dt.runtime.swiftIOKit' '<DVTFilePath:0x7fbeaea00660:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftIOKit.dylib'>'>: {
+}
+2018-08-03 13:28:10 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeb21b81f0 'com.apple.dt.runtime.swiftIOKit' '<DVTFilePath:0x7fbeaea00660:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftIOKit.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlements6dupeN
+2018-08-03 13:28:10 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlements6dupeN' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftIOKit.dylib'
+2018-08-03 13:28:10 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftIOKit.dylib: replacing existing signature
+2018-08-03 13:28:10 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftIOKit.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftIOKit]
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  /usr/bin/codesign exited with 0
+
+2018-08-03 13:28:10 +0000  2018-08-03 13:28:10 +0000  
+
+2018-08-03 13:28:10 +0000  Entitlements for <IDEDistributionItem: 0x7fbeb21b6f90 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fbeb16bfd10:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftMetal.dylib'>'>: {
+}
+2018-08-03 13:28:10 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeb21b6f90 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fbeb16bfd10:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftMetal.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsB5sMZ3
+2018-08-03 13:28:10 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsB5sMZ3' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftMetal.dylib'
+2018-08-03 13:28:10 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftMetal.dylib: replacing existing signature
+2018-08-03 13:28:10 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftMetal.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftMetal]
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:10 +0000  2018-08-03 13:28:10 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:10 +0000  
+
+2018-08-03 13:28:10 +0000  Entitlements for <IDEDistributionItem: 0x7fbeb12e45b0 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fbeaec07010:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftObjectiveC.dylib'>'>: {
+}
+2018-08-03 13:28:10 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeb12e45b0 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fbeaec07010:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftObjectiveC.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsdqwJYn
+2018-08-03 13:28:10 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsdqwJYn' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftObjectiveC.dylib'
+2018-08-03 13:28:10 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftObjectiveC.dylib: replacing existing signature
+2018-08-03 13:28:10 +0000  
+2018-08-03 13:28:11 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftObjectiveC.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftObjectiveC]
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  Entitlements for <IDEDistributionItem: 0x7fbec59a2200 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fbeaece50d0:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftQuartzCore.dylib'>'>: {
+}
+2018-08-03 13:28:11 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbec59a2200 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fbeaece50d0:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftQuartzCore.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsNFe9CD
+2018-08-03 13:28:11 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsNFe9CD' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftQuartzCore.dylib'
+2018-08-03 13:28:11 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftQuartzCore.dylib: replacing existing signature
+2018-08-03 13:28:11 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftQuartzCore.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftQuartzCore]
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  2018-08-03 13:28:11 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:11 +0000  
+
+2018-08-03 13:28:11 +0000  Entitlements for <IDEDistributionItem: 0x7fbeb207efc0 'com.apple.dt.runtime.swiftXPC' '<DVTFilePath:0x7fbeb12cd350:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftXPC.dylib'>'>: {
+}
+2018-08-03 13:28:11 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeb207efc0 'com.apple.dt.runtime.swiftXPC' '<DVTFilePath:0x7fbeb12cd350:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftXPC.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementslhXv7p
+2018-08-03 13:28:11 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementslhXv7p' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftXPC.dylib'
+2018-08-03 13:28:11 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftXPC.dylib: replacing existing signature
+2018-08-03 13:28:11 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftXPC.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftXPC]
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  2018-08-03 13:28:11 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:11 +0000  
+
+2018-08-03 13:28:11 +0000  Entitlements for <IDEDistributionItem: 0x7fbeaee44620 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fbeb12b24c0:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftos.dylib'>'>: {
+}
+2018-08-03 13:28:11 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeaee44620 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fbeb12b24c0:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftos.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsdTPjyU
+2018-08-03 13:28:11 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsdTPjyU' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftos.dylib'
+2018-08-03 13:28:11 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftos.dylib: replacing existing signature
+2018-08-03 13:28:11 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftos.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftos]
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  Entitlements for <IDEDistributionItem: 0x7fbeb18461e0 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7fbec464f280:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftsimd.dylib'>'>: {
+}
+2018-08-03 13:28:11 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeb18461e0 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7fbec464f280:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app/Contents/Frameworks/libswiftsimd.dylib'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsKFWjCs
+2018-08-03 13:28:11 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsKFWjCs' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftsimd.dylib'
+2018-08-03 13:28:11 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftsimd.dylib: replacing existing signature
+2018-08-03 13:28:11 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app/Contents/Frameworks/libswiftsimd.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftsimd]
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  
+2018-08-03 13:28:11 +0000  2018-08-03 13:28:11 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:11 +0000  
+
+2018-08-03 13:28:11 +0000  Entitlements for <IDEDistributionItem: 0x7fbeb1c91500 'rentateam.Vigor.com' '<DVTFilePath:0x7fbeb052b840:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app'>'>: {
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.device.camera" = 1;
+    "com.apple.security.device.microphone" = 1;
+    "com.apple.security.device.usb" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+    "com.apple.security.network.client" = 1;
+    "com.apple.security.network.server" = 1;
+}
+2018-08-03 13:28:11 +0000  Writing entitlements for <IDEDistributionItem: 0x7fbeb1c91500 'rentateam.Vigor.com' '<DVTFilePath:0x7fbeb052b840:'/Users/alexross/Desktop/XcodeArchives/2018-08-03/Vigor 03.08.2018, 16.27.xcarchive/Products/Applications/Vigor.app'>'> to: /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsMu6H1s
+2018-08-03 13:28:11 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '3647F9E141EF3AED163BE70564D7A1BC4DA0FFC8' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/entitlementsMu6H1s' '/var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app'
+2018-08-03 13:28:11 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app: replacing existing signature
+2018-08-03 13:28:12 +0000  /var/folders/pw/hh97zfjn5lgf6sx5g9w8kwhc0000gn/T/XcodeDistPipeline.m2a/Root/Applications/Vigor.app: signed app bundle with Mach-O thin (x86_64) [rentateam.Vigor.com]
+2018-08-03 13:28:12 +0000  
+2018-08-03 13:28:12 +0000  
+2018-08-03 13:28:12 +0000  
+2018-08-03 13:28:12 +0000  
+2018-08-03 13:28:12 +0000  /usr/bin/codesign exited with 0
+2018-08-03 13:28:12 +0000  
+2018-08-03 13:28:12 +0000  Processing step: IDEDistributionStreamingZipItemStep
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-08-03 13:28:12 +0000  Processing step: IDEDistributionSkipPackagingStep
+2018-08-03 13:28:12 +0000  Processing step: IDEDistributionCreateManifestStep
+2018-08-03 13:28:12 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so

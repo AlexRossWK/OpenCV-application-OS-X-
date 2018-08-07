@@ -20,4 +20,5 @@
 -(void)startDetect:(NSString *)mac;
 -(void)stopDetect;
 //-(NSString *)getStatus;
+-(void)writeMAC:(NSString *)mac;
 @end

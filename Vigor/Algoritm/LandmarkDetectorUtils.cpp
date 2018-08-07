@@ -1305,8 +1305,8 @@ namespace LandmarkDetector
 
 		//test
 		cv::Point textOrg(10, 10);
-        //comment cv::rectangle
-//        cv::rectangle(img, cv::Rect(0, 0, img.cols, img.rows), cv::Scalar(0, 0, 0), -1, cv::LINE_8, 0);
+        //Comment
+//        cv::rectangle(img, cv::Rect(0, 0, img.cols, img.rows), cv::Scalar(0, 0, 0), -1);
 
 		//cv::putText(img, text, textOrg, fontFace, fontScale, cv::Scalar::all(255), thickness, 8);
 

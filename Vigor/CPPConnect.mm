@@ -10,7 +10,6 @@
 
 #import <Foundation/Foundation.h>
 #import "CPPConnectHeader.h"
-#import <opencv2/opencv.hpp>
 
 @implementation MyOCPPClass
 
@@ -38,5 +37,9 @@
 //    return status;
 //}
 
+- (void)writeMAC:(NSString *)mac
+{
+    
+}
 
 @end

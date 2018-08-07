@@ -1,7 +1,8 @@
 #pragma once
-#include "FaceDetect.h"
+
 #include "opencv2/opencv.hpp"
 #include <iostream>
+#include "FaceDetect.h"
 
 #include <iostream>
 #include <vector>
@@ -10,7 +11,7 @@
 
 
 //mac
-//#include "winsock2.h"
+//#include <winsock2.h>
 //#include <iphlpapi.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,13 +28,11 @@
 class SleepDetect
 {
 private:
-	bool stop = false;
+	//bool stop = false;
 	
 public:
-	void Start();
+	void Start(std::string id_device);
 	
 	void Stop();
-
-	std::string GetStatus();
 };
 

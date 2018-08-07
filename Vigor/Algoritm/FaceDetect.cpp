@@ -20,16 +20,16 @@ bool Inits()
     
     // det_parameters.model_location = std::string("/usr/local/model/main_clnf_general.txt");
      //det_parameters.face_detector_location = std::string("/usr/local/classifiers/haarcascade_frontalface_alt.xml");
-    det_parameters.model_location = "model/main_clnf_general.txt";
-    det_parameters.face_detector_location = "classifiers/haarcascade_frontalface_alt.xml";
+    det_parameters.model_location = "/usr/local/model/main_clnf_general.txt";
+    det_parameters.face_detector_location = "/usr/local/classifiers/haarcascade_frontalface_alt.xml";
     
     
     
    std::cout<< "model_location = " << det_parameters.model_location << std::endl;
    std::cout<< "face_detector_location = " << det_parameters.face_detector_location << std::endl;
     
-    clnf_model.model_location_clnf = "model/main_clnf_general.txt";
-    clnf_model.face_detector_location_clnf = "classifiers/haarcascade_frontalface_alt.xml";
+    clnf_model.model_location_clnf = "/usr/local/model/main_clnf_general.txt";
+    clnf_model.face_detector_location_clnf = "/usr/local/classifiers/haarcascade_frontalface_alt.xml";
    // clnf_model.model_location_clnf = std::string("/usr/local/model/main_clnf_general.txt");
    // clnf_model.face_detector_location_clnf = std::string("/usr/local/classifiers/haarcascade_frontalface_alt.xml");
     
@@ -43,7 +43,7 @@ bool Inits()
 
 // Visualising the results
 void visualise_tracking(cv::Mat& captured_image, cv::Mat& graf_image, cv::Mat_<float>& depth_image, const LandmarkDetector::CLNF& face_model, const LandmarkDetector::FaceModelParameters& det_parameters, 
-	int frame_count, char change_coiff_eye_distance, std::string mac, std::string uid, std::string &get_status_text)
+	int frame_count, char change_coiff_eye_distance, std::string mac, std::string uid)
 {
 
 	// Drawing the facial landmarks on the face and the bounding box around it if tracking is successful and initialised
@@ -71,7 +71,7 @@ void visualise_tracking(cv::Mat& captured_image, cv::Mat& graf_image, cv::Mat_<f
 	// Only draw if the reliability is reasonable, the value is slightly ad-hoc
 	if (detection_certainty < visualisation_boundary)
 	{
-		LandmarkDetector::Draw(captured_image, graf_image, face_model, bounding_box, refresh_loging_time, change_coiff_eye_distance, mac, uid, get_status_text);
+		LandmarkDetector::Draw(captured_image, graf_image, face_model, bounding_box, refresh_loging_time, change_coiff_eye_distance, mac, uid);
 	}
 }
 
@@ -154,7 +154,8 @@ int detectEye(cv::Mat face)
 	{
 		for (int i = 0; i < eyes.size(); i++)
 		{
-			cv::rectangle(face, eyes[i], cv::Scalar(255, 255, 255), 10);
+            //comment cv::rectangle
+//            cv::rectangle(face, eyes[i], cv::Scalar(255, 255, 255), 10);
 		}
 	}
 
@@ -162,7 +163,7 @@ int detectEye(cv::Mat face)
 }
 
 bool track_success = false;
-bool Detect(cv::Mat &captured_image, int frame_count, char change_coiff_eye_distance, std::string mac, std::string uid, std::string &get_status_text)
+bool Detect(cv::Mat &captured_image, int frame_count, char change_coiff_eye_distance, std::string mac, std::string uid)
 {
 	// Reading the images
 	cv::Mat_<float> depth_image;
@@ -263,7 +264,7 @@ bool Detect(cv::Mat &captured_image, int frame_count, char change_coiff_eye_dist
 	marGraf = cv::Mat(480, 640, grayscale_image.type(), cv::Scalar(255, 255, 255));
 
 	//marGraf = cv::Scalar(255, 255, 255);
-	visualise_tracking(grayscale_image, marGraf, depth_image, clnf_model, det_parameters, frame_count, change_coiff_eye_distance, mac, uid, get_status_text);
+	visualise_tracking(grayscale_image, marGraf, depth_image, clnf_model, det_parameters, frame_count, change_coiff_eye_distance, mac, uid);
 
 
 

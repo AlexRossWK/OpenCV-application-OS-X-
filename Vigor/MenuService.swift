@@ -27,8 +27,8 @@ class MenuService {
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Exit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "0", action: nil, keyEquivalent: ""))
-        menu.addItem(NSMenuItem.separator())
+//        menu.addItem(NSMenuItem(title: "0", action: nil, keyEquivalent: ""))
+//        menu.addItem(NSMenuItem.separator())
         statusItem.menu = menu
     }
 }

@@ -10,13 +10,17 @@
 
 #import <Foundation/Foundation.h>
 #import "CPPConnectHeader.h"
+#import <opencv2/opencv.hpp>
 
 @implementation MyOCPPClass
 
-- (void)startDetect
+- (void)startDetect:(NSString *)mac
 {
+    
+    std::string macID = std::string([mac UTF8String]);
+    
     SleepDetect sd;
-    sd.Start();
+    sd.Start(macID) ;
     
 }
 
@@ -26,12 +30,13 @@
     sd.Stop();
 }
 
-- (NSString *)getStatus
-{
-    SleepDetect sd;
-    NSString *status = [NSString stringWithCString:sd.GetStatus().c_str()
-                                                encoding:[NSString defaultCStringEncoding]];
-    return status;
-}
+//- (NSString *)getStatus
+//{
+//    SleepDetect sd;
+//    NSString *status = [NSString stringWithCString:sd.GetStatus().c_str()
+//                                                encoding:[NSString defaultCStringEncoding]];
+//    return status;
+//}
+
 
 @end

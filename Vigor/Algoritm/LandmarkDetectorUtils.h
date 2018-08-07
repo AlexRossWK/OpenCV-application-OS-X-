@@ -61,9 +61,9 @@ namespace LandmarkDetector
     std::vector<cv::Point2d> CalculateLandmarks(CLNF& clnf_model);
     void DrawLandmarks(cv::Mat img, std::vector<cv::Point> landmarks);
 
-	void Draw(cv::Mat img, cv::Mat graf_image, const cv::Mat_<double>& shape2D, const cv::Mat_<int>& visibilities, cv::Rect rectFace, bool time_logs_refresh, char change_coiff_eye_distance, std::string mac, std::string uid, std::string &get_status_text);
+	void Draw(cv::Mat img, cv::Mat graf_image, const cv::Mat_<double>& shape2D, const cv::Mat_<int>& visibilities, cv::Rect rectFace, bool time_logs_refresh, char change_coiff_eye_distance, std::string mac, std::string uid);
 	void Draw(cv::Mat img, const cv::Mat_<double>& shape2D);
-	void Draw(cv::Mat img, cv::Mat graf_image, const CLNF& clnf_model, cv::Rect rectFace, bool time_logs_refresh, char change_coiff_eye_distance, std::string mac, std::string uid, std::string &get_status_text);
+	void Draw(cv::Mat img, cv::Mat graf_image, const CLNF& clnf_model, cv::Rect rectFace, bool time_logs_refresh, char change_coiff_eye_distance, std::string mac, std::string uid);
 
 
 	//===========================================================================

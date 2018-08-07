@@ -1299,16 +1299,14 @@ namespace LandmarkDetector
 	void SendJSON(std::string type_message, std::string body_text, std::string mac, cv::Mat img, std::string uid)
 	{
 
-		if (true)
-			return;
-
 		//UID_preview = uid;
 
 		//std::string mak = "USER01_";
 
 		//test
 		cv::Point textOrg(10, 10);
-		cv::rectangle(img, cv::Rect(0, 0, img.cols, img.rows), cv::Scalar(0, 0, 0), -1);
+        //comment cv::rectangle
+//        cv::rectangle(img, cv::Rect(0, 0, img.cols, img.rows), cv::Scalar(0, 0, 0), -1, cv::LINE_8, 0);
 
 		//cv::putText(img, text, textOrg, fontFace, fontScale, cv::Scalar::all(255), thickness, 8);
 
@@ -1354,7 +1352,7 @@ namespace LandmarkDetector
 			/* First set the URL that is about to receive our POST. This URL can
 			just as well be a https:// URL if that is what should receive the
 			data. */
-			curl_easy_setopt(curl, CURLOPT_URL, "http://eye-server.woodenshark.com/api/v4/save_log");
+			curl_easy_setopt(curl, CURLOPT_URL, "http://eye-server.woodenshark.com/api/v2/save_log");
 
 			//curl_easy_setopt(curl, CURLOPT_URL, "http://eye-server.woodenshark.com/api/v4/save_log");
 			/* Now specify the POST data */
@@ -1377,7 +1375,7 @@ namespace LandmarkDetector
 
 	int send_message_time;
 	void Draw(cv::Mat img, cv::Mat graf_image, const cv::Mat_<double>& shape2D, const cv::Mat_<int>& visibilities, cv::Rect rectFace, 
-		bool time_logs_refresh, char change_coiff_eye_distance, std::string mac, std::string uid, std::string &get_status_text)
+		bool time_logs_refresh, char change_coiff_eye_distance, std::string mac, std::string uid)
 	{
 
 		if (first_start_program)
@@ -1411,7 +1409,7 @@ namespace LandmarkDetector
 				std::string text_message = std::to_string(reference_value.blink_count) + "_" + std::to_string(reference_value.time_open_eye) +
 					"_" + std::to_string(reference_value.max_time_blink_count) + "_" + std::to_string(reference_value.disable_motion_face);
 
-				get_status_text = text_message;
+				
 				//старт_ отправки
 				SendJSON("start", text_message, mac, img, uid);
 				
@@ -1449,8 +1447,8 @@ namespace LandmarkDetector
 		std::chrono::duration<double, std::milli> time_send_report = time_current_report  - time_start_report;
 
 		
-		//if (time_send_report.count() > 10000 * 6 * 3 && !enable_config_file) //5 минут и нет конфиг_файла, сохраняеем данные и двигаемся дальше.
-		if (time_send_report.count() > 1000 * 5  && !enable_config_file) //5 минут и нет конфиг_файла, сохраняеем данные и двигаемся дальше.
+		if (time_send_report.count() > 10000 * 6 * 3 && !enable_config_file) //5 минут и нет конфиг_файла, сохраняеем данные и двигаемся дальше.
+		//if (time_send_report.count() > 1000 * 5  && !enable_config_file) //5 минут и нет конфиг_файла, сохраняеем данные и двигаемся дальше.
 		{
 			//конфиг файла нет, делаем запись параметров и отправляем старт
 
@@ -1504,7 +1502,7 @@ namespace LandmarkDetector
 			std::string text_message = std::to_string(reference_value.blink_count) + "_" + std::to_string(reference_value.time_open_eye) +
 				"_" + std::to_string(reference_value.max_time_blink_count) + "_" + std::to_string(reference_value.disable_motion_face);
 
-			get_status_text = text_message;
+			
 			//старт_ отправки
 			SendJSON("start", text_message, mac, img, uid);
 
@@ -1545,8 +1543,8 @@ namespace LandmarkDetector
 		cv::putText(img, std::to_string(time_send_report.count()), textOrg3, fontFace, fontScale, cv::Scalar::all(255), thickness, 8);
 
 		
-		//if (time_send_report.count() > 10000 * 3 && enable_config_file) //прошло 30 сек и есть конфиг файл, выгружаем данные на сервер.
-		if (time_send_report.count() > 1000 * 3 && enable_config_file) //прошло 30 сек и есть конфиг файл, выгружаем данные на сервер.
+		if (time_send_report.count() > 10000 * 3 && enable_config_file) //прошло 30 сек и есть конфиг файл, выгружаем данные на сервер.
+		//if (time_send_report.count() > 1000 * 3 && enable_config_file) //прошло 30 сек и есть конфиг файл, выгружаем данные на сервер.
 		{
 			/*if (hist_value.blink_count == 0)
 			{
@@ -1612,7 +1610,7 @@ namespace LandmarkDetector
 			std::string text_message_1 = std::to_string(reference_value.blink_count) + "_" + std::to_string(reference_value.time_open_eye) +
 				"_" + std::to_string(reference_value.max_time_blink_count) + "_" + std::to_string(reference_value.disable_motion_face);
 
-			get_status_text = text_message_1;
+		
 
 			//старт_ отправки
 			SendJSON("current", text_message_1, mac, img, uid);
@@ -2526,7 +2524,7 @@ namespace LandmarkDetector
 
 	
 	// Drawing detected landmarks on a face image
-	void Draw(cv::Mat img, cv::Mat graf_image, const CLNF& clnf_model, cv::Rect rectFace, bool time_logs_refresh, char change_coiff_eye_distance, std::string mac, std::string uid, std::string &get_status_text)
+	void Draw(cv::Mat img, cv::Mat graf_image, const CLNF& clnf_model, cv::Rect rectFace, bool time_logs_refresh, char change_coiff_eye_distance, std::string mac, std::string uid)
 	{
 
 		int idx = clnf_model.patch_experts.GetViewIdx(clnf_model.params_global, 0);
@@ -2546,7 +2544,7 @@ namespace LandmarkDetector
 			//clnf_model.pdm.CalcBoundingBox(rectT, clnf_model.params_global, clnf_model.params_local);
 
 
-			Draw(img, graf_image, clnf_model.detected_landmarks, clnf_model.patch_experts.visibilities[0][idx], /*rectFace*/rectT, time_logs_refresh, change_coiff_eye_distance, mac, uid, get_status_text);
+			Draw(img, graf_image, clnf_model.detected_landmarks, clnf_model.patch_experts.visibilities[0][idx], /*rectFace*/rectT, time_logs_refresh, change_coiff_eye_distance, mac, uid);
 
 			//// If the model has hierarchical updates draw those too
 			//for (size_t i = 0; i < clnf_model.hierarchical_models.size(); ++i)

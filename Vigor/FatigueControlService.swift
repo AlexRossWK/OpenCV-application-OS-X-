@@ -12,10 +12,11 @@ class FatigueControlService {
     
     var isStarted = true
     let objcClass = MyOCPPClass()
+    let deviceServie = DeviceService()
 
     func startFC() {
-        objcClass.startDetect()
         print("analyzing started")
+        objcClass.startDetect(deviceServie.deviceID())
     }
     
     func stopFC() {
@@ -30,14 +31,15 @@ class FatigueControlService {
         NSApplication.shared.terminate(self)
     }
     
-    func currentStatus() -> String {
-        print("status" + objcClass.getStatus())
-        guard let status = objcClass.getStatus() else {
-            return "NON"
-        }
-        if status == "" {
-            return "ERR"
-        }
-        return status
-    }
+    
+//    func currentStatus() -> String {
+//        print("status" + objcClass.getStatus())
+//        guard let status = objcClass.getStatus() else {
+//            return "NON"
+//        }
+//        if status == "" {
+//            return "ERR"
+//        }
+//        return status
+//    }
 }

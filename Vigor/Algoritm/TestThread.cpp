@@ -3,28 +3,25 @@
 #include "opencv2/opencv.hpp"
 #include <iostream>
 #include "FaceDetect.h"
+
 #include <iostream>
 #include <vector>
 #include <time.h>
 #include "string.h"
 
-#include <chrono>
 
 //mac
 //#include <winsock2.h>
 //#include <iphlpapi.h>
 //#include <stdio.h>
 //#include <stdlib.h>
-#include <stdio.h>
-#include <ifaddrs.h>
-//#include <netpacket/packet.h>
 
 #include <thread>
 #include <mutex>
 
-//#pragma comment(lib, "rpcrt4.lib")  // UuidCreate - Minimum supported OS Win 2000
+#pragma comment(lib, "rpcrt4.lib")  // UuidCreate - Minimum supported OS Win 2000
 //#include <windows.h>
-//#include <iostream>
+#include <iostream>
 
 #include <curl/curl.h>
 
@@ -42,9 +39,6 @@
 #define FREE(x) HeapFree(GetProcessHeap(), 0, (x))
 
 
-using namespace std;
-using namespace cv;
-
 int frame_count = 1;
 
 
@@ -60,8 +54,8 @@ void BrightnessAndContrastAuto(const cv::Mat &src, cv::Mat &dst, float clipHistP
 
 	cv::Mat gray;
 	if (src.type() == CV_8UC1) gray = src;
-    else if (src.type() == CV_8UC3) cvtColor(src, gray, cv::COLOR_BGR2GRAY);
-    else if (src.type() == CV_8UC4) cvtColor(src, gray, cv::COLOR_BGRA2GRAY);
+	else if (src.type() == CV_8UC3) cvtColor(src, gray, cv::COLOR_BGR2GRAY);
+	else if (src.type() == CV_8UC4) cvtColor(src, gray, cv::COLOR_BGRA2GRAY);
 	if (clipHistPercent == 0)
 	{
 		cv::minMaxLoc(gray, &minGray, &maxGray);
@@ -114,37 +108,37 @@ void BrightnessAndContrastAuto(const cv::Mat &src, cv::Mat &dst, float clipHistP
 
 //void getdMacAddresses(std::vector<std::string> &vMacAddresses)
 //{
-//    vMacAddresses.clear();
-//    IP_ADAPTER_INFO AdapterInfo[32];       // Allocate information for up to 32 NICs
-//    DWORD dwBufLen = sizeof(AdapterInfo);  // Save memory size of buffer
-//    DWORD dwStatus = GetAdaptersInfo(      // Call GetAdapterInfo
-//        AdapterInfo,                 // [out] buffer to receive data
-//        &dwBufLen);                  // [in] size of receive data buffer
+//	vMacAddresses.clear();
+//	IP_ADAPTER_INFO AdapterInfo[32];       // Allocate information for up to 32 NICs
+//	DWORD dwBufLen = sizeof(AdapterInfo);  // Save memory size of buffer
+//	DWORD dwStatus = GetAdaptersInfo(      // Call GetAdapterInfo
+//		AdapterInfo,                 // [out] buffer to receive data
+//		&dwBufLen);                  // [in] size of receive data buffer
 //
-//                                     //No network card? Other error?
-//    if (dwStatus != ERROR_SUCCESS)
-//        return;
+//									 //No network card? Other error?
+//	if (dwStatus != ERROR_SUCCESS)
+//		return;
 //
-//    PIP_ADAPTER_INFO pAdapterInfo = AdapterInfo;
-//    char szBuffer[512];
-//    while (pAdapterInfo)
-//    {
-//        if (pAdapterInfo->Type == MIB_IF_TYPE_ETHERNET)
-//        {
-//            //"%.2x-%.2x-%.2x-%.2x-%.2x-%.2x"
-//            sprintf_s(szBuffer, sizeof(szBuffer), "%.2x%.2x%.2x%.2x%.2x%.2x"
-//                , pAdapterInfo->Address[0]
-//                , pAdapterInfo->Address[1]
-//                , pAdapterInfo->Address[2]
-//                , pAdapterInfo->Address[3]
-//                , pAdapterInfo->Address[4]
-//                , pAdapterInfo->Address[5]
-//            );
-//            vMacAddresses.push_back(szBuffer);
-//        }
-//        pAdapterInfo = pAdapterInfo->Next;
+//	PIP_ADAPTER_INFO pAdapterInfo = AdapterInfo;
+//	char szBuffer[512];
+//	while (pAdapterInfo)
+//	{
+//		if (pAdapterInfo->Type == MIB_IF_TYPE_ETHERNET)
+//		{
+//			//"%.2x-%.2x-%.2x-%.2x-%.2x-%.2x"
+//			sprintf_s(szBuffer, sizeof(szBuffer), "%.2x%.2x%.2x%.2x%.2x%.2x"
+//				, pAdapterInfo->Address[0]
+//				, pAdapterInfo->Address[1]
+//				, pAdapterInfo->Address[2]
+//				, pAdapterInfo->Address[3]
+//				, pAdapterInfo->Address[4]
+//				, pAdapterInfo->Address[5]
+//			);
+//			vMacAddresses.push_back(szBuffer);
+//		}
+//		pAdapterInfo = pAdapterInfo->Next;
 //
-//    }
+//	}
 //}
 
 
@@ -154,187 +148,153 @@ std::vector<std::vector<cv::Mat>> recordFrames;
 std::string UID_ID_TEXT_MESSAGE;
 /*std::string GetUID()
 {
+	UUID uuid;
+	UuidCreate(&uuid);
+	char *str_uid;
+	UuidToStringA(&uuid, (RPC_CSTR*)&str_uid);
+	std::cout << str_uid << std::endl;
 
+	std::string string_text = std::string(str_uid);
 
-    struct ifaddrs *ifaddr=NULL;
-        struct ifaddrs *ifa = NULL;
-        int i = 0;
-
-        if (getifaddrs(&ifaddr) == -1)
-        {
-             perror("getifaddrs");
-        }
-        else
-        {
-             for ( ifa = ifaddr; ifa != NULL; ifa = ifa->ifa_next)
-             {
-                 if ( (ifa->ifa_addr) && (ifa->ifa_addr->sa_family == AF_PACKET) )
-                 {
-                      struct sockaddr_ll *s = (struct sockaddr_ll*)ifa->ifa_addr;
-                      char buffer_name [50];
-                      sprintf (buffer_name, "%s", ifa->ifa_name);
-                      std::cout<<buffer_name<<std::endl;
-
-                      //printf("%-8s ", ifa->ifa_name);
-
-
-                      std::string text_name = "wlan0";
-                      std::string text_uid = buffer_name;
-                      if(text_uid == text_name.c_str())
-                      {
-
-                      char buffer [50];
-
-                       std::string text="";
-
-                      for (i=0; i <s->sll_halen; i++)
-                      {
-                         // printf("%02x%c", (s->sll_addr[i]), (i+1!=s->sll_halen)?':':'\n');
-                          //sprintf (buffer, "%02x%c", (s->sll_addr[i]), (i+1!=s->sll_halen)?':':'\n');
-                          sprintf (buffer, "%02x%c",  (s->sll_addr[i]), (i+1!=s->sll_halen)?':':'\n');
-                          text+=(std::string)buffer;
-                          //text+=s->sll_halen[i] + ":";
-                      }
-
-
-                      //std::cout<<text<<std::endl;
-                      return text;
-                      }
-                 }
-             }
-             freeifaddrs(ifaddr);
-        }
-
-        return "";
+	return string_text;
 
 }*/
 
-/*
-long GetFileSizeArhive(std::string filename)
-{
-	struct stat stat_buf;
-	int rc = stat(filename.c_str(), &stat_buf);
-	return rc == 0 ? stat_buf.st_size : -1;
-}*/
-/*
-void SendJSONVideoFile(std::string name_file, long size_file, const char* uid)
-{
-	CURLcode ret;
-	CURL *hnd;
-	curl_mime *mime1;
-	curl_mimepart *part1;
-	struct curl_slist *slist1;
+//long GetFileSizeArhive(std::string filename)
+//{
+//    struct stat stat_buf;
+//    int rc = stat(filename.c_str(), &stat_buf);
+//    return rc == 0 ? stat_buf.st_size : -1;
+//}
 
-	mime1 = NULL;
-	slist1 = NULL;
-	slist1 = curl_slist_append(slist1, "X-Device-ID: 309c231d555e");
-
-	hnd = curl_easy_init();
-	curl_easy_setopt(hnd, CURLOPT_BUFFERSIZE, size_file);
-	curl_easy_setopt(hnd, CURLOPT_URL, "http://eye-server.woodenshark.com/api/v1/save_video");
-	curl_easy_setopt(hnd, CURLOPT_NOPROGRESS, 1L);
-	mime1 = curl_mime_init(hnd);
-	part1 = curl_mime_addpart(mime1);
-	curl_mime_data(part1, id, CURL_ZERO_TERMINATED);
-	curl_mime_name(part1, "log_record");
-	part1 = curl_mime_addpart(mime1);
-	curl_mime_filedata(part1, name_file.c_str());
-	curl_mime_name(part1, "video_file");
-	curl_easy_setopt(hnd, CURLOPT_MIMEPOST, mime1);
-	curl_easy_setopt(hnd, CURLOPT_HTTPHEADER, slist1);
-	curl_easy_setopt(hnd, CURLOPT_USERAGENT, "curl/7.58.0");
-	curl_easy_setopt(hnd, CURLOPT_MAXREDIRS, 50L);
-	curl_easy_setopt(hnd, CURLOPT_HTTP_VERSION, (long)CURL_HTTP_VERSION_2TLS);
-	curl_easy_setopt(hnd, CURLOPT_TCP_KEEPALIVE, 1L);
-
-	CURLcode res;
-	ret = curl_easy_perform(hnd);
-	if (CURLE_OK == res) {
-		char *ct;
-		res = curl_easy_getinfo(hnd, CURLINFO_CONTENT_TYPE, &ct);
-		if ((CURLE_OK == res) && ct)
-			printf("\nWe received Content-Type: %s\n", ct);
-	}
-
-	curl_easy_cleanup(hnd);
-	hnd = NULL;
-	curl_mime_free(mime1);
-	mime1 = NULL;
-	curl_slist_free_all(slist1);
-	slist1 = NULL;
-}
-*/
-
-void RecordFile()
-{
-	while (1)
-	{
-
-		if (recordFrames.size() == 0)
-		{
-            std::this_thread::sleep_for(std::chrono::milliseconds(5));
-            //Sleep(1);
-			// recordFramesObj.unlock();
-			continue;
-		}
-
-
-		std::vector<cv::Mat> records(recordFrames[0]);
-		recordFrames.erase(recordFrames.begin() + 0);
-		std::string name_file = "arhive/out_camera" + std::to_string(index_file_name_save) + ".avi";
-		cv::VideoWriter video(name_file, CV_FOURCC('M', 'P', '4', '2'), 15, cv::Size(640, 480), true);
-
-
-		for (int index = 0; index < records.size(); index++)
-		{
-			cv::Mat dt = records[index].clone();
-			video.write(dt);
-		}
-
-		video.release();
-		records.clear();
-
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
-        //Sleep(10);
-
-		//if (LandmarkDetector::UID_preview == UID_ID_TEXT_MESSAGE)
-		//{
-		//SendJSONVideoFile(name_file, GetFileSizeArhive(name_file), UID_ID_TEXT_MESSAGE.c_str());
-		//удаляем файл
-		std::remove(name_file.c_str());
-
-		++index_file_name_save;
-
-		std::ofstream myfile;
-		myfile.open("uid.txt", std::ios_base::app);
-		myfile << "send: " + UID_ID_TEXT_MESSAGE + "\n";
-
-		//UID_ID_TEXT_MESSAGE = GetUID();
-
-		myfile << "new: " + UID_ID_TEXT_MESSAGE + "\n";
-		myfile.close();
-
-
-		//}
-		//Sleep(100);
-	}
-}
+//void SendJSONVideoFile(std::string name_file, long size_file, const char* uid)
+//{
+//	CURLcode ret;
+//	CURL *hnd;
+//	curl_mime *mime1;
+//	curl_mimepart *part1;
+//	struct curl_slist *slist1;
+//
+//	mime1 = NULL;
+//	slist1 = NULL;
+//	slist1 = curl_slist_append(slist1, "X-Device-ID: 309c231d555e");
+//
+//	hnd = curl_easy_init();
+//	curl_easy_setopt(hnd, CURLOPT_BUFFERSIZE, size_file);
+//	curl_easy_setopt(hnd, CURLOPT_URL, "http://eye-server.woodenshark.com/api/v1/save_video");
+//	curl_easy_setopt(hnd, CURLOPT_NOPROGRESS, 1L);
+//	mime1 = curl_mime_init(hnd);
+//	part1 = curl_mime_addpart(mime1);
+//	curl_mime_data(part1, /*"8a665889-b7a2-d9cc-3d40-810d37265fe1"*/uid, CURL_ZERO_TERMINATED);
+//	curl_mime_name(part1, "log_record");
+//	part1 = curl_mime_addpart(mime1);
+//	curl_mime_filedata(part1, /*"arhive/out_camera0.avi"*/name_file.c_str());
+//	curl_mime_name(part1, "video_file");
+//	curl_easy_setopt(hnd, CURLOPT_MIMEPOST, mime1);
+//	curl_easy_setopt(hnd, CURLOPT_HTTPHEADER, slist1);
+//	curl_easy_setopt(hnd, CURLOPT_USERAGENT, "curl/7.58.0");
+//	curl_easy_setopt(hnd, CURLOPT_MAXREDIRS, 50L);
+//	curl_easy_setopt(hnd, CURLOPT_HTTP_VERSION, (long)CURL_HTTP_VERSION_2TLS);
+//	curl_easy_setopt(hnd, CURLOPT_TCP_KEEPALIVE, 1L);
+//
+//	CURLcode res;
+//	ret = curl_easy_perform(hnd);
+//	if (CURLE_OK == res) {
+//		char *ct;
+//		res = curl_easy_getinfo(hnd, CURLINFO_CONTENT_TYPE, &ct);
+//		if ((CURLE_OK == res) && ct)
+//			printf("\nWe received Content-Type: %s\n", ct);
+//	}
+//
+//	curl_easy_cleanup(hnd);
+//	hnd = NULL;
+//	curl_mime_free(mime1);
+//	mime1 = NULL;
+//	curl_slist_free_all(slist1);
+//	slist1 = NULL;
+//}
+//
+//void RecordFile()
+//{
+//	while (1)
+//	{
+//
+//		if (recordFrames.size() == 0)
+//		{
+//			Sleep(1);
+//			// recordFramesObj.unlock();
+//			continue;
+//		}
+//
+//
+//		std::vector<cv::Mat> records(recordFrames[0]);
+//		recordFrames.erase(recordFrames.begin() + 0);
+//		std::string name_file = "arhive/out_camera" + std::to_string(index_file_name_save) + ".avi";
+//		cv::VideoWriter video(name_file, CV_FOURCC('M', 'P', '4', '2'), 15, cv::Size(640, 480), true);
+//
+//
+//		for (int index = 0; index < records.size(); index++)
+//		{
+//			cv::Mat dt = records[index].clone();
+//			video.write(dt);
+//		}
+//
+//		video.release();
+//		records.clear();
+//
+//		Sleep(10);
+//
+//		//if (LandmarkDetector::UID_preview == UID_ID_TEXT_MESSAGE)
+//		//{
+//		SendJSONVideoFile(name_file, GetFileSizeArhive(name_file), UID_ID_TEXT_MESSAGE.c_str());
+//		//удаляем файл
+//		std::remove(name_file.c_str());
+//
+//		++index_file_name_save;
+//
+//		std::ofstream myfile;
+//		myfile.open("uid.txt", std::ios_base::app);
+//		myfile << "send: " + UID_ID_TEXT_MESSAGE + "\n";
+//
+//		//UID_ID_TEXT_MESSAGE = GetUID();
+//
+//		myfile << "new: " + UID_ID_TEXT_MESSAGE + "\n";
+//		myfile.close();
+//
+//
+//		//}
+//		Sleep(100);
+//	}
+//}
 
 std::vector<cv::Mat> frames;
 
 
 bool stop = false;
-std::string get_status = "";
-void SleepDetectMetod()
+
+void SleepDetectMetod(std::string id_device)
 {
-	std::string mac;
+	std::string mac = id_device;
 	
-    cv::VideoCapture video_capture(0);
-//    cv::VideoCapture video_capture("video/1.mp4");
+	//if (false)
+	//{//get_mac
+
+	//	std::vector<std::string> vect;
+	//	getdMacAddresses(vect);
+
+	//	if (vect.size() > 0)
+	//		mac = vect[0];
+	//	//std::cout << vect[0] << std::endl;
+	//	//std::cout << getdMacAddresses() << std::endl;
+	//}
+
+	cv::VideoCapture video_capture(0);
+	//cv::VideoCapture video_capture("video/1.mp4");
 
 	Inits();
 
-//    cv::namedWindow("tracking_result", cv::WINDOW_AUTOSIZE);
+	//cv::namedWindow("tracking_result", cv::WINDOW_AUTOSIZE);
+	
 	//cv::namedWindow("grayscale_image", cv::WINDOW_AUTOSIZE);
 	//cv::imshow("grayscale_image", grayscale_image);
 
@@ -365,7 +325,7 @@ void SleepDetectMetod()
 	//std::thread thread_record = std::thread(RecordFile);
 	//thread_record.detach();
 
-	UID_ID_TEXT_MESSAGE = "GetUID()";
+	UID_ID_TEXT_MESSAGE = id_device;
 
 	while (true)
 	{
@@ -380,7 +340,7 @@ void SleepDetectMetod()
 
 		video_capture >> image;
 
-//        cv::imshow("image", image);
+		//cv::imshow("image", image);
 
 
 		BrightnessAndContrastAuto(image, image, 0.5);
@@ -429,11 +389,11 @@ void SleepDetectMetod()
 
 			if (!skip)
 			{
-				Detect(targetImage, frame_count, k, mac, UID_ID_TEXT_MESSAGE, get_status);
+				Detect(targetImage, frame_count, k, mac, UID_ID_TEXT_MESSAGE);
 			}
 			else
 			{
-                cv::putText(targetImage, "PAUSE", cv::Point(targetImage.cols - 120, targetImage.rows - 10), FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(0, 0, 255), 1);
+				cv::putText(targetImage, "PAUSE", cv::Point(targetImage.cols - 120, targetImage.rows - 10), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(0, 0, 255), 1);
 
 			}
 
@@ -452,15 +412,15 @@ void SleepDetectMetod()
 		else
 		cv::putText(image, "HotKey ESC: ON ", cv::Point(25, image.rows - 40), CV_FONT_HERSHEY_SIMPLEX, 1, CV_RGB(192, 192, 192), 2);*/
 
-        cv::putText(image, "Stamina: N/A", cv::Point(25, image.rows - 50), FONT_HERSHEY_SIMPLEX, 0.7, CV_RGB(255, 255, 255), 2);
-        cv::putText(image, "ID: " + mac, cv::Point(25, image.rows - 30), FONT_HERSHEY_SIMPLEX, 0.7, CV_RGB(255, 255, 255), 2);
+        cv::putText(image, "Stamina: N/A", cv::Point(25, image.rows - 50), cv::FONT_HERSHEY_SIMPLEX, 0.7, CV_RGB(255, 255, 255), 2);
+        cv::putText(image, "ID: " + mac, cv::Point(25, image.rows - 30), cv::FONT_HERSHEY_SIMPLEX, 0.7, CV_RGB(255, 255, 255), 2);
 
 		if (!skip)
 		{
-            cv::putText(image, "HotKey ESC: OFF ", cv::Point(25, image.rows - 10), FONT_HERSHEY_SIMPLEX, 0.7, CV_RGB(255, 255, 255), 2);
+			cv::putText(image, "HotKey ESC: OFF ", cv::Point(25, image.rows - 10), cv::FONT_HERSHEY_SIMPLEX, 0.7, CV_RGB(255, 255, 255), 2);
 		}
 		else
-            cv::putText(image, "HotKey ESC: ON ", cv::Point(25, image.rows - 10), FONT_HERSHEY_SIMPLEX, 0.7, CV_RGB(255, 255, 255), 2);
+			cv::putText(image, "HotKey ESC: ON ", cv::Point(25, image.rows - 10), cv::FONT_HERSHEY_SIMPLEX, 0.7, CV_RGB(255, 255, 255), 2);
 
 
 		// Write out the framerate on the image before displaying it
@@ -471,9 +431,9 @@ void SleepDetectMetod()
 		cv::putText(image, "FPS:" + std::to_string((int)fps_tracker), cv::Point(25, 20), CV_FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 0, 0));*/
 
 
-//RT Open Camera view with data
-//        cv::imshow("tracking_result", image);
-//        k = cv::waitKey(1);
+
+		//cv::imshow("tracking_result", image);
+		//k = cv::waitKey(1);
 	}
 
 	std::cout << "stop thread" << std::endl;
@@ -482,14 +442,14 @@ void SleepDetectMetod()
 
 }
 
-void SleepDetect::Start()
+void SleepDetect::Start(std::string id_device)
 {
 	
 	//в отдельном потоке запускаем анализ состояния водителя.
 	//std::thread thread_camera_detect = std::thread(SleepDetectMetod);
 	//thread_camera_detect.detach();
     stop = false;
-	SleepDetectMetod();
+	SleepDetectMetod(id_device);
 
 }
 
@@ -497,8 +457,7 @@ void StopStatus()
 {
 	while (1)
 	{
-		std::this_thread::sleep_for(std::chrono::milliseconds(10000));
-        //Sleep(10000);
+		std::this_thread::sleep_for(std::chrono::milliseconds(10));
 
 		//выход
 		stop = true;
@@ -512,10 +471,4 @@ void SleepDetect::Stop()
 	std::thread thread_camera_detect = std::thread(StopStatus);
 	thread_camera_detect.detach();
 
-}
-
-std::string SleepDetect::GetStatus()
-{
-	//получаем, что то.....
-	return get_status;
 }

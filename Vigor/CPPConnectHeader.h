@@ -17,8 +17,7 @@
 
 @interface MyOCPPClass: NSObject
 
--(void)startDetect;
+-(void)startDetect:(NSString *)mac;
 -(void)stopDetect;
--(NSString *)getStatus;
-
+//-(NSString *)getStatus;
 @end

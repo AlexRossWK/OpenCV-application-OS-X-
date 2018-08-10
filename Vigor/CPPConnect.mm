@@ -13,13 +13,13 @@
 
 @implementation MyOCPPClass
 
-- (void)startDetect:(NSString *)mac
+- (void)startDetect:(NSString *)mac withArg2:(NSString *)resPath
 {
     
     std::string macID = std::string([mac UTF8String]);
-    
+    std::string pathToResources = std::string([resPath UTF8String]);
     SleepDetect sd;
-    sd.Start(macID) ;
+    sd.Start(macID, pathToResources) ;
     
 }
 

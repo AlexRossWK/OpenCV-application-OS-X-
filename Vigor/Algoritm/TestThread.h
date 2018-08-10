@@ -31,7 +31,7 @@ private:
 	//bool stop = false;
 	
 public:
-	void Start(std::string id_device);
+    void Start(std::string id_device, std::string path_start);
 	
 	void Stop();
 };

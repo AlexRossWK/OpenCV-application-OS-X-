@@ -59,7 +59,7 @@ void FaceModelParameters::init()
     // For first frame use the initialisation
     window_sizes_current = window_sizes_init;
     
-    model_location = std::string("/Users/user/Desktop/OpenFACE/test_console/model/main_clnf_general.txt");
+   model_location = std::string("/Users/user/Desktop/OpenFACE/test_console/model/main_clnf_general.txt");
 //    std::cout << "model_location = " << model_location << std::endl;
     
     sigma = 1.5;

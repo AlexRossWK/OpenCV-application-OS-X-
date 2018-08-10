@@ -16,7 +16,7 @@ class FatigueControlService {
 
     func startFC() {
         print("analyzing started")
-        objcClass.startDetect(deviceServie.deviceID())
+        objcClass.startDetect(deviceServie.deviceID(), withArg2: Bundle.main.resourcePath! + "/")
     }
     
     func stopFC() {

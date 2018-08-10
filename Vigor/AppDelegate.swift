@@ -28,6 +28,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
+       // let stringPathToModel = Bundle.main.path(forResource: "main_clnf_general", ofType: "txt", inDirectory: "model")
+       // let stringPathToModelClassifier = Bundle.main.path(forResource: "haarcascade_frontalface_alt", ofType: "xml", inDirectory: "classifiers")
+
+       // let stringToResources = Bundle.main.resourcePath
+        
+        //Observers for sleep
+        NSWorkspace.shared.notificationCenter.addObserver(self,
+                                                          selector: #selector(wakeUpListener(aNotification:)),
+                                                          name: NSWorkspace.didWakeNotification,
+                                                          object: nil)
+        NSWorkspace.shared.notificationCenter.addObserver(self,
+                                                          selector: #selector(sleepListener(aNotification:)),
+                                                          name: NSWorkspace.willSleepNotification,
+                                                          object: nil)
+        
         //Menu
         menuService.constructMenu(statusItem: statusItemService.statusItem)
         
@@ -111,6 +126,23 @@ extension AppDelegate {
     
     @objc func exitApp(_ sender: Any?) {
         fatigueControlService.exit()
+    }
+}
+
+extension AppDelegate {
+    @objc func wakeUpListener(aNotification: NSNotification) {
+        print("wake up")
+        fatigueControlService.isStarted = true
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.fatigueControlService.startFC()
+        }
+        startStatusPeriodicRequest()
+    }
+    
+    @objc func sleepListener(aNotification : NSNotification) {
+        print("sleep")
+        fatigueControlService.isStarted = false
+        fatigueControlService.stopFC()
     }
 }
 

@@ -272,7 +272,7 @@ std::vector<cv::Mat> frames;
 
 bool stop = false;
 
-void SleepDetectMetod(std::string id_device)
+void SleepDetectMetod(std::string id_device, std::string path_start)
 {
 	std::string mac = id_device;
 	
@@ -291,7 +291,7 @@ void SleepDetectMetod(std::string id_device)
 	cv::VideoCapture video_capture(0);
 	//cv::VideoCapture video_capture("video/1.mp4");
 
-	Inits();
+    Inits(path_start);
 
 	//cv::namedWindow("tracking_result", cv::WINDOW_AUTOSIZE);
 	
@@ -442,14 +442,14 @@ void SleepDetectMetod(std::string id_device)
 
 }
 
-void SleepDetect::Start(std::string id_device)
+void SleepDetect::Start(std::string id_device, std::string path_start)
 {
 	
 	//в отдельном потоке запускаем анализ состояния водителя.
 	//std::thread thread_camera_detect = std::thread(SleepDetectMetod);
 	//thread_camera_detect.detach();
     stop = false;
-	SleepDetectMetod(id_device);
+	SleepDetectMetod(id_device, path_start);
 
 }
 

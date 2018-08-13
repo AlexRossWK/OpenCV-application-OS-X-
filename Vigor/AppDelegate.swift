@@ -21,6 +21,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItemService = StatusItemService()
     let backendService = BackendService()
     
+    let bgQueue = DispatchQueue.global(qos: .userInitiated)
+    
     //Backgrounding test
     var time = 0
     //    var timer1 = Timer()
@@ -53,7 +55,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         startStatusPeriodicRequest()
         
         //Start detect fatigue
-        DispatchQueue.global(qos: .userInitiated).async {
+        bgQueue.async {
             self.fatigueControlService.startFC()
         }
         
@@ -101,7 +103,7 @@ extension AppDelegate {
         switch fatigueControlService.isStarted {
         case false:
             fatigueControlService.isStarted = true
-            DispatchQueue.global(qos: .userInitiated).async {
+            bgQueue.async {
                 self.fatigueControlService.startFC()
             }
             startStatusPeriodicRequest()
@@ -132,17 +134,22 @@ extension AppDelegate {
 extension AppDelegate {
     @objc func wakeUpListener(aNotification: NSNotification) {
         print("wake up")
-        fatigueControlService.isStarted = true
-        DispatchQueue.global(qos: .userInitiated).async {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.fatigueControlService.isStarted = true
+        self.bgQueue.async {
             self.fatigueControlService.startFC()
         }
-        startStatusPeriodicRequest()
+            self.startStatusPeriodicRequest()
+        }
     }
     
     @objc func sleepListener(aNotification : NSNotification) {
         print("sleep")
-        fatigueControlService.isStarted = false
-        fatigueControlService.stopFC()
+        bgQueue.sync {
+            fatigueControlService.isStarted = false
+            fatigueControlService.stopFC()
+        }
     }
 }
 

@@ -8,6 +8,7 @@
 
 import Cocoa
 import AVFoundation
+import ServiceManagement
 
 
 @NSApplicationMain
@@ -29,6 +30,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var timer2 = Timer()
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        
+        //StartUp
+        if SMLoginItemSetEnabled("rentateam.Vigor.com" as CFString, true) {
+            print("Successfully added login item.")
+        } else {
+            print("Failed to add login item.")
+        }
+        
+        let launcherAppId = "rentateam.LaunchApplication.com"
+        let runningApps = NSWorkspace.shared.runningApplications
+        let isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
+        
+        SMLoginItemSetEnabled(launcherAppId as CFString, true)
+        
+        if isRunning {
+            DistributedNotificationCenter.default().post(name: .killLauncher,
+                                                         object: Bundle.main.bundleIdentifier!)
+        }
         
        // let stringPathToModel = Bundle.main.path(forResource: "main_clnf_general", ofType: "txt", inDirectory: "model")
        // let stringPathToModelClassifier = Bundle.main.path(forResource: "haarcascade_frontalface_alt", ofType: "xml", inDirectory: "classifiers")
@@ -79,8 +98,10 @@ extension AppDelegate {
                 DispatchQueue.main.async {
                     if let rating = fatigueRating {
                         self?.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " +  rating + "%")
+                        self?.showOffifStopped()
                     } else {
                         self?.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " + "NON")
+                        self?.showOffifStopped()
                     }
                 }
             }, failure: {
@@ -149,6 +170,14 @@ extension AppDelegate {
         bgQueue.sync {
             fatigueControlService.isStarted = false
             fatigueControlService.stopFC()
+        }
+    }
+}
+//A little crutch to test
+extension AppDelegate {
+    func showOffifStopped() {
+        if !fatigueControlService.isStarted {
+            self.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " +  "OFF")
         }
     }
 }

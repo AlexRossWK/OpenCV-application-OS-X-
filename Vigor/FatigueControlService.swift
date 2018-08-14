@@ -32,7 +32,7 @@ class FatigueControlService {
     }
     
     func writeMAC(mac: String) {
-        objcClass.writeMAC(mac)
+//        objcClass.writeMAC(mac)
     }
     
 //    func currentStatus() -> String {

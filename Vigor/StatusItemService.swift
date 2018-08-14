@@ -11,7 +11,8 @@ import Cocoa
 class StatusItemService {
     
     lazy var statusItem: NSStatusItem = {
-        return NSStatusBar.system.statusItem(withLength:NSStatusItem.variableLength)
+        //Lenth can be NSStatusItem.dynamicLength
+        return NSStatusBar.system.statusItem(withLength: 100)
     }()
     
     func setStatusItemButtonTitle(text: String) {

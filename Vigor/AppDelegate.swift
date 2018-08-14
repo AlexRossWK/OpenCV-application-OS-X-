@@ -49,10 +49,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                                                          object: Bundle.main.bundleIdentifier!)
         }
         
-       // let stringPathToModel = Bundle.main.path(forResource: "main_clnf_general", ofType: "txt", inDirectory: "model")
-       // let stringPathToModelClassifier = Bundle.main.path(forResource: "haarcascade_frontalface_alt", ofType: "xml", inDirectory: "classifiers")
-
-       // let stringToResources = Bundle.main.resourcePath
+        // let stringPathToModel = Bundle.main.path(forResource: "main_clnf_general", ofType: "txt", inDirectory: "model")
+        // let stringPathToModelClassifier = Bundle.main.path(forResource: "haarcascade_frontalface_alt", ofType: "xml", inDirectory: "classifiers")
+        
+        // let stringToResources = Bundle.main.resourcePath
         
         //Observers for sleep
         NSWorkspace.shared.notificationCenter.addObserver(self,
@@ -156,19 +156,21 @@ extension AppDelegate {
     @objc func wakeUpListener(aNotification: NSNotification) {
         print("wake up")
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.fatigueControlService.isStarted = true
-        self.bgQueue.async {
-            self.fatigueControlService.startFC()
-        }
-            self.startStatusPeriodicRequest()
+        if fatigueControlService.isStarted {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.fatigueControlService.isStarted = true
+                self.bgQueue.async {
+                    self.fatigueControlService.startFC()
+                }
+                self.startStatusPeriodicRequest()
+            }
         }
     }
     
     @objc func sleepListener(aNotification : NSNotification) {
         print("sleep")
         bgQueue.sync {
-            fatigueControlService.isStarted = false
+//            fatigueControlService.isStarted = false
             fatigueControlService.stopFC()
         }
     }

@@ -342,12 +342,39 @@ void SleepDetectMetod(std::string id_device, std::string path_start)
 
 		//cv::imshow("image", image);
 
+        
+        ////
+        if (stop)
+        {
+            std::cout << "exit_buttom" << std::endl;
+            //нажали SleepDetect::Stop
+            break;
+        }
+        ////
 
 		BrightnessAndContrastAuto(image, image, 0.5);
+        
+        ////
+        if (stop)
+        {
+            std::cout << "exit_buttom" << std::endl;
+            //нажали SleepDetect::Stop
+            break;
+        }
+        ////
 
 		//std::cout<<image.rows <<":"<<image.cols<<std::endl;
 		cv::resize(image, image, cv::Size(640, 480));
 
+        ////
+        if (stop)
+        {
+            std::cout << "exit_buttom" << std::endl;
+            //нажали SleepDetect::Stop
+            break;
+        }
+        ////
+        
 		if (false)
 		{
 			//video.write(image);
@@ -356,10 +383,28 @@ void SleepDetectMetod(std::string id_device, std::string path_start)
 			std::chrono::high_resolution_clock::time_point time_end = std::chrono::high_resolution_clock::now();
 			std::chrono::duration<double, std::milli> time_send_report = time_end - time_start;
 
+            ////
+            if (stop)
+            {
+                std::cout << "exit_buttom" << std::endl;
+                //нажали SleepDetect::Stop
+                break;
+            }
+            ////
+            
 			if (time_send_report.count() > 30000)
 			{
 				//video.release();
 
+                ////
+                if (stop)
+                {
+                    std::cout << "exit_buttom" << std::endl;
+                    //нажали SleepDetect::Stop
+                    break;
+                }
+                ////
+                
 				recordFrames.push_back(frames);
 				frames.clear();
 
@@ -367,12 +412,38 @@ void SleepDetectMetod(std::string id_device, std::string path_start)
 				time_start = std::chrono::high_resolution_clock::now();
 			}
 		}
-
+        
+        ////
+        if (stop)
+        {
+            std::cout << "exit_buttom" << std::endl;
+            //нажали SleepDetect::Stop
+            break;
+        }
+        ////
+        
 		cv::Mat targetImage(image.cols, image.rows, CV_8UC3);
 		//cv::cvtColor(image, targetImage, cv::COLOR_BGRA2BGR);
+        
+        ////
+        if (stop)
+        {
+            std::cout << "exit_buttom" << std::endl;
+            //нажали SleepDetect::Stop
+            break;
+        }
+        ////
+        
 		targetImage = image.clone();
 
-
+        ////
+        if (stop)
+        {
+            std::cout << "exit_buttom" << std::endl;
+            //нажали SleepDetect::Stop
+            break;
+        }
+        ////
 
 		if (targetImage.empty())
 		{
@@ -382,6 +453,15 @@ void SleepDetectMetod(std::string id_device, std::string path_start)
 		else
 		{
 
+            ////
+            if (stop)
+            {
+                std::cout << "exit_buttom" << std::endl;
+                //нажали SleepDetect::Stop
+                break;
+            }
+            ////
+            
 			if (k == 27)
 			{
 				skip = !skip;
@@ -400,6 +480,16 @@ void SleepDetectMetod(std::string id_device, std::string path_start)
 			frame_count = frame_count + 1;
 		}
 		//cv::cvtColor(targetImage, image, cv::COLOR_BGRA2RGB);
+        
+        ////
+        if (stop)
+        {
+            std::cout << "exit_buttom" << std::endl;
+            //нажали SleepDetect::Stop
+            break;
+        }
+        ////
+        
 		image = targetImage.clone();
 
 		/*	cv::putText(image, "Stamina: N/A", cv::Point(25, image.rows - 100), CV_FONT_HERSHEY_SIMPLEX, 1, CV_RGB(192, 192, 192), 2);
@@ -412,9 +502,27 @@ void SleepDetectMetod(std::string id_device, std::string path_start)
 		else
 		cv::putText(image, "HotKey ESC: ON ", cv::Point(25, image.rows - 40), CV_FONT_HERSHEY_SIMPLEX, 1, CV_RGB(192, 192, 192), 2);*/
 
+        ////
+        if (stop)
+        {
+            std::cout << "exit_buttom" << std::endl;
+            //нажали SleepDetect::Stop
+            break;
+        }
+        ////
+        
         cv::putText(image, "Stamina: N/A", cv::Point(25, image.rows - 50), cv::FONT_HERSHEY_SIMPLEX, 0.7, CV_RGB(255, 255, 255), 2);
         cv::putText(image, "ID: " + mac, cv::Point(25, image.rows - 30), cv::FONT_HERSHEY_SIMPLEX, 0.7, CV_RGB(255, 255, 255), 2);
 
+        ////
+        if (stop)
+        {
+            std::cout << "exit_buttom" << std::endl;
+            //нажали SleepDetect::Stop
+            break;
+        }
+        ////
+        
 		if (!skip)
 		{
 			cv::putText(image, "HotKey ESC: OFF ", cv::Point(25, image.rows - 10), cv::FONT_HERSHEY_SIMPLEX, 0.7, CV_RGB(255, 255, 255), 2);
@@ -457,7 +565,7 @@ void StopStatus()
 {
 	while (1)
 	{
-		std::this_thread::sleep_for(std::chrono::milliseconds(10));
+//        std::this_thread::sleep_for(std::chrono::milliseconds(0));
 
 		//выход
 		stop = true;

@@ -1,9 +1,9 @@
 //
 //  StatusItemService.swift
-//  Vigor
+//  SwiftObjectivecCpp
 //
 //  Created by Алексей Россошанский on 25.07.2018.
-//  Copyright © 2018 Rentateam. All rights reserved.
+//  Copyright © 2018 AlexRoss. All rights reserved.
 //
 
 import Cocoa

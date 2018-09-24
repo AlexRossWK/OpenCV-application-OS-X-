@@ -1,9 +1,9 @@
 //
 //  CPPConnect.m
-//  Vigor
+//  SwiftObjectivecCpp
 //
 //  Created by Алексей Россошанский on 27.07.2018.
-//  Copyright © 2018 Rentateam. All rights reserved.
+//  Copyright © 2018 AlexRoss. All rights reserved.
 //
 
 #include "TestThread.h"

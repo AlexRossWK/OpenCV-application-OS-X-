@@ -16,39 +16,20 @@ cv::Rect_<double> bounding_box;
 bool Inits(std::string path)
 {
      det_parameters.init();
-    
-    // det_parameters.model_location = std::string("/usr/local/model/main_clnf_general.txt");
-     //det_parameters.face_detector_location = std::string("/usr/local/classifiers/haarcascade_frontalface_alt.xml");
-    
-//    det_parameters.model_location = "/Users/alexross/Library/Developer/Xcode/DerivedData/Vigor-cvvrmzmjvwcotmbtmpqjctqubqfr/Build/Products/Debug/Vigor.app/Contents/Resources/model/main_clnf_general.txt";
-//    det_parameters.face_detector_location = "/Users/alexross/Library/Developer/Xcode/DerivedData/Vigor-cvvrmzmjvwcotmbtmpqjctqubqfr/Build/Products/Debug/Vigor.app/Contents/Resources/classifiers/haarcascade_frontalface_alt.xml";
-    
+
     det_parameters.model_location = path + "model/main_clnf_general.txt";
     det_parameters.face_detector_location = path + "classifiers/haarcascade_frontalface_alt.xml";
 
     
-    
-    // /usr/local/lib/model/main_clnf_general.txt
-    // /usr/local/lib/classifiers/haarcascade_frontalface_alt.xml
-    // /Users/alexross/Library/Developer/Xcode/DerivedData/Vigor-cvvrmzmjvwcotmbtmpqjctqubqfr/Build/Products/Debug/Vigor.app/Contents/Resources/model/main_clnf_general.txt
-    // /Users/alexross/Library/Developer/Xcode/DerivedData/Vigor-cvvrmzmjvwcotmbtmpqjctqubqfr/Build/Products/Debug/Vigor.app/Contents/Resources/classifiers/haarcascade_frontalface_alt.xml
-    
-//   std::cout<< "model_location = " << det_parameters.model_location << std::endl;
-//   std::cout<< "face_detector_location = " << det_parameters.face_detector_location << std::endl;
-    
+
     std::cout<< "model_location = " << det_parameters.model_location << std::endl;
     std::cout<< "face_detector_location = " << det_parameters.face_detector_location << std::endl;
 
     
-//    clnf_model.model_location_clnf = "/Users/alexross/Library/Developer/Xcode/DerivedData/Vigor-cvvrmzmjvwcotmbtmpqjctqubqfr/Build/Products/Debug/Vigor.app/Contents/Resources/model/main_clnf_general.txt";
-//    clnf_model.face_detector_location_clnf = "/Users/alexross/Library/Developer/Xcode/DerivedData/Vigor-cvvrmzmjvwcotmbtmpqjctqubqfr/Build/Products/Debug/Vigor.app/Contents/Resources/classifiers/haarcascade_frontalface_alt.xml";
-    
     clnf_model.model_location_clnf = path + "model/main_clnf_general.txt";
     clnf_model.face_detector_location_clnf = path + "classifiers/haarcascade_frontalface_alt.xml";
 
-    
-   // clnf_model.model_location_clnf = std::string("/usr/local/model/main_clnf_general.txt");
-   // clnf_model.face_detector_location_clnf = std::string("/usr/local/classifiers/haarcascade_frontalface_alt.xml");
+
     
     clnf_model.inits();
 

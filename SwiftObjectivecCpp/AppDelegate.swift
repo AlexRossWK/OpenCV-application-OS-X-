@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Vigor
+//  SwiftObjectivecCpp
 //
 //  Created by Алексей Россошанский on 24.07.2018.
-//  Copyright © 2018 Rentateam. All rights reserved.
+//  Copyright © 2018 AlexRoss. All rights reserved.
 //
 
 import Cocoa
@@ -32,13 +32,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
         //StartUp
-        if SMLoginItemSetEnabled("rentateam.Vigor.com" as CFString, true) {
+        if SMLoginItemSetEnabled("alexross.swiftobjectivecpp.com" as CFString, true) {
             print("Successfully added login item.")
         } else {
             print("Failed to add login item.")
         }
         
-        let launcherAppId = "rentateam.LaunchApplication.com"
+        let launcherAppId = "alexross.LaunchApplication.com"
         let runningApps = NSWorkspace.shared.runningApplications
         let isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
         
@@ -68,7 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menuService.constructMenu(statusItem: statusItemService.statusItem)
         
         //Status item title
-        statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " + "NON")
+        statusItemService.setStatusItemButtonTitle(text: "SwiftObjectivecCpp" + " " + "NON")
         
         //Status request
         startStatusPeriodicRequest()
@@ -97,16 +97,16 @@ extension AppDelegate {
             self?.backendService.getFatigueRating(success: { (fatigueRating) in
                 DispatchQueue.main.async {
                     if let rating = fatigueRating {
-                        self?.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " +  rating + "%")
+                        self?.statusItemService.setStatusItemButtonTitle(text: "SwiftObjectivecCpp" + " " +  rating + "%")
                         self?.showOffifStopped()
                     } else {
-                        self?.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " + "NON")
+                        self?.statusItemService.setStatusItemButtonTitle(text: "SwiftObjectivecCpp" + " " + "NON")
                         self?.showOffifStopped()
                     }
                 }
             }, failure: {
                 DispatchQueue.main.async {
-                    self?.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " +  "ERR")
+                    self?.statusItemService.setStatusItemButtonTitle(text: "SwiftObjectivecCpp" + " " +  "ERR")
                 }
             })
         })
@@ -129,7 +129,7 @@ extension AppDelegate {
             }
             startStatusPeriodicRequest()
             
-            self.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " + "NON")
+            self.statusItemService.setStatusItemButtonTitle(text: "SwiftObjectivecCpp" + " " + "NON")
             
         default:
             fatigueControlService.isStarted = false
@@ -137,13 +137,13 @@ extension AppDelegate {
             
             stopStatusPeriodicRequest()
             
-            self.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " +  "OFF")
+            self.statusItemService.setStatusItemButtonTitle(text: "SwiftObjectivecCpp" + " " +  "OFF")
             
         }
     }
     
     @objc func sendFeedback(_ sender: Any?) {
-        feedbackService.sendFeedback(emails: ["ik@woodenshark.com"], subject: "Fatigue control feedback: \(deviceService.deviceID())", text: "")
+        feedbackService.sendFeedback(emails: ["example@test.com"], subject: "Fatigue  feedback: \(deviceService.deviceID())", text: "")
         
     }
     
@@ -179,7 +179,7 @@ extension AppDelegate {
 extension AppDelegate {
     func showOffifStopped() {
         if !fatigueControlService.isStarted {
-            self.statusItemService.setStatusItemButtonTitle(text: "VIGOR" + " " +  "OFF")
+            self.statusItemService.setStatusItemButtonTitle(text: "SwiftObjectivecCpp" + " " +  "OFF")
         }
     }
 }

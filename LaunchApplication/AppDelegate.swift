@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  LaunchApplication
+//  SwiftObjectivecCpp
 //
 //  Created by Алексей Россошанский on 13.08.2018.
-//  Copyright © 2018 Rentateam. All rights reserved.
+//  Copyright © 2018 AlexRoss. All rights reserved.
 //
 
 import Cocoa
@@ -22,7 +22,7 @@ extension AppDelegate: NSApplicationDelegate {
         
         //StartUp
         
-        let mainAppIdentifier = "rentateam.Vigor.com"
+        let mainAppIdentifier = "alexross.swiftobjectivecpp.com"
         let runningApps = NSWorkspace.shared.runningApplications
         let isRunning = !runningApps.filter { $0.bundleIdentifier == mainAppIdentifier }.isEmpty
         
@@ -38,7 +38,7 @@ extension AppDelegate: NSApplicationDelegate {
             components.removeLast()
             components.removeLast()
             components.append("MacOS")
-            components.append("Vigor") //main app name
+            components.append("SwiftObjectivecCpp") //main app name
             
             let newPath = NSString.path(withComponents: components)
             
